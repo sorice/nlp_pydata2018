@@ -1,0 +1,158 @@
+Capítulo 2. 2001: La Odisea  
+de un Hacker
+El departamento de 
+ciencias de la computación 
+de la Universidad de New 
+York está situado dentro del
+Hall Warren Weaver, un 
+edificio que parece una 
+fortaleza localizado a dos 
+cuadras al oriente del
+Washington Square Park. 
+Corrientes de aire 
+acondicionado de fuerza 
+industrial crean un foso de 
+aire
+
+caliente, deslentando a 
+holgazanes y a abogados 
+por igual. Los visitantes que 
+logran atravesar el foso
+encuentran otra formidable 
+barrera, una máquina 
+registradora de seguridad 
+situada inmediatamente
+adentro del único corredor 
+de entrada de la edificación.
+Más allá del punto de 
+registro de seguridad, la 
+atmósfera se relaja en 
+alguna medida. Pero 
+todavía,
+
+subsisten numerosas 
+señales desparramadas a lo 
+largo del primer piso que 
+previenen acerca de los
+peligros de las puertas no 
+aseguradas y de las salidas 
+de incendio propped-open. 
+Tomados como un
+todo, las señales ofrecen un 
+recordatorio: aún los 
+relativamente tranquilos 
+confines de antes del 11 de
+septiembre del 2001, uno 
+nunca puede ser 
+demasiado cuidadoso o 
+demasiado sospechoso.
+Las señales ofrecen un 
+interesante punto de vista 
+contrario al creciente 
+número de visitantes que se
+
+agrupan el atrio interior del 
+hall. Unos pocos parecen 
+estudiantes de la 
+Universidad de Nueva York. 
+La
+mayoría parecen asistentes 
+desgreñados a un concierto 
+haciendo fila en las afueras 
+de una sala de
+
+música en aniticipación al 
+acto principal.. Por una 
+breve mañana, las masas 
+se han tomado al Hall
+Warren Weaver, dejando al 
+guardián de seguridad 
+vecino sin nada mejor que 
+observar a Ricki Lake en
+television y encoger sus 
+hombros hacia el auditorio 
+contiguo cada vez que los 
+visitantes preguntan por
+"la charla".
+
+Una vez dentro del 
+auditorio, un visitante 
+encuentra la persona que 
+ha forzado este colapso 
+temporal
+de los procedimientos de 
+seguridad de la edificación. 
+La persona es Richard M. 
+Stallman, fundador del
+Proyecto GNU, presidente 
+original de la Fundación del 
+Software Libre (FSF- Free 
+Software
+Foundation), ganador del 
+programa de Becas 
+MacArthur en 1990, 
+ganador de Premio de 
+Mecánica
+
+Computacional de la 
+Asociación Grace Murray 
+Hopper (también en 1990), 
+corecipiente del Premio
+Takeda 2001 de la 
+Fundación Takeda, y 
+antiguo hacker del 
+Laboratorio de Inteligencia 
+Artificial. Tal
+
+como fue anunciado en los 
+sitios web relativos a 
+hackers, incluyendo el sitio 
+del propio Proyecto GNU
+www.gnu.org, Stallman está 
+en Manhattan, su antiguo 
+
+hogar, para presentar una 
+muy esperada charla
+en respuesta a la reciente 
+campaña de la Corporación 
+Microsoft en contra de la 
+Licencia Pública
+General de GNU.
+El tema de la conferencia 
+de Stallman es la historia y 
+el futuro del movimiento de 
+software libre. La
+
+ubicación es significativa. 
+Menos de un mes antes, el 
+vice presidente senior de 
+Microsoft Craig
+Mundie apareció en la 
+vecina Escuela de Negocios 
+Stern de la uNiversidad de 
+Nueva York,
+
+presentando una charla en 
+la que soltó una andanada 
+contra Licencia Pública 
+General, o GPL, un
+dispositivo legal 
+originalmente concebido por 
+Stallman 16 años atrás. 
+Construida para 
+contrarrestar la
+ola creciente de 
+secretividad en el software, 
+ola que está en proceso de 
+tomarse a la industria del
+software- una ola que fue 
+notada inicialmente por 
+
+Stallman durante sus 
+problemas de 1980 troubles
+con la impresora láser 
+Xerox laser -la GPL ha 
+evolucionado hacia una 
+herramienta central de la
+comunidad del software 
+libre. En términos más 

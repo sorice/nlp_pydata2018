@@ -1,0 +1,993 @@
+1<LTTextBoxHorizontal(0) 38.400,733.136,563.153,806.728 u'2015 4th International Symposium on Emerging Trends and Technologies in Libraries and Information Services\nAvoiding Plagiarism in Research through Free Online \nPlagiarism Tools \n'>-
+1<LTTextBoxHorizontal(1) 57.959,625.521,354.355,710.962 u'Richa Tripathi \nPuneet Tiwari \n Hindustan University                                              \nIT Service Manager \nElixir CT Pvt. Ltd. \nChennai, India \nricha.tiwari77@gmail.com \nNoida-U.P., India \npuneet252002@gmail.com \n \n \n'>-
+1<LTTextBoxHorizontal(2) 111.717,637.044,114.207,650.132 u' \n'>-
+1<LTTextBoxHorizontal(3) 434.758,659.962,532.701,710.962 u'K. Nithyanandam \n Hindustan University \nChennai, India \nmail2knithi@gmail.com\n'>-
+1<LTTextBoxHorizontal(4) 36.720,469.943,291.055,626.813 u'Abstract\u2014Plagiarism  is a serious problem  identified amongst \nresearch  community.  Plagiarism  has  been  around  for  centuries, \nbut  with  the  use  of  Internet  and  easy  access  to  material  in \nelectronic  format  has  made  it  easier  to  plagiarize  materials  of \nothers. On  the  other  hand  plagiarism  detection  is  now  as  easy  as \nplagiarizing  a  document.  There  are  a  number  of  anti-plagiarism \nsoftware  available  either  freely  or  commercially,  which  can  be \nused  for  plagiarism  detection.  But  the  commercial  softwares  are \ntoo  expensive.  So  it  is  not  affordable  for  an  individual  to \npurchase  those  softwares.  This  paper  highlights  the  plagiarism \ndetection  softwares which  are  freely  available  online,  that  can  be \ndownloaded free of cost. It is suggested that faculty members and \nresearch  scholars  can  use  these  anti  plagiarism  softwares  in \nchecking  their  thesis  or  research  papers  before  submitting  to \nuniversities or conferences.  \n'>-
+1<LTTextBoxHorizontal(5) 36.720,335.636,291.056,461.537 u'Identifying  the  plagiarized  content  has  become  one  of  the \nmajor  concerns  of  journals  publishers,  research  center  and \nconferences  organisers.  The  software  that  are  mentioned  and \nreferred  to  in  this  paper  are  all  valuable  resources  to  discover \nplagiarized  materials.  By  employing  these  softwares  one  can \nascertain that none of the articles, documents or research work in \nany  form  and  capacity,  is  not  plagiarized  and  thereby  the \ncopyright  of  the  publisher  and  the  authors  are  not  violated. \nPlagiarism  can  destroy  any  one\u2019s  career  and  this  paper  creates \nawareness  of  plagiarism  softwares  among  research  scholars, \nfaculty  members  and  helps  them  to  have  successful  academic \ncareers in future by avoiding plagiarism.  \n'>-
+1<LTTextBoxHorizontal(6) 36.720,294.596,290.987,327.410 u'Keywords\u2014  Plagiarism,  anti-plagiarism  software,  online \nplagiarism detection  tools,  plagiarism  checker,  copyright.,academic \ndishonesty, Plagiarism  Tracker. \n'>-
+1<LTTextBoxHorizontal(7) 36.720,123.358,291.396,282.795 u'I.   INTRODUCTION  \nPlagiarism  is  a  very  serious  and  common  problem  in \nResearch.  Stealing  of  someone  else  work  is  not  only  common \namong research  scholars but also very common among  faculty \nmembers.  There  have  been many  plagiarism  cases  detected  in \nIndia  and  abroad.  For  example,  The  first  case:  A  research \nscholars  awarded  Ph.D.  in  the  year  1976  for  his  thesis  in \nEnglish  entitled,  \u201cA  Critical  Study  of  the  Suta  Samhita\u201d.  As \nper  his  allegation,  almost  80%  of  his  thesis  has  been \nplagiarized  by  \u201canother  scholar\u201d  [1]  in  Hindi  verbatim \nincluding  footnotes,  charts  and  tables.  This  scholar  submitted \nhis  thesis  entitled,  \u201cSuta  Samhita  ka  Alocanatmak  Adhyayan\u201d \nto  another  University  and  got  Ph.D.  in  the  year  1981.  In  the \nsecond case: A  \u201cvice-chancellor\u201d  [2] resigned  in 2003 after he \n'>-
+1<LTTextBoxHorizontal(8) 306.716,318.445,561.400,627.484 u"and  a  student  were  found  guilty  of  plagiarism  of  a  paper \n(which formed part of the student's thesis). In the third case: A \n\u201cprofessor\u201d  [3]  is  accused  of  plagiarizing  more  than  70 \nresearch  papers  published  between  2004  and  2007. University \nExecutive  Council  has  banned  him \nfrom  undertaking \nexamination  work  and  research  guidance.  He  has  been \ndebarred  from  securing  further  promotions  and  appointments \nto  administrative  positions.  In  the  fourth  case:  A  \u201cChancellor \nand  the  Education Minister\u201d  [4]  for  the  country,  has  resigned \nafter  her  Ph.D.  was  revoked  following  an  investigation  into \nher  doctoral  thesis  that  found  evidence  of  plagiarism.  Above \nmotioned  cases  not  only  describe  the  seriousness  of  the \nproblem  but  also  show  that  plagiarism  can  destroy  any  one\u2019s \ncareer. \nIn  the  age  of  advanced  Information  and  Communication \nTechnologies  (ICT)  plagiarism  has  become  more  actual  and \nturned  into  a  serious  problem.  Many  tools  have  been \ndeveloped  for  detecting  similarities  in  files  [5].  These  tools \nautomate  the  detection  process  and  allow  the  academic  to \ncarry out the investigation process manually [6]. \nPlagiarism  detection  software  benefits  academicians, \nresearch  scholars and anyone  else  interested  in  safeguard  their \nwriting.  By  using  plagiarism  detection  software  one  can \nensure  that  the  text  is  unique.  Through  plagiarism  detection \ntools  research community can benefit by  having  their  research \npaper/theses  and  dissertation  checked  for  any  plagiarism  done \nunintentionally. \n">-
+1<LTTextBoxHorizontal(9) 306.724,128.082,561.387,306.432 u'II.  REVIEW OF LITERATURE \nAsim  , Ali, Hussam  and Vaclav  [7]  find  that  till  now  there \nis    no  software  that  can  100%  detect  or    prove  that  the \ndocument has been plagiarize, because each software and tools \nhas  advantages  and  limitation. Arbib &  Eti Yaari  [8]  find  that \nstudents  perceive  plagiarism  offences  from  online  sources  as \nsignificantly  less dishonest  than  similar offences  using printed \nsources.  Smith,   Ghazali, & Minhad  [9]  suggested  that  factors \ncontributing  to plagiarism include  lack  of  awareness,  lack  of \nunderstanding,  lack  of  competence,  and  personal attitudes. No \nevidence  was  found  to  support  the  suggestion  that  either \npressure  or  the  availability  of  internet  facilities  had  increased \nthe  incidence  of  plagiarism.  Kwong,  Ng, Mark  &  Wong  [10] \nfind  that  faculty  members  and  students  do  not  share  a \nconsensus \non \nthe \ndefinition \nof \nthe \nseriousness \n'>-
+1<LTTextBoxHorizontal(10) 40.680,49.769,222.694,77.216 u' \n 978-1-4799-5532-9/15/$31.00 \xa92015 IEEE \n'>-
+1<LTTextBoxHorizontal(11) 290.160,36.684,307.650,61.176 u'275 \n \n'>-
+1<LTRect 75.720,243.200,288.720,254.960>-
+1<LTRect 36.720,232.280,288.720,244.040>-
+1<LTRect 36.720,221.360,288.720,233.120>-
+1<LTRect 36.720,210.440,116.520,222.200>-
+1<LTRect 33.480,3.680,279.720,78.440>-
+2015 4th International Symposium on Emerging Trends and Technologies in Libraries and Information Services
+Avoiding Plagiarism in Research through Free Online 
+Plagiarism Tools 
+
+Richa Tripathi 
+Puneet Tiwari 
+ Hindustan University                                              
+IT Service Manager 
+Elixir CT Pvt. Ltd. 
+Chennai, India 
+richa.tiwari77@gmail.com 
+Noida-U.P., India 
+puneet252002@gmail.com 
+ 
+ 
+
+Abstract—Plagiarism  is a serious problem  identified amongst 
+research  community.  Plagiarism  has  been  around  for  centuries, 
+but  with  the  use  of  Internet  and  easy  access  to  material  in 
+electronic  format  has  made  it  easier  to  plagiarize  materials  of 
+others. On  the  other  hand  plagiarism  detection  is  now  as  easy  as 
+plagiarizing  a  document.  There  are  a  number  of  anti-plagiarism 
+software  available  either  freely  or  commercially,  which  can  be 
+used  for  plagiarism  detection.  But  the  commercial  softwares  are 
+too  expensive.  So  it  is  not  affordable  for  an  individual  to 
+purchase  those  softwares.  This  paper  highlights  the  plagiarism 
+detection  softwares which  are  freely  available  online,  that  can  be 
+downloaded free of cost. It is suggested that faculty members and 
+research  scholars  can  use  these  anti  plagiarism  softwares  in 
+checking  their  thesis  or  research  papers  before  submitting  to 
+universities or conferences.  
+
+Identifying  the  plagiarized  content  has  become  one  of  the 
+major  concerns  of  journals  publishers,  research  center  and 
+conferences  organisers.  The  software  that  are  mentioned  and 
+referred  to  in  this  paper  are  all  valuable  resources  to  discover 
+plagiarized  materials.  By  employing  these  softwares  one  can 
+ascertain that none of the articles, documents or research work in 
+any  form  and  capacity,  is  not  plagiarized  and  thereby  the 
+copyright  of  the  publisher  and  the  authors  are  not  violated. 
+Plagiarism  can  destroy  any  one’s  career  and  this  paper  creates 
+awareness  of  plagiarism  softwares  among  research  scholars, 
+faculty  members  and  helps  them  to  have  successful  academic 
+careers in future by avoiding plagiarism.  
+
+Keywords—  Plagiarism,  anti-plagiarism  software,  online 
+plagiarism detection  tools,  plagiarism  checker,  copyright.,academic 
+dishonesty, Plagiarism  Tracker. 
+
+I.   INTRODUCTION  
+Plagiarism  is  a  very  serious  and  common  problem  in 
+Research.  Stealing  of  someone  else  work  is  not  only  common 
+among research  scholars but also very common among  faculty 
+members.  There  have  been many  plagiarism  cases  detected  in 
+India  and  abroad.  For  example,  The  first  case:  A  research 
+scholars  awarded  Ph.D.  in  the  year  1976  for  his  thesis  in 
+English  entitled,  “A  Critical  Study  of  the  Suta  Samhita”.  As 
+per  his  allegation,  almost  80%  of  his  thesis  has  been 
+plagiarized  by  “another  scholar”  [1]  in  Hindi  verbatim 
+including  footnotes,  charts  and  tables.  This  scholar  submitted 
+his  thesis  entitled,  “Suta  Samhita  ka  Alocanatmak  Adhyayan” 
+to  another  University  and  got  Ph.D.  in  the  year  1981.  In  the 
+second case: A  “vice-chancellor”  [2] resigned  in 2003 after he 
+
+and  a  student  were  found  guilty  of  plagiarism  of  a  paper 
+(which formed part of the student's thesis). In the third case: A 
+“professor”  [3]  is  accused  of  plagiarizing  more  than  70 
+research  papers  published  between  2004  and  2007. University 
+Executive  Council  has  banned  him 
+from  undertaking 
+examination  work  and  research  guidance.  He  has  been 
+debarred  from  securing  further  promotions  and  appointments 
+to  administrative  positions.  In  the  fourth  case:  A  “Chancellor 
+and  the  Education Minister”  [4]  for  the  country,  has  resigned 
+after  her  Ph.D.  was  revoked  following  an  investigation  into 
+her  doctoral  thesis  that  found  evidence  of  plagiarism.  Above 
+motioned  cases  not  only  describe  the  seriousness  of  the 
+problem  but  also  show  that  plagiarism  can  destroy  any  one’s 
+career. 
+In  the  age  of  advanced  Information  and  Communication 
+Technologies  (ICT)  plagiarism  has  become  more  actual  and 
+turned  into  a  serious  problem.  Many  tools  have  been 
+developed  for  detecting  similarities  in  files  [5].  These  tools 
+automate  the  detection  process  and  allow  the  academic  to 
+carry out the investigation process manually [6]. 
+Plagiarism  detection  software  benefits  academicians, 
+research  scholars and anyone  else  interested  in  safeguard  their 
+writing.  By  using  plagiarism  detection  software  one  can 
+ensure  that  the  text  is  unique.  Through  plagiarism  detection 
+tools  research community can benefit by  having  their  research 
+paper/theses  and  dissertation  checked  for  any  plagiarism  done 
+unintentionally. 
+
+II.  REVIEW OF LITERATURE 
+Asim  , Ali, Hussam  and Vaclav  [7]  find  that  till  now  there 
+is    no  software  that  can  100%  detect  or    prove  that  the 
+document has been plagiarize, because each software and tools 
+has  advantages  and  limitation. Arbib &  Eti Yaari  [8]  find  that 
+students  perceive  plagiarism  offences  from  online  sources  as 
+significantly  less dishonest  than  similar offences  using printed 
+sources.  Smith,   Ghazali, & Minhad  [9]  suggested  that  factors 
+contributing  to plagiarism include  lack  of  awareness,  lack  of 
+understanding,  lack  of  competence,  and  personal attitudes. No 
+evidence  was  found  to  support  the  suggestion  that  either 
+pressure  or  the  availability  of  internet  facilities  had  increased 
+the  incidence  of  plagiarism.  Kwong,  Ng, Mark  &  Wong  [10] 
+find  that  faculty  members  and  students  do  not  share  a 
+consensus 
+on 
+the 
+definition 
+of 
+the 
+seriousness 
+
+
+2<LTTextBoxHorizontal(0) 306.719,660.352,561.315,754.306 u"VI.  CIRCUMSTANCES OF PLAGIARISM \nPlagiarism  occur  under \nis \ntwo  circumstances  one \nintentional  another  is  unintentional.  \u201cplagiarism,  a  form  of \nintellectual  dishonesty, \ninvolves  unintentionally  using \nsomeone  else's  work  without  properly  acknowledging  where \nthe  idea(s)  came  from  (the  most  common  form  of  plagiarism) \nor  intentionally  copying  someone  else's  work  and  passing  it \noff as your own (the most serious form of plagiarism)\u201d[20]. \n">-
+2<LTTextBoxHorizontal(1) 36.717,385.055,561.374,806.728 u"2015 4th International Symposium on Emerging Trends and Technologies in Libraries and Information Services\ntheft  or  misappropriation  of  intellectual  property  and  the \nof plagiarism and  collusion.  Students,  in  general,  commit \nsubstantial unattributed textual copying of another\u2019s work.  \nmisconduct  due  to  academic  work,  pressure  for  grades,  and \nteachers'  unclear  instructions  of  academic  integrity.  Faculty \nmembers  rarely  report  cases  of  misconduct  to  the  university \nand  handle  the  cases  according  to  their  own  standard. \nZimerman  [11]  find  that  there  is  a  definite  problem  involved \nin  the  interaction  of  international  student  in  the  higher \neducation  setting  and  plagiarism.  Kaner  &  Fiedler  [12]  say \nthat an appearance of  successful plagiarism prevention may  in \nfact  reflect  better  training  of  students  to  avoid  plagiarism \ndetection  .Gorman  [13]  says  \u201cPlagiarism has  been  common \nplagiarism for  fear  of  litigation.  \u201cLitigation(cid:486)creep\u201d  has  spread, \namong  generations  of  students  in  secondary  and  tertiary \neducation  and  the  situation  has  not  improved.  Many  tertiary \nthan  tackling  the  issue  head(cid:486)on\u201d.  According  to  Alzahrani, \ninstitutions  almost  never  make  a  forceful  response  to  cases  of \nwith universities regularly adopting avoidance measures rather \nSalim  and  Abraham  [14]  \u201cAmong  the  ways  of  plagiarism \nprevention is the use of plagiarism detectors; Turnitin is a very \npopular one. Academic institutions, publishers, and conference \nmanagement  systems  have  started  to  use  detectors.  Examples \ninclude,  but  not  limited  to,  WCopyFind  that  is  used  by  the \nUniversity  of  Virginia,  CrossCheck  that  is  invested  by \nElsevier,  Springer,  Massachusetts  Institute  of  Technology \npress,  and  other  renowned  publishers,  Docoloc  that  is \nintegrated  with  EDAS  conference  management  system. \nNowadays, many anti plagiarism tools have been built and can \nbe found on the Internet\u201d. \nIII.  OBJECTIVE \nThe objectives of this paper are as follows: \n\u2022  To  identify  the  plagiarism  detection  tools  which \nare freely available online; and \n\u2022  To suggest how to avoid plagiarism in research.  \n">-
+2<LTTextBoxHorizontal(2) 306.699,498.141,561.267,580.133 u'B.  Unintentional plagiarism \nUnintentional  plagiarism  occurs  when  even  if  a  person \ndoes  not  have  any    intention  to  plagiarized   but  he/she  has  not \ngiven  the  references  in  proper  manner    then  they  indulged  in \nplagiarism.  \u201cUnintentional  plagiarism \nincludes  careless \nparaphrasing,  paraphrasing  a  source  without  citing,  forget \nfootnote etc.\u201d [21]. \n'>-
+2<LTTextBoxHorizontal(3) 306.709,590.162,561.337,650.322 u'A.  Intentional plagiarism   \nIntentional  plagiarism  occur \nintentionally \nif  person \ncopying  other  material  and  not  citing  the  source  deliberately. \nIt  includes,  copying  other\u2019s  work,  copy  and  pasting  form \nonline source, purchasing papers from paper mills etc. \n'>-
+2<LTTextBoxHorizontal(4) 306.720,280.776,561.413,486.128 u'VII. PLAGIARISM DETECTION TOOLS/SOFTWARE \n\u201cPlagiarism  detection  is  the  process  of  featuring  the \ndocument,  analyzing  its  content,  unveiling  portions  that might \nbe  plagiarized,  and  bringing  similar  source  documents,  if  they \nare  available.\u201d  [22]  \u201cUsing  plagiarism  detection  tools  would \nbenefit  the  scholarly  publication  process  by  helping  authors \nexamine  their  own  work  and  by  allowing  reviewers  and \neditors to detect and deter plagiarism prior to publication.\u201d[23] \nPlagiarism tools, while invaluable for discovering potential \nproblems,  can  also  expose  cases  where  judgments  depend  on \ncomplex circumstances.[24].  \nPlagiarism  detection  tools/Anti  \u2013plagiarism  software  can \nbe divided into two groups. \nA.  Proprietary/Commercial  anti-plagiarism \nsoftware \nB.  Free online plagiarism tools/software \n'>-
+2<LTTextBoxHorizontal(5) 536.346,308.614,561.220,321.701 u'tools/ \n'>-
+2<LTTextBoxHorizontal(6) 306.721,166.802,561.268,270.745 u'A.  Proprietary or Commercial anti-plagiarism software/tools \nthe  Latin \n\u201cThe \nfrom \nterm proprietary is  derived \nword proprietas meaning property.  Proprietary \nsoftware is \nsoftware that is owned by an individual or a company (usually \nthe  one \nthat  developed \nit)\u201d[25].  There \nis  a \nlot  of \nproprietary/commercial  anti-plagiarism  software  viz.  Turnitin, \nCopyCatch  Gold,  EVE2:Essay  Verification  Engine,  J  Plag, \nMoss  ,EduTie.com,  PlagiServe, Wordcheck  etc.  For  using  the \ncommercial software user has to purchase the software. \n'>-
+2<LTTextBoxHorizontal(7) 306.721,118.565,561.320,156.772 u'B.  Free online software/tools \n\u201cFree software, which is generally the same as open source \nsoftware,  is  available  at  no  cost  to  everyone,  and  it  can  be \n'>-
+2<LTTextBoxHorizontal(8) 36.716,300.944,291.361,373.042 u'IV.  SCOPE & LIMITATION \nThere  are  many  commercial  plagiarism  software  available \nviz.    Copy  Catch  Gold,  EVE2:Essay  Verification  Engine,  J \nPlag,  Moss,  Turnitin,  EduTie.com,  PlagiServe,  Wordcheck \netc.  but  this  paper    covers  anti-  plagiarism  tools  which  are \nfreely available  online . \n'>-
+2<LTTextBoxHorizontal(9) 36.718,105.472,291.315,288.932 u'V.   PLAGIARISM  \nThe  word  \u2018plagiarism\u2019  comes  from  the  Latin  word \n\u2018plagiare\u2019  which  means  \u201cto  kidnap\u2019.  Plagiarism  is  a  type  of \ncheating  where  students  present  the  work  of  others  as  their \nown  for  the  purpose  of  academic  credit.  [15].  Plagiarism  is \ndefined in many different ways, \n\u201cUnacknowledged copying of documents or programs\u2019\u2019 [16] \n\u201cThe presentation of another person\u2019s ideas or materials as if it \nwere ones own\u201d [17] \n\u201c The submission of the part or all of another person\u2019s work as \nif  it  were  ones  own, without  the  knowledge  of  the  author  ,and \nwith intention to deceive\u201d[18] \nAs  a  general  working  definition,  Office  of  Research \nIntegrity  (ORI)  [19]  considers  plagiarism  to  include  both  the \n'>-
+2<LTTextBoxHorizontal(10) 290.160,36.684,307.650,61.176 u'276 \n \n'>-
+2<LTRect 149.640,580.640,288.720,592.400>-
+2<LTRect 36.720,569.120,288.720,580.880>-
+2<LTRect 36.720,557.720,288.720,569.480>-
+2<LTRect 36.720,546.200,288.720,557.960>-
+2<LTRect 36.720,534.680,288.720,546.440>-
+2<LTRect 36.720,523.160,288.720,534.920>-
+2<LTRect 36.720,511.640,288.720,523.400>-
+2<LTRect 36.720,500.120,288.720,511.880>-
+2<LTRect 36.720,488.720,288.720,500.480>-
+2<LTRect 36.720,477.200,288.720,488.960>-
+2<LTRect 36.720,465.680,139.800,477.440>-
+2<LTRect 321.120,457.400,558.720,469.160>-
+2<LTRect 306.720,446.480,558.720,458.240>-
+2<LTRect 306.720,435.560,558.720,447.320>-
+2<LTRect 306.720,424.640,558.720,436.400>-
+2<LTRect 306.720,413.720,558.720,425.480>-
+2<LTRect 306.720,402.800,558.720,414.560>-
+2<LTRect 306.720,391.880,558.000,403.640>-
+2015 4th International Symposium on Emerging Trends and Technologies in Libraries and Information Services
+theft  or  misappropriation  of  intellectual  property  and  the 
+of plagiarism and  collusion.  Students,  in  general,  commit 
+substantial unattributed textual copying of another’s work.  
+misconduct  due  to  academic  work,  pressure  for  grades,  and 
+teachers'  unclear  instructions  of  academic  integrity.  Faculty 
+members  rarely  report  cases  of  misconduct  to  the  university 
+and  handle  the  cases  according  to  their  own  standard. 
+Zimerman  [11]  find  that  there  is  a  definite  problem  involved 
+in  the  interaction  of  international  student  in  the  higher 
+education  setting  and  plagiarism.  Kaner  &  Fiedler  [12]  say 
+that an appearance of  successful plagiarism prevention may  in 
+fact  reflect  better  training  of  students  to  avoid  plagiarism 
+detection  .Gorman  [13]  says  “Plagiarism has  been  common 
+plagiarism for  fear  of  litigation.  “Litigation(cid:486)creep”  has  spread, 
+among  generations  of  students  in  secondary  and  tertiary 
+education  and  the  situation  has  not  improved.  Many  tertiary 
+than  tackling  the  issue  head(cid:486)on”.  According  to  Alzahrani, 
+institutions  almost  never  make  a  forceful  response  to  cases  of 
+with universities regularly adopting avoidance measures rather 
+Salim  and  Abraham  [14]  “Among  the  ways  of  plagiarism 
+prevention is the use of plagiarism detectors; Turnitin is a very 
+popular one. Academic institutions, publishers, and conference 
+management  systems  have  started  to  use  detectors.  Examples 
+include,  but  not  limited  to,  WCopyFind  that  is  used  by  the 
+University  of  Virginia,  CrossCheck  that  is  invested  by 
+Elsevier,  Springer,  Massachusetts  Institute  of  Technology 
+press,  and  other  renowned  publishers,  Docoloc  that  is 
+integrated  with  EDAS  conference  management  system. 
+Nowadays, many anti plagiarism tools have been built and can 
+be found on the Internet”. 
+III.  OBJECTIVE 
+The objectives of this paper are as follows: 
+•  To  identify  the  plagiarism  detection  tools  which 
+are freely available online; and 
+•  To suggest how to avoid plagiarism in research.  
+
+IV.  SCOPE & LIMITATION 
+There  are  many  commercial  plagiarism  software  available 
+viz.    Copy  Catch  Gold,  EVE2:Essay  Verification  Engine,  J 
+Plag,  Moss,  Turnitin,  EduTie.com,  PlagiServe,  Wordcheck 
+etc.  but  this  paper    covers  anti-  plagiarism  tools  which  are 
+freely available  online . 
+
+V.   PLAGIARISM  
+The  word  ‘plagiarism’  comes  from  the  Latin  word 
+‘plagiare’  which  means  “to  kidnap’.  Plagiarism  is  a  type  of 
+cheating  where  students  present  the  work  of  others  as  their 
+own  for  the  purpose  of  academic  credit.  [15].  Plagiarism  is 
+defined in many different ways, 
+“Unacknowledged copying of documents or programs’’ [16] 
+“The presentation of another person’s ideas or materials as if it 
+were ones own” [17] 
+“ The submission of the part or all of another person’s work as 
+if  it  were  ones  own, without  the  knowledge  of  the  author  ,and 
+with intention to deceive”[18] 
+As  a  general  working  definition,  Office  of  Research 
+Integrity  (ORI)  [19]  considers  plagiarism  to  include  both  the 
+
+VI.  CIRCUMSTANCES OF PLAGIARISM 
+Plagiarism  occur  under 
+is 
+two  circumstances  one 
+intentional  another  is  unintentional.  “plagiarism,  a  form  of 
+intellectual  dishonesty, 
+involves  unintentionally  using 
+someone  else's  work  without  properly  acknowledging  where 
+the  idea(s)  came  from  (the  most  common  form  of  plagiarism) 
+or  intentionally  copying  someone  else's  work  and  passing  it 
+off as your own (the most serious form of plagiarism)”[20]. 
+
+A.  Intentional plagiarism   
+Intentional  plagiarism  occur 
+intentionally 
+if  person 
+copying  other  material  and  not  citing  the  source  deliberately. 
+It  includes,  copying  other’s  work,  copy  and  pasting  form 
+online source, purchasing papers from paper mills etc. 
+
+B.  Unintentional plagiarism 
+Unintentional  plagiarism  occurs  when  even  if  a  person 
+does  not  have  any    intention  to  plagiarized   but  he/she  has  not 
+given  the  references  in  proper  manner    then  they  indulged  in 
+plagiarism.  “Unintentional  plagiarism 
+includes  careless 
+paraphrasing,  paraphrasing  a  source  without  citing,  forget 
+footnote etc.” [21]. 
+
+VII. PLAGIARISM DETECTION TOOLS/SOFTWARE 
+“Plagiarism  detection  is  the  process  of  featuring  the 
+document,  analyzing  its  content,  unveiling  portions  that might 
+be  plagiarized,  and  bringing  similar  source  documents,  if  they 
+are  available.”  [22]  “Using  plagiarism  detection  tools  would 
+benefit  the  scholarly  publication  process  by  helping  authors 
+examine  their  own  work  and  by  allowing  reviewers  and 
+editors to detect and deter plagiarism prior to publication.”[23] 
+Plagiarism tools, while invaluable for discovering potential 
+problems,  can  also  expose  cases  where  judgments  depend  on 
+complex circumstances.[24].  
+Plagiarism  detection  tools/Anti  –plagiarism  software  can 
+be divided into two groups. 
+A.  Proprietary/Commercial  anti-plagiarism 
+software 
+B.  Free online plagiarism tools/software 
+
+A.  Proprietary or Commercial anti-plagiarism software/tools 
+the  Latin 
+“The 
+from 
+term proprietary is  derived 
+word proprietas meaning property.  Proprietary 
+software is 
+software that is owned by an individual or a company (usually 
+the  one 
+that  developed 
+it)”[25].  There 
+is  a 
+lot  of 
+proprietary/commercial  anti-plagiarism  software  viz.  Turnitin, 
+CopyCatch  Gold,  EVE2:Essay  Verification  Engine,  J  Plag, 
+Moss  ,EduTie.com,  PlagiServe, Wordcheck  etc.  For  using  the 
+commercial software user has to purchase the software. 
+
+B.  Free online software/tools 
+“Free software, which is generally the same as open source 
+software,  is  available  at  no  cost  to  everyone,  and  it  can  be 
+
+
+3<LTTextBoxHorizontal(0) 36.723,649.436,291.332,754.273 u'VIII.  FREE ONLINE PLAGIARISM TOOLS \nFree plagiarism detection  tools along with  the website address \nare  mentioned  in  below  tables.  Softwares  which  are  freely \navailable online are mentioned in table I and user can use it by \nsimply  open \nfreely \n  Softwares  which  are \nlink. \nthe \ndownloadable  online  are  mentioned  in  table  II  and  user  can \ndownload  the  software  by  using  the  web  address  and  use  it. \nSoftwares  which  can  be  used  free  of  cost  with  sign  up \nrequirement are mentioned in table III. \n'>-
+3<LTTextBoxHorizontal(1) 51.120,468.049,561.354,806.728 u'2015 4th International Symposium on Emerging Trends and Technologies in Libraries and Information Services\nproper  manner,  then  he/she  has  indulged  in  plagiarism.  There \nused  by  anyone  for  any  purpose  and  with  only  very \nare  some  simple \ntips  for  avoiding  plagiarism  of \nthe \nminimal restrictions\u201d [26]. \nunintentional variety. \n\u2022  Researcher  should  give  citation  for  all  material \nwhatever  he/she  is  using  for  his/her  research \nwork. \n\u2022  Researcher  should  know  how  anti  plagiarism \ntools work. \nIf anyone takes away text from his/her own article \nfor  writing  another  article  is  known  as  self \nplagiarism, \ntherefore  researcher  should  give \ncitation for that work also. \n\u2022  People  some  times  change  the  word  in  the  text \nand  clam  it  as  their  own  yet,  then  also  falls  under \nplagiarism, \ntherefore  researcher  should  give \nreference  for  that    idea  also which  he/she  is  using \nfor  his/her  research  work  even  if    he/she  change \nthe words. \nIf the researcher use  someone else\u2019s words as it is \nhe/she  should always use quotation marks \n\u2022  While  citing  the  sources  academic  style  sheet  ( \nlike APA, MLA, Chicago) should be followed \n\u2022  After  finishing  all  works  a  researcher    should \ncheck  through  online  plagiarism  software  before \nsummiting his/her research work in anywhere \n'>-
+3<LTTextBoxHorizontal(2) 38.765,340.335,291.390,637.424 u'IX.  BENEFITS OF USING ANTI-PLAGIARISM DETECTION TOOLS \n\u2022  With  the  help  of  plagiarism  detection  tools \nresearcher can  find out  if any  other person copied \nhis/her research writing. \nIt  helps  to  improve  writing  skills  as  some \nplagiarism tools check grammar also. \n\u2022 \nIt  filters the duplicate content. \n\u2022  These  tools  are  useful  to  avoid  intellectual \nproperty issues. \n\u2022 \nIt promotes effective and efficient research. \n\u2022  These  softwares  are  useful  for  research  scholars, \nwebsite creator, and publisher. \n\u2022  Plagiarism \nto  access  multiple \ntools  allow \ndatabases. \nIt allows to detect any incidents of plagiarism and \nhelps to take appropriate action. \nIt helps the researcher  to properly cite references \nIt creates awareness of plagiarism among research \nscholars,  faculty  members  and  help  them  to  have \nsuccessful  academic  careers  in  future  by  avoiding \nplagiarism. \n'>-
+3<LTTextBoxHorizontal(3) 69.117,568.830,76.448,583.909 u'\u2022 \n'>-
+3<LTTextBoxHorizontal(4) 69.117,419.329,76.448,434.408 u'\u2022 \n'>-
+3<LTTextBoxHorizontal(5) 69.117,373.133,76.448,405.853 u'\u2022 \n\u2022 \n'>-
+3<LTTextBoxHorizontal(6) 339.116,669.771,346.445,684.850 u'\u2022 \n'>-
+3<LTTextBoxHorizontal(7) 339.116,547.043,346.445,562.122 u'\u2022 \n'>-
+3<LTTextBoxHorizontal(8) 306.718,118.945,561.351,456.037 u'XII. CONCLUSION \nIn  this  technological  era,  plagiarism  detection  is  essential \nfor  protecting  the  written  work.  It  is  concluded  that  all \nresearch  scholars  and  authors  of  journal  articles  should  be \naware  of  plagiarism  and  anti-plagiarism  softwares.  Now  -a  -\ndays  \u201cUniversity  Grants  Commission\u201d  (UGC)  insists  research \nscholars  to  send  one  soft  copy  to  the  thesis  to  \u201cInformation \nand  Library  Network\u201d  (INFLIBNET)  while  submitting  to \nUniversities.  So  faculty  members  and  research  scholars  have \nto use one   of these anti plagiarism softwares in checking their \nthesis or  research paper before  submitting  to  universities. This \nwill  definitely  improve  the  quality  of  the  thesis  work  of  the \nresearch scholars and authors of journal article. \nReferences \n[1]  Shivamurthaiah,T.,\u201cAn Easy Way to get a Ph.D. Degree from the \nUniversities.  Available on \nhttp://www.taralabalu.org/Suta%20Samhita/plagiarism/ \n[2]  \u201cPhysics plagiarism.\u201d,Available on \nhttp://web.archive.org/web/20091027034050/http:/geocities.com/physics\n_plagiarism/ \n[3]  \u201cScientific plagiarism in India.\u201dAvailable on : \nhttp://en.wikipedia.org/wiki/Scientific_plagiarism_in_India \n[4]  Bailey,J.\u201dGerman  Education  Minister  Resignation:  Plagiarism  or \nPolitics?\u201d  Available  on \n  http://www.ithenticate.com/plagiarism-\ndetection-blog/bid/91110/German-Education-Minister-Resignation-\nPlagiarism-or-Politics \n[5]  Mozgovoy, M. ; ldquo, \u201cDesktop Tools for Offline Plagiarism Detection \nin Computer Programs,\u201d Informatics in Education, vol. 5, no. 1, pp. 97-\n112, 2006. \n[6]  Cosma,  G.;  Joy,  M.,  "An  Approach  to  Source-Code  Plagiarism \nDetection \nand \nInvestigation \nUsing \nLatent \nSemantic \n'>-
+3<LTTextBoxHorizontal(9) 51.118,185.508,291.310,328.323 u'X.  LIMITATIONS OF DETECTION TOOLS \n\u201cThe drawbacks of detection tools are: \n\u2022 \nInability  to  distinguish  correctly  cited  text  from \nplagiarized text.  \n\u2022  Books  are \ntypically  not  searched  by \nservices. \n\u2022  Detect  plagiarized  words,  not  plagiarized \nthoughts or ideas.  \nInability  to  process  textual  images  for  similarity \nchecks\u201d[46]. \n'>-
+3<LTTextBoxHorizontal(10) 268.035,253.655,291.172,266.742 u'these \n'>-
+3<LTTextBoxHorizontal(11) 69.116,196.593,76.446,211.672 u'\u2022 \n'>-
+3<LTTextBoxHorizontal(12) 36.720,112.419,291.325,173.496 u'XI.   SUGGESTIONS TO AVOID UNINTENTIONAL PLAGIARISM  \nIf a researcher is intentionally plagiarizing in his/her paper, \nthesis, or dissertation, he/she    should  stop  it. Otherwise  it may \nspoil  his/her  carrier.  But  sometimes  even  if  a  researcher  has \nnot  intestinally  plagiarized  but  has  not  given  references  in \n'>-
+3<LTTextBoxHorizontal(13) 290.160,36.684,307.650,61.176 u'277 \n \n'>-
+3<LTRect 324.720,157.280,558.720,166.760>-
+3<LTRect 324.720,147.800,558.720,160.040>-
+3<LTRect 324.720,139.400,358.680,148.880>-
+VIII.  FREE ONLINE PLAGIARISM TOOLS 
+Free plagiarism detection  tools along with  the website address 
+are  mentioned  in  below  tables.  Softwares  which  are  freely 
+available online are mentioned in table I and user can use it by 
+simply  open 
+freely 
+  Softwares  which  are 
+link. 
+the 
+downloadable  online  are  mentioned  in  table  II  and  user  can 
+download  the  software  by  using  the  web  address  and  use  it. 
+Softwares  which  can  be  used  free  of  cost  with  sign  up 
+requirement are mentioned in table III. 
+
+2015 4th International Symposium on Emerging Trends and Technologies in Libraries and Information Services
+proper  manner,  then  he/she  has  indulged  in  plagiarism.  There 
+used  by  anyone  for  any  purpose  and  with  only  very 
+are  some  simple 
+tips  for  avoiding  plagiarism  of 
+the 
+minimal restrictions” [26]. 
+unintentional variety. 
+•  Researcher  should  give  citation  for  all  material 
+whatever  he/she  is  using  for  his/her  research 
+work. 
+•  Researcher  should  know  how  anti  plagiarism 
+tools work. 
+If anyone takes away text from his/her own article 
+for  writing  another  article  is  known  as  self 
+plagiarism, 
+therefore  researcher  should  give 
+citation for that work also. 
+•  People  some  times  change  the  word  in  the  text 
+and  clam  it  as  their  own  yet,  then  also  falls  under 
+plagiarism, 
+therefore  researcher  should  give 
+reference  for  that    idea  also which  he/she  is  using 
+for  his/her  research  work  even  if    he/she  change 
+the words. 
+If the researcher use  someone else’s words as it is 
+he/she  should always use quotation marks 
+•  While  citing  the  sources  academic  style  sheet  ( 
+like APA, MLA, Chicago) should be followed 
+•  After  finishing  all  works  a  researcher    should 
+check  through  online  plagiarism  software  before 
+summiting his/her research work in anywhere 
+
+IX.  BENEFITS OF USING ANTI-PLAGIARISM DETECTION TOOLS 
+•  With  the  help  of  plagiarism  detection  tools 
+researcher can  find out  if any  other person copied 
+his/her research writing. 
+It  helps  to  improve  writing  skills  as  some 
+plagiarism tools check grammar also. 
+• 
+It  filters the duplicate content. 
+•  These  tools  are  useful  to  avoid  intellectual 
+property issues. 
+• 
+It promotes effective and efficient research. 
+•  These  softwares  are  useful  for  research  scholars, 
+website creator, and publisher. 
+•  Plagiarism 
+to  access  multiple 
+tools  allow 
+databases. 
+It allows to detect any incidents of plagiarism and 
+helps to take appropriate action. 
+It helps the researcher  to properly cite references 
+It creates awareness of plagiarism among research 
+scholars,  faculty  members  and  help  them  to  have 
+successful  academic  careers  in  future  by  avoiding 
+plagiarism. 
+
+X.  LIMITATIONS OF DETECTION TOOLS 
+“The drawbacks of detection tools are: 
+• 
+Inability  to  distinguish  correctly  cited  text  from 
+plagiarized text.  
+•  Books  are 
+typically  not  searched  by 
+services. 
+•  Detect  plagiarized  words,  not  plagiarized 
+thoughts or ideas.  
+Inability  to  process  textual  images  for  similarity 
+checks”[46]. 
+
+XI.   SUGGESTIONS TO AVOID UNINTENTIONAL PLAGIARISM  
+If a researcher is intentionally plagiarizing in his/her paper, 
+thesis, or dissertation, he/she    should  stop  it. Otherwise  it may 
+spoil  his/her  carrier.  But  sometimes  even  if  a  researcher  has 
+not  intestinally  plagiarized  but  has  not  given  references  in 
+
+XII. CONCLUSION 
+In  this  technological  era,  plagiarism  detection  is  essential 
+for  protecting  the  written  work.  It  is  concluded  that  all 
+research  scholars  and  authors  of  journal  articles  should  be 
+aware  of  plagiarism  and  anti-plagiarism  softwares.  Now  -a  -
+days  “University  Grants  Commission”  (UGC)  insists  research 
+scholars  to  send  one  soft  copy  to  the  thesis  to  “Information 
+and  Library  Network”  (INFLIBNET)  while  submitting  to 
+Universities.  So  faculty  members  and  research  scholars  have 
+to use one   of these anti plagiarism softwares in checking their 
+thesis or  research paper before  submitting  to  universities. This 
+will  definitely  improve  the  quality  of  the  thesis  work  of  the 
+research scholars and authors of journal article. 
+References 
+[1]  Shivamurthaiah,T.,“An Easy Way to get a Ph.D. Degree from the 
+Universities.  Available on 
+http://www.taralabalu.org/Suta%20Samhita/plagiarism/ 
+[2]  “Physics plagiarism.”,Available on 
+http://web.archive.org/web/20091027034050/http:/geocities.com/physics
+_plagiarism/ 
+[3]  “Scientific plagiarism in India.”Available on : 
+http://en.wikipedia.org/wiki/Scientific_plagiarism_in_India 
+[4]  Bailey,J.”German  Education  Minister  Resignation:  Plagiarism  or 
+Politics?”  Available  on 
+  http://www.ithenticate.com/plagiarism-
+detection-blog/bid/91110/German-Education-Minister-Resignation-
+Plagiarism-or-Politics 
+[5]  Mozgovoy, M. ; ldquo, “Desktop Tools for Offline Plagiarism Detection 
+in Computer Programs,” Informatics in Education, vol. 5, no. 1, pp. 97-
+112, 2006. 
+[6]  Cosma,  G.;  Joy,  M.,  "An  Approach  to  Source-Code  Plagiarism 
+Detection 
+and 
+Investigation 
+Using 
+Latent 
+Semantic 
+
+
+4<LTTextBoxHorizontal(0) 36.708,699.517,48.302,710.258 u'[9] \n'>-
+4<LTTextBoxHorizontal(1) 36.702,363.641,477.552,806.728 u'2015 4th International Symposium on Emerging Trends and Technologies in Libraries and Information Services\nAnalysis," Computers, \nIEEE  Transactions  on ,  vol.61,  no.3, \npp.379,394, March 2012 \n[7]  Asim M. El Tahir  ;Ali, Hussam M. Dahwa Abdulla,  and Vaclav Snasel, \n\u201cOverview  and  Comparison  of  Plagiarism  Detection  Tools\u201d.  Available \non : http://ceur-ws.org/Vol-706/poster22.pdf \n[8]  Arbib  ,S.B.;  Yaari,  E.,\u201cPrinted  Versus  Internet  Plagiarism:  A  Study  of \nInternational \nJournal \nof \nInformation \nStudents\'  Perception\u201d, \nEthics,vol.1,no.6,2004. \n Smith,M; Ghazali N.,  Minhad S., "Attitudes  towards plagiarism among \nundergraduate  accounting  students:  Malaysian  evidence", Asian  Review \nof Accounting, Vol. 15 Iss: 2, pp.122,146,2007 \n[10]  Kwong,T.; Ng \n,K.,   Wong,E.  "Students\'  and  faculty\'s \n,H.;, Mark \nin  Hong  Kong", Campus-Wide \nperception  of  academic \nintegrity \nInformation Systems, Vol. 27 Iss: 5, pp.341,355,2010 \n[11]   Zimerman  M.,  "Plagiarism  and  international  students  in  academic \nlibraries", New Library World, vol. 113 ,Iss: 5/6, pp.290,299,2012 \n[12]  Kaner,  C.;  Fiedler,  R.L.,  "A  Cautionary  Note  on  Checking  Software \nEngineering Papers  for Plagiarism," Education,  IEEE Transactions on , \nvol.51, no.2, pp.184,188, May 2008 \n[13]  Gorman,  G.E  "The  plague  of  plagiarism  in  an  online  world", Online \nInformation Review, Vol. 32,No. 3, pp.297,301,2008 \n[14]  Alzahrani,  S.M.;  Salim,  N.;  Abraham,  A,  "Understanding  Plagiarism \nLinguistic Patterns, Textual Features, and Detection Methods," Systems, \nMan,  and  Cybernetics,  Part  C:  Applications  and  Reviews,  IEEE \nTransactions on , vol.42, no.2, pp.133,149, March 2012 \n[15]  Park, C. \u201cIn Other  (People\'s) Words: Plagiarism by University Students-\nLiterature  and  Lessons\'.  Assessment  &  Evaluation \nin  Higher \nEducation,vol.28,no.5.pp. 471,488 ,2003 \n[16]  Joy  ,M.  ;Luck,  M  \u201cPlagiarism  in  Programming  assignments,\u2019IEEE \nTransactions on Education, vol.42,no.2, pp.129,133,1999 \n[17]  Colwin,F  ;Lancaster,T.  \u201cA  review  of  electronic  services  for  plagiarism \ndetection  in  student  submissions\u201d,  8th  Annual  Conference  on  the \nTeaching of Computing.Edinburgh.2000 \n[18]   Irving,  R.  W.  \u201cPlagiarism  and  collusion  detection  using  the  smith-\nwaterman algorithm\u201d.Glasgow,UK,2004  \n:www.bedfordresearcher.com/links/writing_resources.cfm?type(cid:1308)=(cid:1308)writin\n[19]  \u201cORI  Policy  on  Plagiarism\u201d  ORI  Newsletter,  Vol.3,no.1,available \ng&discipline(cid:1308)=(cid:1308)writing_plagiarism \nat:http://ori.dhhs.gov/policies/plagiarism.shtml \n[20]  Palmquist,  M. , \nat \navailable \n\u201cThe  bedford \nresearcher\u201d,2003 \n[21]  Rajeev  Vij,  Navin  Kumar  Soni,  Gayas  Makhdumi,  \u201cEncouraging \nAcademic  Honesty \nthrough  Anti-plagiarism \nSoftware\u201d \n, \nhttp://www.inflibnet.ac.in/caliber2009/CaliberPDF/55.pdf \n'>-
+4<LTTextBoxHorizontal(2) 306.701,404.184,560.791,789.826 u'[22]  Alzahrani,  S.M.;  Salim,  N.;  Abraham,  A,  "Understanding  Plagiarism \nLinguistic Patterns, Textual Features, and Detection Methods," Systems, \nMan,  and  Cybernetics,  Part  C:  Applications  and  Reviews,  IEEE \nTransactions on , vol.42, no.2, pp.133,149, March 2012 \n[23]  Gotterbarn,  D.;  Miller,  K.;  Impagliazzo,  J.,  "Plagiarism  and  Scholarly \nPublications: An  Ethical Analysis," Frontiers  in  Education Conference, \n36th Annual , pp.22,27, 27-31 Oct. 2006 \n[24]  Seadle,M.  ,  "Copyright  in  the  networked  world:  plagiarism  and  its \nambiguities", Library Hi Tech, Vol. 26, Iss: 4, pp.691,695,2008 \n[25]  \u201cProprietary Software Definition\u201d, http://www.linfo.org/proprietary.html \n[26]  \u201cProprietary Software Definition\u201d, http://www.linfo.org/proprietary.html \n[27]  \u201cArticle checker\u201d, http:/www.articlechecker.com \n[28]  \u201cCrossrefme\u201d, http://www.crossrefme.com/ \n[29]  \u201cDuplichecker\u201d, http:/www.duplichecker.com \n[30]  \u201ceTBLAST \u201d, http://etest.vbi.vt.edu/etblast3/ \n[31]  \u201cI T S\u201d, http://www.itseducation.asia/plagiarism-checker.htm \n[32]  \u201cPaperRater.com\u201d, http://www.paperrater.com/ \n[33]  \u201cPlagiarism Checker\u201d, http://smallseotools.com/plagiarism-checker/ \n[34]  \u201cPlagiarism detect\u201d, http://plagiarism-detect.com/ \n[35]  \u201cPlagiarismChecker.com\u201d, \nhttp://wwwplagiarismchecker.com/help-\nteach \n[36]  \u201cPlagiarismSoftware\u201d, http://www.plagiarismsoftware.net/ \n[37]  \u201cSeeSources\u201d, http://www.plagscan.com/seesources/plagiate.php \n[38]  \u201cThePlagiarismChecker\u201d, \nhttp://www.dustball.com/cs/plagiarism.checker/ \n[39]  \u201cAnti-Plagiarism\u201d, http://sourceforge.net/projects/antiplagiarismc/ \n[40]  \u201cPlagiarism detector\u201d, http://www.plagiarism-detector.com/ \n[41]  \u201cViper\u201d, http://www.scanmyessay.com/ \n[42]  \u201cWcopyfind\u201d, \n \n \nhttp://plagiarism.bloomfieldmedia.com/z-\nwordpress/software/wcopyfind/ \n[43]   \u201cWinsite\u201d, http://anti-plagiarism- software.winsite.com/ linux/ \n[44]    \u201cOpen-Access Plagiarism Search\u201d, https://oaps.eu/ \n[45]    \u201cplagiarismcheck\u201d, http://plagiarismcheck.org/home \n[46]  Jaya,  P.  A.,  \u201cSeminar  report  on  plagiarism  detection  techniques\u201d  . \nAvailable  on  :    http://seminarprojects.com/Thread-seminar-report-on-\nplagiarism-detection-techniques \n'>-
+4<LTTextBoxHorizontal(3) 306.720,378.809,309.210,403.227 u' \n \n'>-
+4<LTTextBoxHorizontal(4) 36.724,349.885,39.214,362.972 u' \n'>-
+4<LTTextBoxHorizontal(5) 184.080,329.303,413.370,340.045 u'TABLE I.  PLAGIARISM DETECTION TOOLS FREELY AVAILABLE ONLINE \n'>-
+4<LTTextBoxHorizontal(6) 40.081,298.463,133.523,318.418 u'Tools/ Software name with \nURL \n'>-
+4<LTTextBoxHorizontal(7) 223.320,303.021,292.893,313.739 u'Method of checking \n'>-
+4<LTTextBoxHorizontal(8) 36.720,241.944,135.606,282.868 u'Article checker [27] \n \nhttp:/www.articlechecker.com \n'>-
+4<LTTextBoxHorizontal(9) 145.557,238.712,370.859,286.108 u'It has three boxes, the first and third box enables to check a webpage \nwhile  the  middle  allows    to  paste  text/written  words.  The  content \nwhich user want  to  check  for plagiarism has  to be pasted    in  the  text \nbox  and  press  the  \u201c  compare\u201d  button.  It  will  compare  with  search \nengine and give the report.  \n'>-
+4<LTTextBoxHorizontal(10) 36.720,183.624,128.006,224.548 u'Crossrefme [28] \n \nhttp://www.crossrefme.com \n'>-
+4<LTTextBoxHorizontal(11) 145.557,189.630,370.815,218.550 u'User has  to   paste  the  text  into  the given box  and press  the  \u201csubmit\u201d \nbutton.  It  will  compare  with  the  document  available  on  internet  and \ngive the report. \n'>-
+4<LTTextBoxHorizontal(12) 441.478,295.456,493.231,321.417 u'Pros and Cons \n \n'>-
+4<LTTextBoxHorizontal(13) 379.562,178.945,555.254,290.586 u'Pros Webpage and text \ncan be checked with google and yahoo option. \nCons There is no  facility to  upload a file. \nIt can check text document only. \nPros This service could be used to determine whether \na given text has been correctly referenced. \nCons There is no  facility to  upload a file. \nIt can check text document only. \n'>-
+4<LTTextBoxHorizontal(14) 290.160,36.684,307.650,61.176 u'278 \n \n'>-
+4<LTRect 324.720,632.960,371.640,642.440>-
+4<LTRect 328.200,610.040,388.200,620.240>-
+4<LTRect 324.720,511.520,387.000,521.000>-
+4<LTRect 31.080,322.760,31.560,323.240>-
+4<LTRect 31.080,322.760,558.960,323.240>-
+4<LTRect 558.480,322.760,558.960,323.240>-
+4<LTRect 31.080,292.280,31.560,322.760>-
+4<LTRect 140.040,292.280,140.520,322.760>-
+4<LTRect 374.040,292.280,374.520,322.760>-
+4<LTRect 558.480,292.280,558.960,322.760>-
+4<LTRect 31.080,291.800,558.960,292.280>-
+4<LTRect 31.080,231.080,31.560,291.800>-
+4<LTRect 140.040,231.080,140.520,291.800>-
+4<LTRect 374.040,231.080,374.520,291.800>-
+4<LTRect 558.480,231.080,558.960,291.800>-
+4<LTRect 31.080,230.600,558.960,231.080>-
+4<LTRect 31.080,175.280,31.560,230.600>-
+4<LTRect 31.080,175.280,140.040,175.760>-
+4<LTRect 140.040,175.280,140.520,230.600>-
+4<LTRect 140.520,175.280,374.040,175.760>-
+4<LTRect 374.040,175.280,374.520,230.600>-
+4<LTRect 374.520,175.280,558.480,175.760>-
+4<LTRect 558.480,175.280,558.960,230.600>-
+4<LTRect 558.480,175.280,558.960,175.760>-
+2015 4th International Symposium on Emerging Trends and Technologies in Libraries and Information Services
+Analysis," Computers, 
+IEEE  Transactions  on ,  vol.61,  no.3, 
+pp.379,394, March 2012 
+[7]  Asim M. El Tahir  ;Ali, Hussam M. Dahwa Abdulla,  and Vaclav Snasel, 
+“Overview  and  Comparison  of  Plagiarism  Detection  Tools”.  Available 
+on : http://ceur-ws.org/Vol-706/poster22.pdf 
+[8]  Arbib  ,S.B.;  Yaari,  E.,“Printed  Versus  Internet  Plagiarism:  A  Study  of 
+International 
+Journal 
+of 
+Information 
+Students'  Perception”, 
+Ethics,vol.1,no.6,2004. 
+ Smith,M; Ghazali N.,  Minhad S., "Attitudes  towards plagiarism among 
+undergraduate  accounting  students:  Malaysian  evidence", Asian  Review 
+of Accounting, Vol. 15 Iss: 2, pp.122,146,2007 
+[10]  Kwong,T.; Ng 
+,K.,   Wong,E.  "Students'  and  faculty's 
+,H.;, Mark 
+in  Hong  Kong", Campus-Wide 
+perception  of  academic 
+integrity 
+Information Systems, Vol. 27 Iss: 5, pp.341,355,2010 
+[11]   Zimerman  M.,  "Plagiarism  and  international  students  in  academic 
+libraries", New Library World, vol. 113 ,Iss: 5/6, pp.290,299,2012 
+[12]  Kaner,  C.;  Fiedler,  R.L.,  "A  Cautionary  Note  on  Checking  Software 
+Engineering Papers  for Plagiarism," Education,  IEEE Transactions on , 
+vol.51, no.2, pp.184,188, May 2008 
+[13]  Gorman,  G.E  "The  plague  of  plagiarism  in  an  online  world", Online 
+Information Review, Vol. 32,No. 3, pp.297,301,2008 
+[14]  Alzahrani,  S.M.;  Salim,  N.;  Abraham,  A,  "Understanding  Plagiarism 
+Linguistic Patterns, Textual Features, and Detection Methods," Systems, 
+Man,  and  Cybernetics,  Part  C:  Applications  and  Reviews,  IEEE 
+Transactions on , vol.42, no.2, pp.133,149, March 2012 
+[15]  Park, C. “In Other  (People's) Words: Plagiarism by University Students-
+Literature  and  Lessons'.  Assessment  &  Evaluation 
+in  Higher 
+Education,vol.28,no.5.pp. 471,488 ,2003 
+[16]  Joy  ,M.  ;Luck,  M  “Plagiarism  in  Programming  assignments,’IEEE 
+Transactions on Education, vol.42,no.2, pp.129,133,1999 
+[17]  Colwin,F  ;Lancaster,T.  “A  review  of  electronic  services  for  plagiarism 
+detection  in  student  submissions”,  8th  Annual  Conference  on  the 
+Teaching of Computing.Edinburgh.2000 
+[18]   Irving,  R.  W.  “Plagiarism  and  collusion  detection  using  the  smith-
+waterman algorithm”.Glasgow,UK,2004  
+:www.bedfordresearcher.com/links/writing_resources.cfm?type(cid:1308)=(cid:1308)writin
+[19]  “ORI  Policy  on  Plagiarism”  ORI  Newsletter,  Vol.3,no.1,available 
+g&discipline(cid:1308)=(cid:1308)writing_plagiarism 
+at:http://ori.dhhs.gov/policies/plagiarism.shtml 
+[20]  Palmquist,  M. , 
+at 
+available 
+“The  bedford 
+researcher”,2003 
+[21]  Rajeev  Vij,  Navin  Kumar  Soni,  Gayas  Makhdumi,  “Encouraging 
+Academic  Honesty 
+through  Anti-plagiarism 
+Software” 
+, 
+http://www.inflibnet.ac.in/caliber2009/CaliberPDF/55.pdf 
+
+It has three boxes, the first and third box enables to check a webpage 
+while  the  middle  allows    to  paste  text/written  words.  The  content 
+which user want  to  check  for plagiarism has  to be pasted    in  the  text 
+box  and  press  the  “  compare”  button.  It  will  compare  with  search 
+engine and give the report.  
+
+User has  to   paste  the  text  into  the given box  and press  the  “submit” 
+button.  It  will  compare  with  the  document  available  on  internet  and 
+give the report. 
+
+[22]  Alzahrani,  S.M.;  Salim,  N.;  Abraham,  A,  "Understanding  Plagiarism 
+Linguistic Patterns, Textual Features, and Detection Methods," Systems, 
+Man,  and  Cybernetics,  Part  C:  Applications  and  Reviews,  IEEE 
+Transactions on , vol.42, no.2, pp.133,149, March 2012 
+[23]  Gotterbarn,  D.;  Miller,  K.;  Impagliazzo,  J.,  "Plagiarism  and  Scholarly 
+Publications: An  Ethical Analysis," Frontiers  in  Education Conference, 
+36th Annual , pp.22,27, 27-31 Oct. 2006 
+[24]  Seadle,M.  ,  "Copyright  in  the  networked  world:  plagiarism  and  its 
+ambiguities", Library Hi Tech, Vol. 26, Iss: 4, pp.691,695,2008 
+[25]  “Proprietary Software Definition”, http://www.linfo.org/proprietary.html 
+[26]  “Proprietary Software Definition”, http://www.linfo.org/proprietary.html 
+[27]  “Article checker”, http:/www.articlechecker.com 
+[28]  “Crossrefme”, http://www.crossrefme.com/ 
+[29]  “Duplichecker”, http:/www.duplichecker.com 
+[30]  “eTBLAST ”, http://etest.vbi.vt.edu/etblast3/ 
+[31]  “I T S”, http://www.itseducation.asia/plagiarism-checker.htm 
+[32]  “PaperRater.com”, http://www.paperrater.com/ 
+[33]  “Plagiarism Checker”, http://smallseotools.com/plagiarism-checker/ 
+[34]  “Plagiarism detect”, http://plagiarism-detect.com/ 
+[35]  “PlagiarismChecker.com”, 
+http://wwwplagiarismchecker.com/help-
+teach 
+[36]  “PlagiarismSoftware”, http://www.plagiarismsoftware.net/ 
+[37]  “SeeSources”, http://www.plagscan.com/seesources/plagiate.php 
+[38]  “ThePlagiarismChecker”, 
+http://www.dustball.com/cs/plagiarism.checker/ 
+[39]  “Anti-Plagiarism”, http://sourceforge.net/projects/antiplagiarismc/ 
+[40]  “Plagiarism detector”, http://www.plagiarism-detector.com/ 
+[41]  “Viper”, http://www.scanmyessay.com/ 
+[42]  “Wcopyfind”, 
+ 
+ 
+http://plagiarism.bloomfieldmedia.com/z-
+wordpress/software/wcopyfind/ 
+[43]   “Winsite”, http://anti-plagiarism- software.winsite.com/ linux/ 
+[44]    “Open-Access Plagiarism Search”, https://oaps.eu/ 
+[45]    “plagiarismcheck”, http://plagiarismcheck.org/home 
+[46]  Jaya,  P.  A.,  “Seminar  report  on  plagiarism  detection  techniques”  . 
+Available  on  :    http://seminarprojects.com/Thread-seminar-report-on-
+plagiarism-detection-techniques 
+
+Pros Webpage and text 
+can be checked with google and yahoo option. 
+Cons There is no  facility to  upload a file. 
+It can check text document only. 
+Pros This service could be used to determine whether 
+a given text has been correctly referenced. 
+Cons There is no  facility to  upload a file. 
+It can check text document only. 
+
+
+5<LTTextBoxHorizontal(0) 117.742,796.216,477.552,806.728 u'2015 4th International Symposium on Emerging Trends and Technologies in Libraries and Information Services\n'>-
+5<LTTextBoxHorizontal(1) 36.720,721.463,132.108,767.068 u'Duplichecker [29] \n \nhttp:/www.duplichecker.com \n'>-
+5<LTTextBoxHorizontal(2) 36.720,642.504,133.660,683.428 u'eTBLAST [30] \n \nhttp://etest.vbi.vt.edu/etblast3 \n'>-
+5<LTTextBoxHorizontal(3) 36.720,564.146,134.621,614.308 u'ITS [31] \n \nhttp://www.itseducation.asia/p\nlagiarism-checker.htm \n'>-
+5<LTTextBoxHorizontal(4) 36.720,485.303,125.408,527.428 u'PaperRater.com[32] \n \nhttp://www.paperrater.com \n'>-
+5<LTTextBoxHorizontal(5) 36.720,392.423,133.436,457.708 u'Plagiarism Checker [33] \n \nhttp://smallseotools.com/plagi\narism-checker/ \n \n'>-
+5<LTTextBoxHorizontal(6) 36.720,329.549,115.448,385.708 u'Plagiarism detect [34] \n \nhttp://plagiarism-detect. \ncom/ \n'>-
+5<LTTextBoxHorizontal(7) 36.720,254.186,133.855,304.348 u'PlagiarismChecker.com [35] \n \nhttp://www.plagiarismchecker\n.com/ \n'>-
+5<LTTextBoxHorizontal(8) 36.720,175.954,133.030,226.108 u'PlagiarismSoftware [36] \n \nhttp://www.plagiarismsoftwar\ne.net \n'>-
+5<LTTextBoxHorizontal(9) 145.557,729.745,370.833,758.785 u'For  checking  plagiarism user  has  to paste  or  upload    the  content  file \nand  click  \u201csearch\u201d  button.  It  will  compare  the  content  with  online \nsources and give the report. \n'>-
+5<LTTextBoxHorizontal(10) 145.557,648.510,370.852,677.430 u'User  has  to  paste  the    text    or  upload  the  file  in  the  given  box  and \nclick  on  the  \u201c  Search  for  similar  Text\u201d  botton.  It  will  compare  the \ntext  with different databases and give the report. \n'>-
+5<LTTextBoxHorizontal(11) 145.557,574.832,370.784,603.752 u'The content which user want to check for plagiarism has to be pasted \nin the text box within qutation mark (\u201c \u201d ) and press the search button \n. The report will appear within few minutes. \n'>-
+5<LTTextBoxHorizontal(12) 145.557,467.438,372.794,545.186 u'This  software  is  officially  used  in  schools  and  Universities  in  about \n46  countries  across  the  world  and  this  greatly  helps  students  to \ndevelop their writing style.  \nFor checking   plagiarism, user has  to paste  the  text     and      references \nin the given box and click the \u201c get report\u201d button. \nIt  will  compare  the    text  with    over  10  billion  documents  and  show  \nthe  report. \n'>-
+5<LTTextBoxHorizontal(13) 145.557,410.545,370.826,439.586 u'User  has  to    paste  the    content  in  the  given  box,  and    click    the  big \ngreen  button    \u201cCheck  for  plagiarism!\u201d.  It  will  compare    the  content \nwith the sources available  on internet  and give the  report. \n'>-
+5<LTTextBoxHorizontal(14) 145.557,329.323,370.826,385.837 u'When open the URL it will show  four option viz. check essay, check \narticle,  check  website  and  other  text.  User  has  to  choose  option  and \nuplode any file or just copy paste text in given box and click \u201cdetect\u201d \nbotton. It   compares the content with sources available in google and \nyahoo  search  engine  and  gives  report.  For  checking    website,  user \nhas to  paste website address in the given box. \n'>-
+5<LTTextBoxHorizontal(15) 145.557,171.275,370.811,322.712 u'When open    the URL    there   will be  two option. One  is \u201cfor  teacher\u201d \nanother is \u201cfor author\u201d. User has to  select the option and  type one or \nmore  phrases  from  different  parts  of  the  document  into  the  given \nsearch  box  and  hit  the  Enter  key  after  each  phrase  then  click  on \n\u201csearch\u201d button. It will compare the content with online sources. \nNow new facility added for web publishers, it can findout if someone \nhas plagiarized webpage. \n  \nUser    has  to  copy  &  past  or  upload  a  file  in  the  given  box  and  then \nclick  the  \u201csearch\u201d  button.  It  will  compare  the  content  with  online \nsources and give report. \n \n \n'>-
+5<LTTextBoxHorizontal(16) 379.562,462.888,555.297,786.305 u'Pros  It  is  very  useful  because  all  the  source websites \nfrom where the content ware copied are displayed and \nresearcher  can  use  this  service  for  giving  correct \nreferences. \nCons  It can check  \nmaximum 1500 words in one search at a time. \nIt can check .docx and .txt file only. \nPros It is a test-similarity based search engine and the \ntext  will  be  compared  with  the  databases  viz. \nMEDLINE, CRISP, NASA , PMC etc. \nUser  can  find  out  same  key  words  with  the  help  of \nthis.  \nCons User can upload the text file only. \nPros  This service is provided by  ITS Tutorial School \nand very useful for students and teachers.  \nEasy  to use but    it  is mandatory  to put quation marks \nat the beginning and end of the text. \nCons  It  can  accept  32  words  in  one  search  at  a  time. \nThere is no  facility to  upload a file. \nPros  This  adopt  artificial  Intelligence  which  enable \nany  user    to  enhance  their  writing  skills.  It  not  only \ndoes a proofreading but also checks and discovers the \nplagiarized  content,  covering  a  vast  range  of  a  large \ncollection  of  indexes  belonging  to  same  of  the \nprominent search engines.  \nCons There is no  facility to  upload a file. \nIt  can  check text document only. \n'>-
+5<LTTextBoxHorizontal(17) 379.562,395.430,555.229,454.862 u'Pros  This  tool  can    identify  the  original  source  of \nplagiarized content that was copied from the internet. \nIt can check content  line by line. \nCons  It  can  accept  maximum 1500 words  in  one \nsearch at a time. \n'>-
+5<LTTextBoxHorizontal(18) 379.562,327.884,555.302,387.437 u'Pros  \u201cIt  is  a  online  service  to  detect  plagiarism  in  a \ndocument, text or website\u201d .[34] \nUser can upload .doc, .docx, .odt and .txt files. \nCons  There  is  no  facility  to  check  plagiarism  in  pdf \nformat.  \n'>-
+5<LTTextBoxHorizontal(19) 379.562,237.391,555.236,321.312 u'Pros    User  can  check  if  others  have  plagiarized  their \nwork online and   \nif  he  creates  Google  Alert,  he  will  get  e-mail  from \nGoogle  when  new  instances  of  his  phrases  are \npublished on the Internet. \nCons There is no  facility to  upload a file. \nIt can check text document only. \n'>-
+5<LTTextBoxHorizontal(20) 379.562,172.964,505.422,229.276 u'Pros User can upload the file . \nIt can check result line by line. \nCons It can check text document only. \nThere is no facility to check .pdf file. \n'>-
+5<LTTextBoxHorizontal(21) 290.160,36.684,307.650,61.176 u'279 \n \n'>-
+5<LTRect 31.080,787.520,31.560,788.000>-
+5<LTRect 31.080,787.520,558.960,788.000>-
+5<LTRect 558.480,787.520,558.960,788.000>-
+5<LTRect 31.080,699.080,31.560,787.520>-
+5<LTRect 140.040,699.080,140.520,787.520>-
+5<LTRect 374.040,699.080,374.520,787.520>-
+5<LTRect 558.480,699.080,558.960,787.520>-
+5<LTRect 36.720,672.680,85.800,682.160>-
+5<LTRect 31.080,698.600,558.960,699.080>-
+5<LTRect 31.080,625.400,31.560,698.600>-
+5<LTRect 140.040,625.400,140.520,698.600>-
+5<LTRect 374.040,625.400,374.520,698.600>-
+5<LTRect 558.480,625.400,558.960,698.600>-
+5<LTRect 31.080,624.920,558.960,625.400>-
+5<LTRect 31.080,551.720,31.560,624.920>-
+5<LTRect 140.040,551.720,140.520,624.920>-
+5<LTRect 374.040,551.720,374.520,624.920>-
+5<LTRect 558.480,551.720,558.960,624.920>-
+5<LTRect 36.720,516.680,101.400,526.160>-
+5<LTRect 31.080,551.240,558.960,551.720>-
+5<LTRect 31.080,459.680,31.560,551.240>-
+5<LTRect 140.040,459.680,140.520,551.240>-
+5<LTRect 374.040,459.680,374.520,551.240>-
+5<LTRect 558.480,459.680,558.960,551.240>-
+5<LTRect 31.080,459.200,558.960,459.680>-
+5<LTRect 31.080,389.120,31.560,459.200>-
+5<LTRect 140.040,389.120,140.520,459.200>-
+5<LTRect 374.040,389.120,374.520,459.200>-
+5<LTRect 558.480,389.120,558.960,459.200>-
+5<LTRect 31.080,388.640,558.960,389.120>-
+5<LTRect 31.080,324.680,31.560,388.640>-
+5<LTRect 140.040,324.680,140.520,388.640>-
+5<LTRect 374.040,324.680,374.520,388.640>-
+5<LTRect 558.480,324.680,558.960,388.640>-
+5<LTRect 31.080,324.200,558.960,324.680>-
+5<LTRect 31.080,232.520,31.560,324.200>-
+5<LTRect 140.040,232.520,140.520,324.200>-
+5<LTRect 374.040,232.520,374.520,324.200>-
+5<LTRect 558.480,232.520,558.960,324.200>-
+5<LTRect 31.080,232.040,558.960,232.520>-
+5<LTRect 31.080,167.480,31.560,232.040>-
+5<LTRect 31.080,167.480,140.040,167.960>-
+5<LTRect 140.040,167.480,140.520,232.040>-
+5<LTRect 140.520,167.480,374.040,167.960>-
+5<LTRect 374.040,167.480,374.520,232.040>-
+5<LTRect 374.520,167.480,558.480,167.960>-
+5<LTRect 558.480,167.480,558.960,232.040>-
+5<LTRect 558.480,167.480,558.960,167.960>-
+For  checking  plagiarism user  has  to paste  or  upload    the  content  file 
+and  click  “search”  button.  It  will  compare  the  content  with  online 
+sources and give the report. 
+
+User  has  to  paste  the    text    or  upload  the  file  in  the  given  box  and 
+click  on  the  “  Search  for  similar  Text”  botton.  It  will  compare  the 
+text  with different databases and give the report. 
+
+The content which user want to check for plagiarism has to be pasted 
+in the text box within qutation mark (“ ” ) and press the search button 
+. The report will appear within few minutes. 
+
+This  software  is  officially  used  in  schools  and  Universities  in  about 
+46  countries  across  the  world  and  this  greatly  helps  students  to 
+develop their writing style.  
+For checking   plagiarism, user has  to paste  the  text     and      references 
+in the given box and click the “ get report” button. 
+It  will  compare  the    text  with    over  10  billion  documents  and  show  
+the  report. 
+
+User  has  to    paste  the    content  in  the  given  box,  and    click    the  big 
+green  button    “Check  for  plagiarism!”.  It  will  compare    the  content 
+with the sources available  on internet  and give the  report. 
+
+When open the URL it will show  four option viz. check essay, check 
+article,  check  website  and  other  text.  User  has  to  choose  option  and 
+uplode any file or just copy paste text in given box and click “detect” 
+botton. It   compares the content with sources available in google and 
+yahoo  search  engine  and  gives  report.  For  checking    website,  user 
+has to  paste website address in the given box. 
+
+When open    the URL    there   will be  two option. One  is “for  teacher” 
+another is “for author”. User has to  select the option and  type one or 
+more  phrases  from  different  parts  of  the  document  into  the  given 
+search  box  and  hit  the  Enter  key  after  each  phrase  then  click  on 
+“search” button. It will compare the content with online sources. 
+Now new facility added for web publishers, it can findout if someone 
+has plagiarized webpage. 
+  
+User    has  to  copy  &  past  or  upload  a  file  in  the  given  box  and  then 
+click  the  “search”  button.  It  will  compare  the  content  with  online 
+sources and give report. 
+ 
+ 
+
+Pros  It  is  very  useful  because  all  the  source websites 
+from where the content ware copied are displayed and 
+researcher  can  use  this  service  for  giving  correct 
+references. 
+Cons  It can check  
+maximum 1500 words in one search at a time. 
+It can check .docx and .txt file only. 
+Pros It is a test-similarity based search engine and the 
+text  will  be  compared  with  the  databases  viz. 
+MEDLINE, CRISP, NASA , PMC etc. 
+User  can  find  out  same  key  words  with  the  help  of 
+this.  
+Cons User can upload the text file only. 
+Pros  This service is provided by  ITS Tutorial School 
+and very useful for students and teachers.  
+Easy  to use but    it  is mandatory  to put quation marks 
+at the beginning and end of the text. 
+Cons  It  can  accept  32  words  in  one  search  at  a  time. 
+There is no  facility to  upload a file. 
+Pros  This  adopt  artificial  Intelligence  which  enable 
+any  user    to  enhance  their  writing  skills.  It  not  only 
+does a proofreading but also checks and discovers the 
+plagiarized  content,  covering  a  vast  range  of  a  large 
+collection  of  indexes  belonging  to  same  of  the 
+prominent search engines.  
+Cons There is no  facility to  upload a file. 
+It  can  check text document only. 
+
+Pros  This  tool  can    identify  the  original  source  of 
+plagiarized content that was copied from the internet. 
+It can check content  line by line. 
+Cons  It  can  accept  maximum 1500 words  in  one 
+search at a time. 
+
+Pros  “It  is  a  online  service  to  detect  plagiarism  in  a 
+document, text or website” .[34] 
+User can upload .doc, .docx, .odt and .txt files. 
+Cons  There  is  no  facility  to  check  plagiarism  in  pdf 
+format.  
+
+Pros    User  can  check  if  others  have  plagiarized  their 
+work online and   
+if  he  creates  Google  Alert,  he  will  get  e-mail  from 
+Google  when  new  instances  of  his  phrases  are 
+published on the Internet. 
+Cons There is no  facility to  upload a file. 
+It can check text document only. 
+
+Pros User can upload the file . 
+It can check result line by line. 
+Cons It can check text document only. 
+There is no facility to check .pdf file. 
+
+
+6<LTTextBoxHorizontal(0) 117.742,796.216,477.552,806.728 u'2015 4th International Symposium on Emerging Trends and Technologies in Libraries and Information Services\n'>-
+6<LTTextBoxHorizontal(1) 36.720,722.187,134.584,772.348 u'See Sources [37] \n \nhttp://www.plagscan.com/sees\nources/plagiate.php \n'>-
+6<LTTextBoxHorizontal(2) 145.557,728.193,370.842,766.351 u'User  has  to  click  the  \u201ccheck  test\u201d  button  and  upload  a  file  in    .doc/ \n.docx  or  .html    format  copy  paste  text  in  the  given  box  and    click \n\u201cStart  Analysis\u201d  button.    It  will  compare  the  content    with  Internet \nsources and  show the results  very soon. \n'>-
+6<LTTextBoxHorizontal(3) 36.720,650.066,133.737,700.228 u'The Plagiarism Checker [38] \n \nhttp://www.dustball.com/cs/pl\nagiarism.checker/ \n'>-
+6<LTTextBoxHorizontal(4) 145.557,653.066,370.856,697.229 u'User has  to   paste  the document or upload   Word  file    into  the given \nbox  and  click  the  \u201ccheck\u201d  button.  It    will  compare  the  content    with \ninternet sources  and  find similar  text in the document. \n \n'>-
+6<LTTextBoxHorizontal(5) 379.562,647.068,555.276,786.306 u'Pros  User  can  upload  the  file  in  .doc  ,  .docx.  and \n.html format. \nCons  In one  time  it can search 300KB or 1000 words \nonly. \nNote  :  Professional  version  of  see  sources  is  also \navailable  by  the  name  \u201cPlag  Scan\u201d.    Free  trail \navailable on www.Plagscan.com \nPros It is very quick and easy to use. \nIt can check result line by line. \nCons It provides limited free search . \nOnly MS file can be uploaded. \n'>-
+6<LTTextBoxHorizontal(6) 145.560,551.905,339.263,613.625 u'Method of checking \nThe  software  has  to  be  downloaded  from  the  given  URL \nand  upload the file  for  checking Plagiarism. The software \nwill    scan  the  document  and  compare  with  online  sources \nand give the result. \n \n'>-
+6<LTTextBoxHorizontal(7) 230.520,454.365,505.765,633.628 u'PLAGIARISM  DETECTION TOOLS/ SOFTWARE  FREELY DOWNLOADABLE ONLINE \nPros and Cons \n \nPros  It accepts  file    in any  format viz.  .rtf,  .doc, \n.docx, .pdf .  \n \nCons    Website    shows    free  software  but  it  is \nnot so. \nPros  It  is  available  in  three  language  English, \nRussian and Ukrainian.   User can use content in \nany format. \nThis software is fast and reliable. \n \nCons Free download for demo only. \nPros It provides unlimited resubmitting.  \nThere is no limitation for document length. \n \nCons It is available for  Windows only.  \n'>-
+6<LTTextBoxHorizontal(8) 145.557,505.359,339.294,543.516 u'User  has  to    download  the  software.  When  user  copy  and \npaste  the  content    in  the  text    box,  it  will  compare  with \nother  documents  available  on  internet    and    give  an \nimmediate  report . \n'>-
+6<LTTextBoxHorizontal(9) 145.557,403.228,339.259,497.075 u'User has to  download  the software and   put the document \nin  the given box.  It will  compare  the given document  from \nthe  large  database  of  academic  essays  and  other  online \nsources and  give the report regarding similar text.  \n \nWCopyfind is an open source windows-based program  that \ncompares documents  and  reports  similarities  in  their words \nand  phrases.    It  is  licensed under  the Gnu  Public  License\u201d. \nUser  has  to    download      the  software  for  checking \nplagiarism. \n'>-
+6<LTTextBoxHorizontal(10) 145.557,370.477,339.187,390.279 u'User has  to   download  the  software  and use  it  for  checking \nplagiarism. \n'>-
+6<LTTextBoxHorizontal(11) 348.120,412.474,483.907,441.547 u'Pros User can check  . doc and .docx file. \n  \nCons It is available for  Windows only. \n'>-
+6<LTTextBoxHorizontal(12) 348.116,361.367,505.781,399.678 u'Pros It is  freely downloadable for Linux. \n \nCons  It    can  not  be  downloaded    for      window \noprating system \n'>-
+6<LTTextBoxHorizontal(13) 36.720,551.912,152.835,633.805 u'TABLE II.  \nTools/ Software name with \nURL \nAnti-Plagiarism [39] \n \nhttp://sourceforge.net/projects\n/antiplagiarismc \n \n'>-
+6<LTTextBoxHorizontal(14) 36.720,505.350,115.954,543.508 u'Plagiarism detector [40] \n \nhttp://www.plagiarism-\ndetector.com/ \n'>-
+6<LTTextBoxHorizontal(15) 36.720,356.672,134.275,492.508 u'Viper [41] \n \nhttp://www.scanmyessay.com\n/   \nWcopyfind [42] \n \nhttp://plagiarism.bloomfieldm\nedia.com/zwordpress/software\n/wcopyfind \nWinsite [43] \n \nhttp://anti-plagiarism- \nsoftware.winsite.com/ linux/  \n \n'>-
+6<LTTextBoxHorizontal(16) 36.720,273.750,136.841,346.525 u'TABLE III.  \nTools/ Software name with \nURL \nOpen-Access \nPlagiarism \nSearch (OAPS) [44] \n \nhttps://oaps.eu/ \n'>-
+6<LTTextBoxHorizontal(17) 36.720,218.073,131.362,265.348 u'Plagiarismcheck [45] \n \nhttp://plagiarismcheck.org/ho\nme \n \n'>-
+6<LTTextBoxHorizontal(18) 36.718,194.606,39.208,207.693 u' \n'>-
+6<LTTextBoxHorizontal(19) 153.720,273.766,485.970,346.348 u'PLAGIARISM  DETECTION TOOLS/ SOFTWARE   FREELY AVAILABLE  ONLINE WITH SIGN UP REQUIREMENT \nPros and Cons \nMethod of checking \n \nPros  It highlights the similarities. \n \nCons It can check  text content  only. \n \n'>-
+6<LTTextBoxHorizontal(20) 145.557,178.487,341.245,311.917 u'User  has  to  open  a  personal  account  in  order  to  log  in  to \nthis  website  and  avail  this  service  with  no  charge.  The \ncheck  for  plagiarism  will  begin  once  the  document  is \nsubmitted.  The  search  results  will  be  sent  in  the  form  of  a \nreport to his/ her  account. \nPlagiarismcheck  provides  free  services  but  user    has    to  \ncreate  an  account  for  using  this  service.  After  login  user \nhas  to  insert  the  text  in  the given box  and  click  the  \u201c  check \nfor  plagiarism\u201d  button.  It  compare  the  text  with  large \nnumber of internet sources and give the report .  \n \n \n'>-
+6<LTTextBoxHorizontal(21) 348.116,227.205,493.654,265.515 u'Pros It Provides unlimited search . \nIt can accept all file format. \n \nCons It can not check plagiarism in .pdf file. \n'>-
+6<LTTextBoxHorizontal(22) 290.160,36.684,307.650,61.176 u'280 \n \n'>-
+6<LTRect 31.080,787.520,31.560,788.000>-
+6<LTRect 31.080,787.520,558.960,788.000>-
+6<LTRect 558.480,787.520,558.960,788.000>-
+6<LTRect 31.080,705.080,31.560,787.520>-
+6<LTRect 140.040,705.080,140.520,787.520>-
+6<LTRect 374.040,705.080,374.520,787.520>-
+6<LTRect 558.480,705.080,558.960,787.520>-
+6<LTRect 31.080,704.600,558.960,705.080>-
+6<LTRect 31.080,643.280,31.560,704.600>-
+6<LTRect 31.080,643.280,140.040,643.760>-
+6<LTRect 140.040,643.280,140.520,704.600>-
+6<LTRect 140.520,643.280,374.040,643.760>-
+6<LTRect 374.040,643.280,374.520,704.600>-
+6<LTRect 374.520,643.280,558.480,643.760>-
+6<LTRect 558.480,643.280,558.960,704.600>-
+6<LTRect 558.480,643.280,558.960,643.760>-
+6<LTRect 31.080,616.520,31.560,617.000>-
+6<LTRect 31.080,616.520,509.520,617.000>-
+6<LTRect 509.040,616.520,509.520,617.000>-
+6<LTRect 31.080,598.160,31.560,616.520>-
+6<LTRect 140.040,598.160,140.520,616.520>-
+6<LTRect 342.480,598.160,342.960,616.520>-
+6<LTRect 509.040,598.160,509.520,616.520>-
+6<LTRect 145.560,588.560,337.200,597.680>-
+6<LTRect 145.560,579.320,337.200,588.800>-
+6<LTRect 145.560,570.080,337.200,579.560>-
+6<LTRect 145.560,560.960,206.400,570.440>-
+6<LTRect 399.120,588.560,503.760,597.680>-
+6<LTRect 348.120,579.320,386.400,588.800>-
+6<LTRect 31.080,597.680,509.520,598.160>-
+6<LTRect 31.080,551.600,31.560,597.680>-
+6<LTRect 140.040,551.600,140.520,597.680>-
+6<LTRect 342.480,551.600,342.960,597.680>-
+6<LTRect 509.040,551.600,509.520,597.680>-
+6<LTRect 31.080,551.120,509.520,551.600>-
+6<LTRect 31.080,495.920,31.560,551.120>-
+6<LTRect 140.040,495.920,140.520,551.120>-
+6<LTRect 342.480,495.920,342.960,551.120>-
+6<LTRect 509.040,495.920,509.520,551.120>-
+6<LTRect 31.080,495.440,509.520,495.920>-
+6<LTRect 31.080,449.480,31.560,495.440>-
+6<LTRect 140.040,449.480,140.520,495.440>-
+6<LTRect 342.480,449.480,342.960,495.440>-
+6<LTRect 509.040,449.480,509.520,495.440>-
+6<LTRect 145.560,439.880,337.200,449.000>-
+6<LTRect 145.560,430.640,337.200,440.120>-
+6<LTRect 145.560,421.400,331.680,430.880>-
+6<LTRect 31.080,449.000,509.520,449.480>-
+6<LTRect 31.080,402.920,31.560,449.000>-
+6<LTRect 140.040,402.920,140.520,449.000>-
+6<LTRect 342.480,402.920,342.960,449.000>-
+6<LTRect 509.040,402.920,509.520,449.000>-
+6<LTRect 31.080,402.440,509.520,402.920>-
+6<LTRect 31.080,356.000,31.560,402.440>-
+6<LTRect 31.080,356.000,140.040,356.480>-
+6<LTRect 140.040,356.000,140.520,402.440>-
+6<LTRect 140.520,356.000,342.480,356.480>-
+6<LTRect 342.480,356.000,342.960,402.440>-
+6<LTRect 342.960,356.000,509.040,356.480>-
+6<LTRect 509.040,356.000,509.520,402.440>-
+6<LTRect 509.040,356.000,509.520,356.480>-
+6<LTRect 31.080,329.240,31.560,329.720>-
+6<LTRect 31.080,329.240,509.520,329.720>-
+6<LTRect 509.040,329.240,509.520,329.720>-
+6<LTRect 31.080,310.760,31.560,329.240>-
+6<LTRect 140.040,310.760,140.520,329.240>-
+6<LTRect 342.480,310.760,342.960,329.240>-
+6<LTRect 509.040,310.760,509.520,329.240>-
+6<LTRect 31.080,310.280,509.520,310.760>-
+6<LTRect 31.080,264.320,31.560,310.280>-
+6<LTRect 140.040,264.320,140.520,310.280>-
+6<LTRect 342.480,264.320,342.960,310.280>-
+6<LTRect 509.040,264.320,509.520,310.280>-
+6<LTRect 31.080,263.840,509.520,264.320>-
+6<LTRect 31.080,217.280,31.560,263.840>-
+6<LTRect 31.080,217.280,140.040,217.760>-
+6<LTRect 140.040,217.280,140.520,263.840>-
+6<LTRect 140.520,217.280,342.480,217.760>-
+6<LTRect 342.480,217.280,342.960,263.840>-
+6<LTRect 342.960,217.280,509.040,217.760>-
+6<LTRect 509.040,217.280,509.520,263.840>-
+6<LTRect 509.040,217.280,509.520,217.760>-
+TABLE II.  
+Tools/ Software name with 
+URL 
+Anti-Plagiarism [39] 
+ 
+http://sourceforge.net/projects
+/antiplagiarismc 
+ 
+
+Viper [41] 
+ 
+http://www.scanmyessay.com
+/   
+Wcopyfind [42] 
+ 
+http://plagiarism.bloomfieldm
+edia.com/zwordpress/software
+/wcopyfind 
+Winsite [43] 
+ 
+http://anti-plagiarism- 
+software.winsite.com/ linux/  
+ 
+
+User  has  to  click  the  “check  test”  button  and  upload  a  file  in    .doc/ 
+.docx  or  .html    format  copy  paste  text  in  the  given  box  and    click 
+“Start  Analysis”  button.    It  will  compare  the  content    with  Internet 
+sources and  show the results  very soon. 
+
+User has  to   paste  the document or upload   Word  file    into  the given 
+box  and  click  the  “check”  button.  It    will  compare  the  content    with 
+internet sources  and  find similar  text in the document. 
+ 
+
+Method of checking 
+The  software  has  to  be  downloaded  from  the  given  URL 
+and  upload the file  for  checking Plagiarism. The software 
+will    scan  the  document  and  compare  with  online  sources 
+and give the result. 
+ 
+
+User  has  to    download  the  software.  When  user  copy  and 
+paste  the  content    in  the  text    box,  it  will  compare  with 
+other  documents  available  on  internet    and    give  an 
+immediate  report . 
+
+User has to  download  the software and   put the document 
+in  the given box.  It will  compare  the given document  from 
+the  large  database  of  academic  essays  and  other  online 
+sources and  give the report regarding similar text.  
+ 
+WCopyfind is an open source windows-based program  that 
+compares documents  and  reports  similarities  in  their words 
+and  phrases.    It  is  licensed under  the Gnu  Public  License”. 
+User  has  to    download      the  software  for  checking 
+plagiarism. 
+
+PLAGIARISM  DETECTION TOOLS/ SOFTWARE   FREELY AVAILABLE  ONLINE WITH SIGN UP REQUIREMENT 
+Pros and Cons 
+Method of checking 
+ 
+Pros  It highlights the similarities. 
+ 
+Cons It can check  text content  only. 
+ 
+
+User  has  to  open  a  personal  account  in  order  to  log  in  to 
+this  website  and  avail  this  service  with  no  charge.  The 
+check  for  plagiarism  will  begin  once  the  document  is 
+submitted.  The  search  results  will  be  sent  in  the  form  of  a 
+report to his/ her  account. 
+Plagiarismcheck  provides  free  services  but  user    has    to  
+create  an  account  for  using  this  service.  After  login  user 
+has  to  insert  the  text  in  the given box  and  click  the  “  check 
+for  plagiarism”  button.  It  compare  the  text  with  large 
+number of internet sources and give the report .  
+ 
+ 
+
+PLAGIARISM  DETECTION TOOLS/ SOFTWARE  FREELY DOWNLOADABLE ONLINE 
+Pros and Cons 
+ 
+Pros  It accepts  file    in any  format viz.  .rtf,  .doc, 
+.docx, .pdf .  
+ 
+Cons    Website    shows    free  software  but  it  is 
+not so. 
+Pros  It  is  available  in  three  language  English, 
+Russian and Ukrainian.   User can use content in 
+any format. 
+This software is fast and reliable. 
+ 
+Cons Free download for demo only. 
+Pros It provides unlimited resubmitting.  
+There is no limitation for document length. 
+ 
+Cons It is available for  Windows only.  
+
+Pros  User  can  upload  the  file  in  .doc  ,  .docx.  and 
+.html format. 
+Cons  In one  time  it can search 300KB or 1000 words 
+only. 
+Note  :  Professional  version  of  see  sources  is  also 
+available  by  the  name  “Plag  Scan”.    Free  trail 
+available on www.Plagscan.com 
+Pros It is very quick and easy to use. 
+It can check result line by line. 
+Cons It provides limited free search . 
+Only MS file can be uploaded. 
+
+Pros It is  freely downloadable for Linux. 
+ 
+Cons  It    can  not  be  downloaded    for      window 
+oprating system 
+
+Pros It Provides unlimited search . 
+It can accept all file format. 
+ 
+Cons It can not check plagiarism in .pdf file. 
