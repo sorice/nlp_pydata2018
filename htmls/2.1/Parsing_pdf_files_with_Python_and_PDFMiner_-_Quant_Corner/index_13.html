@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head xmlns="http://www.w3.org/1999/xhtml">
+<meta content="application/xhtml+xml; charset=UTF-8" http-equiv="Content-Type" />
+
+    <title>Problema al cargar la página</title>
+    <link rel="stylesheet" href="chrome://global/skin/netError.css" type="text/css" media="all" />
+    <!-- If the location of the favicon is changed here, the FAVICON_ERRORPAGE_URL symbol in
+         toolkit/components/places/src/nsFaviconService.h should be updated. -->
+    <link rel="icon" type="image/png" id="favicon" href="chrome://global/skin/icons/warning-16.png" />
+
+    
+  </head>
+<body xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+
+    <!-- ERROR ITEM CONTAINER (removed during loading to avoid bug 39098) -->
+    
+
+    <!-- PAGE CONTAINER (for styling purposes only) -->
+    <div id="errorPageContainer">
+    
+      <!-- Error Title -->
+      <div id="errorTitle">
+        <h1 id="errorTitleText">El servidor proxy está rechazando las conexiones</h1>
+      </div>
+      
+      <!-- LONG CONTENT (the section most likely to require scrolling) -->
+      <div id="errorLongContent">
+      
+        <!-- Short Description -->
+        <div id="errorShortDesc">
+          <p id="errorShortDescText">Firefox está configurado para usar un servidor proxy que está rechazando las conexiones.</p>
+        </div>
+
+        <!-- Long Description (Note: See netError.dtd for used XHTML tags) -->
+        <div id="errorLongDesc">
+<ul>
+  <li>Compruebe la configuración de proxy para asegurarse de
+    que es correcta.</li>
+  <li>Contacte con su administrador de red para asegurarse de
+    que el servidor proxy está funcionando.</li>
+</ul>
+</div>
+
+        <!-- Override section - For ssl errors only.  Removed on init for other
+             error types.  -->
+        
+      </div>
+
+      <!-- Retry Button -->
+      <button id="errorTryAgain" autocomplete="off" onclick="retryThis(this);">Reintentar</button>
+      
+
+    </div>
+
+    <!--
+    - Note: It is important to run the script this way, instead of using
+    - an onload handler. This is because error pages are loaded as
+    - LOAD_BACKGROUND, which means that onload handlers will not be executed.
+    -->
+    
+
+  </body>
+</html>

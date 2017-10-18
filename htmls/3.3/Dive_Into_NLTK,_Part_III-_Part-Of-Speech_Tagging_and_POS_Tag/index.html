@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Dive Into NLTK, Part III: Part-Of-Speech Tagging and POS Tagger | Text Mining Online | Text Analysis Online | Text Processing Online</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://textminingonline.com/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://textminingonline.com/wp-content/themes/twentytwelveorg/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Text Mining Online | Text Analysis Online | Text Processing Online » Feed" href="http://textminingonline.com/feed">
+<link rel="alternate" type="application/rss+xml" title="Text Mining Online | Text Analysis Online | Text Processing Online » Comments Feed" href="http://textminingonline.com/comments/feed">
+<link rel="alternate" type="application/rss+xml" title="Text Mining Online | Text Analysis Online | Text Processing Online » Dive Into NLTK, Part III: Part-Of-Speech Tagging and POS Tagger Comments Feed" href="http://textminingonline.com/dive-into-nltk-part-iii-part-of-speech-tagging-and-pos-tagger/feed">
+		
+		
+
+
+
+
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://textminingonline.com/wp-content/themes/twentytwelveorg/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://textminingonline.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://textminingonline.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Getting Started with MBSP" href="http://textminingonline.com/getting-started-with-mbsp">
+<link rel="next" title="Dive Into NLTK, Part IV: Stemming and Lemmatization" href="http://textminingonline.com/dive-into-nltk-part-iv-stemming-and-lemmatization">
+<meta name="generator" content="WordPress 4.2.2">
+<link rel="canonical" href="http://textminingonline.com/dive-into-nltk-part-iii-part-of-speech-tagging-and-pos-tagger">
+<link rel="shortlink" href="http://textminingonline.com/?p=220">
+	
+
+<link rel="stylesheet" type="text/css" href="index.css" media="all">
+</head>
+<body class="single single-post postid-220 single-format-standard custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="http://textminingonline.com/" title="Text Mining Online | Text Analysis Online | Text Processing Online" rel="home">Text Mining Online | Text Analysis Online | Text Processing Online</a></h1>
+			<h2 class="site-description">Text Mining | Text Analysis | Text Process | Natural Language Processing</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<h3 class="menu-toggle">Menu</h3>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul><li><a href="http://textminingonline.com/">Home</a></li><li class="page_item page-item-254"><a href="http://textanalysisonline.com/" target="_top">TextAnalysis</a></li><li class="page_item page-item-256"><a href="http://textsummarization.net/" target="_top">TextSummarization</a></li><li class="page_item page-item-402"><a href="http://textsentiment.com/" target="_top">TextSentiment</a></li><li class="page_item page-item-408"><a href="http://documentsimilarity.com/" target="_top">DocumentSimilarity</a></li><li class="page_item page-item-2"><a href="http://textminingonline.com/about">About</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-220" class="post-220 post type-post status-publish format-standard hentry category-nltk category-text-analysis category-text-mining category-text-processing tag-brill-pos-tagger tag-crf-pos-tagger tag-hmm-pos-tagger tag-maxent-pos-tagger tag-nltk tag-nltk-pos-tagger tag-nltk-pos-tagging tag-part-of-speech-tagging tag-pos tag-pos-tagger tag-pos-tagging tag-stanford-pos-tagger tag-tnt-pos-tagger tag-train-a-pos-tagger">
+				<header class="entry-header">
+									<h1 class="entry-title">Dive Into NLTK, Part III: Part-Of-Speech Tagging and POS Tagger</h1>
+										<div class="comments-link">
+					<a href="http://textminingonline.com/dive-into-nltk-part-iii-part-of-speech-tagging-and-pos-tagger#respond"><span class="leave-reply">Leave a reply</span></a>				</div><!-- .comments-link -->
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>This is the third article in the series “<a href="http://textminingonline.com/dive-into-nltk-part-i-getting-started-with-nltk">Dive Into NLTK</a>“, here is an index of all the articles in the series that have been published to date:</p>
+<p><a href="http://textminingonline.com/dive-into-nltk-part-i-getting-started-with-nltk">Part I: Getting Started with NLTK</a><br>
+<a href="http://textminingonline.com/dive-into-nltk-part-ii-sentence-tokenize-and-word-tokenize">Part II: Sentence Tokenize and Word Tokenize</a><br>
+<a href="http://textminingonline.com/dive-into-nltk-part-iii-part-of-speech-tagging-and-pos-tagger">Part III: Part-Of-Speech Tagging and POS Tagger (this article)</a><br>
+<a href="http://textminingonline.com/dive-into-nltk-part-iv-stemming-and-lemmatization">Part IV: Stemming and Lemmatization</a><br>
+<a href="http://textminingonline.com/dive-into-nltk-part-v-using-stanford-text-analysis-tools-in-python">Part V: Using Stanford Text Analysis Tools in Python</a><br>
+<a href="http://textminingonline.com/dive-into-nltk-part-vi-add-stanford-word-segmenter-interface-for-python-nltk">Part VI: Add Stanford Word Segmenter Interface for Python NLTK</a><br>
+<a href="http://textminingonline.com/dive-into-nltk-part-vii-a-preliminary-study-on-text-classification">Part VII: A Preliminary Study on Text Classification</a><br>
+<a href="http://textminingonline.com/dive-into-nltk-part-viii-using-external-maximum-entropy-modeling-libraries-for-text-classification">Part VIII: Using External Maximum Entropy Modeling Libraries for Text Classification</a></p>
+<p>Part-of-speech tagging is one of the most important <a href="http://textanalysisonline.com/">text analysis</a> tasks used to classify words into their part-of-speech and label them according the tagset which is a collection of tags used for the pos tagging. Part-of-speech tagging also known as word classes or lexical categories. Here is the definition from <a href="http://en.wikipedia.org/wiki/Part-of-speech_tagging">wikipedia</a>:</p>
+<blockquote><p>In corpus linguistics, part-of-speech tagging (<a href="http://textanalysisonline.com/nltk-pos-tagging">POS tagging</a> or POST), also called grammatical tagging or word-category disambiguation, is the process of marking up a word in a text (corpus) as corresponding to a particular part of speech, based on both its definition, as well as its context—i.e. relationship with adjacent and related words in a phrase, sentence, or paragraph. A simplified form of this is commonly taught to school-age children, in the identification of words as nouns, verbs, adjectives, adverbs, etc.</p>
+<p>Once performed by hand, POS tagging is now done in the context of computational linguistics, using algorithms which associate discrete terms, as well as hidden parts of speech, in accordance with a set of descriptive tags. POS-tagging algorithms fall into two distinctive groups: rule-based and stochastic. E. Brill’s tagger, one of the first and most widely used English POS-taggers, employs rule-based algorithms.</p></blockquote>
+<p><strong>How to use <a href="http://textanalysisonline.com/nltk-pos-tagging">POS Tagging</a> in NLTK</strong><br>
+After import NLTK in python interpreter, you should use <a href="http://textminingonline.com/dive-into-nltk-part-ii-sentence-tokenize-and-word-tokenize">word_tokenize</a> before pos tagging, which referred as pos_tag method:</p>
+<p>&gt;&gt;&gt; import nltk<br>
+&gt;&gt;&gt; text = nltk.word_tokenize(“Dive into NLTK: Part-of-speech tagging and POS Tagger”)<br>
+&gt;&gt;&gt; text<br>
+[‘Dive’, ‘into’, ‘NLTK’, ‘:’, ‘Part-of-speech’, ‘tagging’, ‘and’, ‘POS’, ‘Tagger’]<br>
+&gt;&gt;&gt; nltk.pos_tag(text)<br>
+[(‘Dive’, ‘JJ’), (‘into’, ‘IN’), (‘NLTK’, ‘NNP’), (‘:’, ‘:’), (‘Part-of-speech’, ‘JJ’), (‘tagging’, ‘NN’), (‘and’, ‘CC’), (‘POS’, ‘NNP’), (‘Tagger’, ‘NNP’)]</p>
+<p>NLTK provides documentation for each tag, which can be queried using the tag, e.g., nltk.help.upenn_tagset(‘RB’), or a regular expression, e.g., nltk.help.upenn_brown_tagset(‘NN.*’):</p>
+<p>&gt;&gt;&gt; nltk.help.upenn_tagset(‘JJ’)<br>
+JJ: adjective or numeral, ordinal<br>
+    third ill-mannered pre-war regrettable oiled calamitous first separable<br>
+    ectoplasmic battery-powered participatory fourth still-to-be-named<br>
+    multilingual multi-disciplinary …<br>
+&gt;&gt;&gt; nltk.help.upenn_tagset(‘IN’)<br>
+IN: preposition or conjunction, subordinating<br>
+    astride among uppon whether out inside pro despite on by throughout<br>
+    below within for towards near behind atop around if like until below<br>
+    next into if beside …<br>
+&gt;&gt;&gt; nltk.help.upenn_tagset(‘NNP’)<br>
+NNP: noun, proper, singular<br>
+    Motown Venneboerger Czestochwa Ranzer Conchita Trumplane Christos<br>
+    Oceanside Escobar Kreisler Sawyer Cougar Yvette Ervin ODI Darryl CTCA<br>
+    Shannon A.K.C. Meltex Liverpool …<br>
+&gt;&gt;&gt; </p>
+<p>NLTK also provide batch pos tagging method for document pos tagging, which is batch_pos_tag method:</p>
+<p>&gt;&gt;&gt; nltk.batch_pos_tag([[‘this’, ‘is’, ‘batch’, ‘tag’, ‘test’], [‘nltk’, ‘is’, ‘text’, ‘analysis’, ‘tool’]])<br>
+[[(‘this’, ‘DT’), (‘is’, ‘VBZ’), (‘batch’, ‘NN’), (‘tag’, ‘NN’), (‘test’, ‘NN’)], [(‘nltk’, ‘NN’), (‘is’, ‘VBZ’), (‘text’, ‘JJ’), (‘analysis’, ‘NN’), (‘tool’, ‘NN’)]]<br>
+&gt;&gt;&gt; </p>
+<p><strong>The pre-trained <a href="http://textanalysisonline.com/nltk-pos-tagging">POS Tagger</a> Model in NLTK</strong></p>
+<p>You can find the pre-trained POS Tagging Model in nltk_data/taggers:</p>
+<blockquote><p>YangtekiMacBook-Pro:taggers textminer$ pwd<br>
+/Users/textminer/nltk_data/taggers<br>
+YangtekiMacBook-Pro:taggers textminer$ ls<br>
+total 11304<br>
+drwxr-xr-x  3 textminer  staff      102  7  9 14:06 hmm_treebank_pos_tagger<br>
+-rw-r–r–  1 textminer  staff   750857  5 26  2013 hmm_treebank_pos_tagger.zip<br>
+drwxr-xr-x  3 textminer  staff      102  7 24  2013 maxent_treebank_pos_tagger<br>
+-rw-r–r–  1 textminer  staff  5031883  5 26  2013 maxent_treebank_pos_tagger.zip</p></blockquote>
+<p>The default pos tagger model using in NLTK is maxent_treebanck_pos_tagger model, you can find the code in nltk-master/nltk/tag/__init__.py:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="line_numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="code"><pre class="python" style="font-family: monospace;"><span style="color: rgb(128, 128, 128); font-style: italic;"># Standard treebank POS tagger</span>
+_POS_TAGGER <span style="color: rgb(102, 204, 102);">=</span> <span style="color: rgb(72, 61, 139);">'taggers/maxent_treebank_pos_tagger/english.pickle'</span>
+<span style="color: rgb(255, 119, 0); font-weight: bold;">def</span> pos_tag<span style="color: black;">(</span>tokens<span style="color: black;">)</span>:
+    <span style="color: rgb(72, 61, 139);">"""
+    Use NLTK's currently recommended part of speech tagger to
+    tag the given list of tokens.
+&nbsp;
+        &gt;&gt;&gt; from nltk.tag import pos_tag # doctest: +SKIP
+        &gt;&gt;&gt; from nltk.tokenize import word_tokenize # doctest: +SKIP
+        &gt;&gt;&gt; pos_tag(word_tokenize("John's big idea isn't all that bad.")) # doctest: +SKIP
+        [('John', 'NNP'), ("'s", 'POS'), ('big', 'JJ'), ('idea', 'NN'), ('is',
+        'VBZ'), ("n't", 'RB'), ('all', 'DT'), ('that', 'DT'), ('bad', 'JJ'),
+        ('.', '.')]
+&nbsp;
+    :param tokens: Sequence of tokens to be tagged
+    :type tokens: list(str)
+    :return: The tagged tokens
+    :rtype: list(tuple(str, str))
+    """</span>
+    tagger <span style="color: rgb(102, 204, 102);">=</span> load<span style="color: black;">(</span>_POS_TAGGER<span style="color: black;">)</span>
+    <span style="color: rgb(255, 119, 0); font-weight: bold;">return</span> tagger.<span style="color: black;">tag</span><span style="color: black;">(</span>tokens<span style="color: black;">)</span>
+&nbsp;
+<span style="color: rgb(255, 119, 0); font-weight: bold;">def</span> batch_pos_tag<span style="color: black;">(</span>sentences<span style="color: black;">)</span>:
+    <span style="color: rgb(72, 61, 139);">"""
+    Use NLTK's currently recommended part of speech tagger to tag the
+    given list of sentences, each consisting of a list of tokens.
+    """</span>
+    tagger <span style="color: rgb(102, 204, 102);">=</span> load<span style="color: black;">(</span>_POS_TAGGER<span style="color: black;">)</span>
+    <span style="color: rgb(255, 119, 0); font-weight: bold;">return</span> tagger.<span style="color: black;">batch_tag</span><span style="color: black;">(</span>sentences<span style="color: black;">)</span></pre></td></tr></tbody></table></div>
+
+<p><strong>How to train a POS Tagging Model or POS Tagger in NLTK</strong><br>
+You have used the maxent treebank pos tagging model in NLTK by default, and NLTK provides not only the maxent pos tagger, but other pos taggers like crf, hmm, brill, tnt and interfaces with stanford pos tagger, hunpos pos tagger and senna postaggers:</p>
+<blockquote><p>-rwxr-xr-x@ 1 textminer  staff   4.4K  7 22  2013 __init__.py<br>
+-rwxr-xr-x@ 1 textminer  staff   2.9K  7 22  2013 api.py<br>
+-rwxr-xr-x@ 1 textminer  staff    56K  7 22  2013 brill.py<br>
+-rwxr-xr-x@ 1 textminer  staff    31K  7 22  2013 crf.py<br>
+-rwxr-xr-x@ 1 textminer  staff    48K  7 22  2013 hmm.py<br>
+-rwxr-xr-x@ 1 textminer  staff   5.1K  7 22  2013 hunpos.py<br>
+-rwxr-xr-x@ 1 textminer  staff    11K  7 22  2013 senna.py<br>
+-rwxr-xr-x@ 1 textminer  staff    26K  7 22  2013 sequential.py<br>
+-rwxr-xr-x@ 1 textminer  staff   3.3K  7 22  2013 simplify.py<br>
+-rwxr-xr-x@ 1 textminer  staff   6.4K  7 22  2013 stanford.py<br>
+-rwxr-xr-x@ 1 textminer  staff    18K  7 22  2013 tnt.py<br>
+-rwxr-xr-x@ 1 textminer  staff   2.3K  7 22  2013 util.py</p></blockquote>
+<p>Here we will show you how to train a TnT POS Tagger Model, you can find the details about TnT in tnt.py:</p>
+
+<div class="wp_syntax"><table><tbody><tr><td class="line_numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+</pre></td><td class="code"><pre class="python" style="font-family: monospace;"><span style="color: rgb(128, 128, 128); font-style: italic;"># Natural Language Toolkit: TnT Tagger</span>
+<span style="color: rgb(128, 128, 128); font-style: italic;">#</span>
+<span style="color: rgb(128, 128, 128); font-style: italic;"># Copyright (C) 2001-2013 NLTK Project</span>
+<span style="color: rgb(128, 128, 128); font-style: italic;"># Author: Sam Huston &lt;sjh900@gmail.com&gt;</span>
+<span style="color: rgb(128, 128, 128); font-style: italic;">#</span>
+<span style="color: rgb(128, 128, 128); font-style: italic;"># URL: &lt;http://www.nltk.org/&gt;</span>
+<span style="color: rgb(128, 128, 128); font-style: italic;"># For license information, see LICENSE.TXT</span>
+&nbsp;
+<span style="color: rgb(72, 61, 139);">'''
+Implementation of 'TnT - A Statisical Part of Speech Tagger'
+by Thorsten Brants
+&nbsp;
+http://acl.ldc.upenn.edu/A/A00/A00-1031.pdf
+'''</span>
+<span style="color: rgb(255, 119, 0); font-weight: bold;">from</span> <span style="color: rgb(220, 20, 60);">__future__</span> <span style="color: rgb(255, 119, 0); font-weight: bold;">import</span> print_function
+<span style="color: rgb(255, 119, 0); font-weight: bold;">from</span> <span style="color: rgb(220, 20, 60);">math</span> <span style="color: rgb(255, 119, 0); font-weight: bold;">import</span> log
+&nbsp;
+<span style="color: rgb(255, 119, 0); font-weight: bold;">from</span> <span style="color: rgb(220, 20, 60);">operator</span> <span style="color: rgb(255, 119, 0); font-weight: bold;">import</span> itemgetter
+&nbsp;
+<span style="color: rgb(255, 119, 0); font-weight: bold;">from</span> nltk.<span style="color: black;">probability</span> <span style="color: rgb(255, 119, 0); font-weight: bold;">import</span> FreqDist<span style="color: rgb(102, 204, 102);">,</span> ConditionalFreqDist
+<span style="color: rgb(255, 119, 0); font-weight: bold;">from</span> nltk.<span style="color: black;">tag</span>.<span style="color: black;">api</span> <span style="color: rgb(255, 119, 0); font-weight: bold;">import</span> TaggerI
+&nbsp;
+<span style="color: rgb(255, 119, 0); font-weight: bold;">class</span> TnT<span style="color: black;">(</span>TaggerI<span style="color: black;">)</span>:
+    <span style="color: rgb(72, 61, 139);">'''
+    TnT - Statistical POS tagger
+&nbsp;
+    IMPORTANT NOTES:
+&nbsp;
+    * DOES NOT AUTOMATICALLY DEAL WITH UNSEEN WORDS
+&nbsp;
+      - It is possible to provide an untrained POS tagger to
+        create tags for unknown words, see __init__ function
+&nbsp;
+    * SHOULD BE USED WITH SENTENCE-DELIMITED INPUT
+&nbsp;
+      - Due to the nature of this tagger, it works best when
+        trained over sentence delimited input.
+      - However it still produces good results if the training
+        data and testing data are separated on all punctuation eg: [,.?!]
+      - Input for training is expected to be a list of sentences
+        where each sentence is a list of (word, tag) tuples
+      - Input for tag function is a single sentence
+        Input for tagdata function is a list of sentences
+        Output is of a similar form
+&nbsp;
+    * Function provided to process text that is unsegmented
+&nbsp;
+      - Please see basic_sent_chop()
+&nbsp;
+&nbsp;
+    TnT uses a second order Markov model to produce tags for
+    a sequence of input, specifically:
+&nbsp;
+      argmax [Proj(P(t_i|t_i-1,t_i-2)P(w_i|t_i))] P(t_T+1 | t_T)
+&nbsp;
+    IE: the maximum projection of a set of probabilities
+&nbsp;
+    The set of possible tags for a given word is derived
+    from the training data. It is the set of all tags
+    that exact word has been assigned.
+&nbsp;
+    To speed up and get more precision, we can use log addition
+    to instead multiplication, specifically:
+&nbsp;
+      argmax [Sigma(log(P(t_i|t_i-1,t_i-2))+log(P(w_i|t_i)))] +
+             log(P(t_T+1|t_T))
+&nbsp;
+    The probability of a tag for a given word is the linear
+    interpolation of 3 markov models; a zero-order, first-order,
+    and a second order model.
+&nbsp;
+      P(t_i| t_i-1, t_i-2) = l1*P(t_i) + l2*P(t_i| t_i-1) +
+                             l3*P(t_i| t_i-1, t_i-2)
+&nbsp;
+    A beam search is used to limit the memory usage of the algorithm.
+    The degree of the beam can be changed using N in the initialization.
+    N represents the maximum number of possible solutions to maintain
+    while tagging.
+&nbsp;
+    It is possible to differentiate the tags which are assigned to
+    capitalized words. However this does not result in a significant
+    gain in the accuracy of the results.
+    '''</span></pre></td></tr></tbody></table></div>
+
+<p>First you need the train dada and test data, we use the treebank data from nltk.corpus:</p>
+<p>&gt;&gt;&gt; from nltk.corpus import treebank<br>
+&gt;&gt;&gt; len(treebank.tagged_sents())<br>
+3914<br>
+&gt;&gt;&gt; train_data = treebank.tagged_sents()[:3000]<br>
+&gt;&gt;&gt; test_data = treebank.tagged_sents()[3000:]<br>
+&gt;&gt;&gt; train_data[0]<br>
+[(u’Pierre’, u’NNP’), (u’Vinken’, u’NNP’), (u’,’, u’,’), (u’61’, u’CD’), (u’years’, u’NNS’), (u’old’, u’JJ’), (u’,’, u’,’), (u’will’, u’MD’), (u’join’, u’VB’), (u’the’, u’DT’), (u’board’, u’NN’), (u’as’, u’IN’), (u’a’, u’DT’), (u’nonexecutive’, u’JJ’), (u’director’, u’NN’), (u’Nov.’, u’NNP’), (u’29’, u’CD’), (u’.’, u’.’)]<br>
+&gt;&gt;&gt; test_data[0]<br>
+[(u’At’, u’IN’), (u’Tokyo’, u’NNP’), (u’,’, u’,’), (u’the’, u’DT’), (u’Nikkei’, u’NNP’), (u’index’, u’NN’), (u’of’, u’IN’), (u’225′, u’CD’), (u’selected’, u’VBN’), (u’issues’, u’NNS’), (u’,’, u’,’), (u’which’, u’WDT’), (u’*T*-1′, u’-NONE-‘), (u’gained’, u’VBD’), (u’132′, u’CD’), (u’points’, u’NNS’), (u’Tuesday’, u’NNP’), (u’,’, u’,’), (u’added’, u’VBD’), (u’14.99′, u’CD’), (u’points’, u’NNS’), (u’to’, u’TO’), (u’35564.43′, u’CD’), (u’.’, u’.’)]<br>
+&gt;&gt;&gt; </p>
+<p>We use the first 3000 treebank tagged sentences as the train_data, and last 914 tagged sentences as the test_data, now we train TnT POS Tagger by the train_data and evaluate it by the test_data:</p>
+<p>&gt;&gt;&gt; from nltk.tag import tnt<br>
+&gt;&gt;&gt; tnt_pos_tagger = tnt.TnT()<br>
+&gt;&gt;&gt; tnt_pos_tagger.train(train_data)<br>
+&gt;&gt;&gt; tnt_pos_tagger.evaluate(test_data)<br>
+0.8755881718109216</p>
+<p>You can save this pos tagger model as a pickle file:</p>
+<p>&gt;&gt;&gt; import pickle<br>
+&gt;&gt;&gt; f = open(‘tnt_treebank_pos_tagger.pickle’, ‘w’)<br>
+&gt;&gt;&gt; pickle.dump(tnt_pos_tagger, f)<br>
+&gt;&gt;&gt; f.close()</p>
+<p>And you can use it any time you want:</p>
+<p>&gt;&gt;&gt; tnt_tagger.tag(nltk.word_tokenize(“this is a tnt treebank tnt tagger”))<br>
+[(‘this’, u’DT’), (‘is’, u’VBZ’), (‘a’, u’DT’), (‘tnt’, ‘Unk’), (‘treebank’, ‘Unk’), (‘tnt’, ‘Unk’), (‘tagger’, ‘Unk’)]<br>
+&gt;&gt;&gt; </p>
+<p>That’s it, now you can train your <a href="http://textanalysisonline.com/nltk-pos-tagging">POS Tagging</a> Model by yourself, just do it.</p>
+<p>Posted by <a href="http://textminingonline.com/">TextMiner</a></p>
+<div class="yarpp-related">
+<h3>Related posts:</h3><ol>
+<li><a href="http://textminingonline.com/getting-started-with-pattern" rel="bookmark" title="Getting Started with Pattern">Getting Started with Pattern </a></li>
+<li><a href="http://textminingonline.com/dive-into-nltk-part-v-using-stanford-text-analysis-tools-in-python" rel="bookmark" title="Dive Into NLTK, Part V: Using Stanford Text Analysis Tools in Python">Dive Into NLTK, Part V: Using Stanford Text Analysis Tools in Python </a></li>
+<li><a href="http://textminingonline.com/dive-into-nltk-part-i-getting-started-with-nltk" rel="bookmark" title="Dive Into NLTK, Part I: Getting Started with NLTK">Dive Into NLTK, Part I: Getting Started with NLTK </a></li>
+<li><a href="http://textminingonline.com/dive-into-nltk-part-vii-a-preliminary-study-on-text-classification" rel="bookmark" title="Dive Into NLTK, Part VII: A Preliminary Study on Text Classification">Dive Into NLTK, Part VII: A Preliminary Study on Text Classification </a></li>
+</ol>
+</div>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="http://textminingonline.com/category/nltk" rel="category tag">NLTK</a>, <a href="http://textminingonline.com/category/text-analysis" rel="category tag">Text Analysis</a>, <a href="http://textminingonline.com/category/text-mining" rel="category tag">Text Mining</a>, <a href="http://textminingonline.com/category/text-processing" rel="category tag">Text Processing</a> and tagged <a href="http://textminingonline.com/tag/brill-pos-tagger" rel="tag">brill pos tagger</a>, <a href="http://textminingonline.com/tag/crf-pos-tagger" rel="tag">crf pos tagger</a>, <a href="http://textminingonline.com/tag/hmm-pos-tagger" rel="tag">hmm pos tagger</a>, <a href="http://textminingonline.com/tag/maxent-pos-tagger" rel="tag">maxent pos tagger</a>, <a href="http://textminingonline.com/tag/nltk" rel="tag">NLTK</a>, <a href="http://textminingonline.com/tag/nltk-pos-tagger" rel="tag">nltk pos tagger</a>, <a href="http://textminingonline.com/tag/nltk-pos-tagging" rel="tag">nltk pos tagging</a>, <a href="http://textminingonline.com/tag/part-of-speech-tagging" rel="tag">Part-of-speech tagging</a>, <a href="http://textminingonline.com/tag/pos" rel="tag">POS</a>, <a href="http://textminingonline.com/tag/pos-tagger" rel="tag">POS Tagger</a>, <a href="http://textminingonline.com/tag/pos-tagging" rel="tag">Pos Tagging</a>, <a href="http://textminingonline.com/tag/stanford-pos-tagger" rel="tag">stanford pos tagger</a>, <a href="http://textminingonline.com/tag/tnt-pos-tagger" rel="tag">tnt pos tagger</a>, <a href="http://textminingonline.com/tag/train-a-pos-tagger" rel="tag">train a pos tagger</a> on <a href="http://textminingonline.com/dive-into-nltk-part-iii-part-of-speech-tagging-and-pos-tagger" title="7:28 am" rel="bookmark"><time class="entry-date" datetime="2014-07-09T07:28:43+00:00">July 9, 2014</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://textminingonline.com/author/yuzhen" title="View all posts by TextMiner" rel="author">TextMiner</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="http://textminingonline.com/getting-started-with-mbsp" rel="prev"><span class="meta-nav">←</span> Getting Started with MBSP</a></span>
+					<span class="nav-next"><a href="http://textminingonline.com/dive-into-nltk-part-iv-stemming-and-lemmatization" rel="next">Dive Into NLTK, Part IV: Stemming and Lemmatization <span class="meta-nav">→</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+							<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://textminingonline.com/dive-into-nltk-part-iii-part-of-speech-tagging-and-pos-tagger#respond" style="display: none;">Cancel reply</a></small></h3>
+									<form action="http://textminingonline.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																			<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" value="" size="30" aria-required="true" required="required" type="text"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" value="" size="30" aria-describedby="email-notes" aria-required="true" required="required" type="text"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" value="" size="30" type="text"></p>
+												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-describedby="form-allowed-tags" aria-required="true" required="required"></textarea></p>						<p class="form-allowed-tags" id="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </code></p>
+						<p class="form-submit"><input name="submit" id="submit" class="submit" value="Post Comment" type="submit"> <input name="comment_post_ID" value="220" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+</p><p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="348ef65f1c" type="hidden"></p><p style="display: none;"></p>					<input id="ak_js" name="ak_js" value="1436314098809" type="hidden"></form>
+							</div><!-- #respond -->
+			
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://textminingonline.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input value="" name="s" id="s" type="text">
+					<input id="searchsubmit" value="Search" type="submit">
+				</div>
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://textminingonline.com/getting-started-with-sentiment-analysis-and-opinion-mining">Getting Started with Sentiment Analysis and Opinion Mining</a>
+						</li>
+					<li>
+				<a href="http://textminingonline.com/delete-unused-demo-and-update-chinese-word-segmenter-model-for-text-analysis-online">Delete unused demo and update Chinese Word Segmenter Model for Text Analysis Online</a>
+						</li>
+					<li>
+				<a href="http://textminingonline.com/text-analysis-online-no-longer-provides-text-summarization-api-interface">Text Analysis Online no longer provides Text Summarization API Interface</a>
+						</li>
+					<li>
+				<a href="http://textminingonline.com/nltk-wordnet-word-lemmatizer-api-for-english-word-with-pos-tag-only">NLTK Wordnet Word Lemmatizer API for English Word with POS Tag Only</a>
+						</li>
+					<li>
+				<a href="http://textminingonline.com/training-word2vec-model-on-english-wikipedia-by-gensim">Training Word2Vec Model on English Wikipedia by Gensim</a>
+						</li>
+				</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Deepa</span> on <a href="http://textminingonline.com/how-to-use-stanford-named-entity-recognizer-ner-in-python-nltk-and-other-programming-languages#comment-93152">How to Use Stanford Named Entity Recognizer (NER) in Python NLTK and Other Programming Languages</a></li><li class="recentcomments"><span class="comment-author-link">Anil</span> on <a href="http://textminingonline.com/how-to-use-stanford-named-entity-recognizer-ner-in-python-nltk-and-other-programming-languages#comment-90780">How to Use Stanford Named Entity Recognizer (NER) in Python NLTK and Other Programming Languages</a></li><li class="recentcomments"><span class="comment-author-link">David</span> on <a href="http://textminingonline.com/getting-started-with-word2vec-and-glove-in-python#comment-88929">Getting Started with Word2Vec and GloVe in Python</a></li><li class="recentcomments"><span class="comment-author-link">sri</span> on <a href="http://textminingonline.com/getting-started-with-the-automatic-text-summarization-api-on-mashape#comment-81378">Getting Started with the Automatic Text Summarization API on Mashape</a></li><li class="recentcomments"><span class="comment-author-link">xjkdh</span> on <a href="http://textminingonline.com/how-to-use-stanford-named-entity-recognizer-ner-in-python-nltk-and-other-programming-languages#comment-41053">How to Use Stanford Named Entity Recognizer (NER) in Python NLTK and Other Programming Languages</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+	<li><a href="http://textminingonline.com/2015/05">May 2015</a></li>
+	<li><a href="http://textminingonline.com/2015/04">April 2015</a></li>
+	<li><a href="http://textminingonline.com/2015/03">March 2015</a></li>
+	<li><a href="http://textminingonline.com/2015/02">February 2015</a></li>
+	<li><a href="http://textminingonline.com/2015/01">January 2015</a></li>
+	<li><a href="http://textminingonline.com/2014/12">December 2014</a></li>
+	<li><a href="http://textminingonline.com/2014/11">November 2014</a></li>
+	<li><a href="http://textminingonline.com/2014/10">October 2014</a></li>
+	<li><a href="http://textminingonline.com/2014/09">September 2014</a></li>
+	<li><a href="http://textminingonline.com/2014/07">July 2014</a></li>
+	<li><a href="http://textminingonline.com/2014/06">June 2014</a></li>
+	<li><a href="http://textminingonline.com/2014/05">May 2014</a></li>
+	<li><a href="http://textminingonline.com/2014/04">April 2014</a></li>
+	<li><a href="http://textminingonline.com/2014/01">January 2014</a></li>
+		</ul>
+</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-66"><a href="http://textminingonline.com/category/how-to-use-mashape-api">How to Use Mashape API</a>
+</li>
+	<li class="cat-item cat-item-153"><a href="http://textminingonline.com/category/named-entity-recognition">Named Entity Recognition</a>
+</li>
+	<li class="cat-item cat-item-2"><a href="http://textminingonline.com/category/nlp">NLP</a>
+</li>
+	<li class="cat-item cat-item-119"><a href="http://textminingonline.com/category/nlp-tools">NLP Tools</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://textminingonline.com/category/nltk">NLTK</a>
+</li>
+	<li class="cat-item cat-item-44"><a href="http://textminingonline.com/category/sentiment-analysis">Sentiment Analysis</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://textminingonline.com/category/text-analysis">Text Analysis</a>
+</li>
+	<li class="cat-item cat-item-213"><a href="http://textminingonline.com/category/text-classification">Text Classification</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://textminingonline.com/category/text-mining">Text Mining</a>
+</li>
+	<li class="cat-item cat-item-47"><a href="http://textminingonline.com/category/text-processing">Text Processing</a>
+</li>
+	<li class="cat-item cat-item-253"><a href="http://textminingonline.com/category/text-similarity">Text Similarity</a>
+</li>
+	<li class="cat-item cat-item-48"><a href="http://textminingonline.com/category/text-summarization">Text Summarization</a>
+</li>
+	<li class="cat-item cat-item-55"><a href="http://textminingonline.com/category/textanalysis-api-2">TextAnalysis API</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://textminingonline.com/category/uncategorized">Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-262"><a href="http://textminingonline.com/category/word-embedding">Word Embedding</a>
+</li>
+	<li class="cat-item cat-item-204"><a href="http://textminingonline.com/category/word-segmentation">Word Segmentation</a>
+</li>
+		</ul>
+</aside><aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="http://textminingonline.com/wp-login.php">Log in</a></li>
+			<li><a href="http://textminingonline.com/feed">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://textminingonline.com/comments/feed">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+
+
+
+
+
+
+<!-- Piwik -->
+
+<!-- End Piwik Code -->
+
+
+</body>
+</html>

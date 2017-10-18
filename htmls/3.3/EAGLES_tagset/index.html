@@ -1,0 +1,3885 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	
+	<title>ETIQUETAS EAGLES</title>
+	<meta name="DESCRIPTION" content="El analizador morfológico para el castellano utiliza un conjunto de etiquetas para representar la información morfológica de las palabras. Este conjunto de etiquetas se basa en las etiquetas propuestas por el grupo EAGLES para la anotación morfosintáctica de lexicones y corpus para todas las lenguas europeas.">
+	<meta name="KEYWORDS" content="Universidad de Barcelona, Universidad Politécnica de Cataluña, analizador morfológico, flexionador, lematizador, etiquetador morfológico, análisis sintáctico, categorías PAROLE, categorías EAGLES, etiquetas PAROLE, etiquetas EAGLES" lang="es">
+ 	
+
+<link rel="stylesheet" type="text/css" href="index.css" media="all">
+</head>
+<body>
+<h3>INTRODUCCIÓN A LAS ETIQUETAS EAGLES</h3>
+<p align="JUSTIFY">El <b>analizador morfológico para el castellano</b>
+utiliza un conjunto de etiquetas para representar la información
+morfológica de las palabras. Este conjunto de etiquetas se basa en
+las etiquetas propuestas por el grupo <a href="http://www.ilc.cnr.it/EAGLES96/home.html" target="_top">EAGLES</a>
+para la anotación morfosintáctica de lexicones y corpus para todas
+las lenguas europeas. Así pues está previsto que recojan los
+accidentes gramaticales existentes en las lenguas europeas. Es por
+esto que dependiendo de la lengua hay atributos que pueden no
+especificarse. Si un atributo no se especifica significa que o bien
+expresa un tipo de información que no existe en la lengua o que la
+información no se considera relevante. La infraespecificación de un
+atributo se marca con el 0. </p>
+
+<p>A continuación presentamos las etiquetas que el analizador
+morfológico utiliza para el castellano en formato de tabla y algunos
+ejemplos de cada categoría.</p>
+
+<p>Para cada categoría se presentan los atributos, valores y códigos
+que puede tomar, así como algunos ejemplos relevantes.</p>
+
+<p>Las tablas en la que se presentan las etiquetas tienen el siguiente aspecto:</p>
+
+<center>
+<table border="1" width="377">
+  <tbody>
+    <tr>
+      <th class="clase1" colspan="4">ETIQUETAS</th>
+    </tr>
+    <tr>
+      <th class="clase1" width="25%">Posición</th>
+      <th class="clase1" width="25%">Atributo</th>
+      <th class="clase1" width="25%">Valor</th>
+      <th class="clase1" width="25%">Código</th>
+    </tr>
+    <tr align="center" valign="top">
+      <td nowrap="nowrap" width="25%"><i>Columna 1</i></td>
+      <td nowrap="nowrap" width="25%"><i>Columna 2</i></td>
+      <td nowrap="nowrap" width="25%"><i>Columna 3</i></td>
+      <td nowrap="nowrap" width="25%"><i>Columna 4</i></td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+<p align="JUSTIFY">En la <i>columna 1</i> encontramos un número que
+hace referencia al orden y posición en que aparecen los atributos.
+La <i>columna 2</i> hace referencia a los atributos, el número de
+los cuales varía dependiendo de la categoría. En la <i>columna 3</i>
+encontramos los valores que puede tomar cada atributo y, finalmente,
+la <i>columna 4</i> representa los códigos que se han establecido
+para su representación. Las etiquetas en sí sólo son los códigos
+(columna 4) y se sabe a qué atributo pertenecen por la posición
+(columna 1) en la que se encuentran. 
+</p>
+
+<p>
+<a name="index">
+</a></p><h3><a name="index">TABLAS DE ETIQUETAS POR CATEGORÍA</a></h3><a name="index">
+</a><ol><a name="index">
+	</a><li><a name="index"></a><a href="#adjetivos">ADJETIVOS</a></li>
+	<li><a href="#adverbios">ADVERBIOS</a></li>
+	<li><a href="#determinantes">DETERMINANTES</a></li>
+	<li><a href="#nombres">NOMBRES</a></li>
+	<li><a href="#verbos">VERBOS</a></li>
+	<li><a href="#pronombres">PRONOMBRES</a></li>
+	<li><a href="#conjunciones">CONJUNCIONES</a></li>
+	<li><a href="#interjecciones">INTERJECCIONES</a></li>
+	<li><a href="#preposiciones">PREPOSICIONES</a></li>
+	<li><a href="#puntuacion">PUNTUACIÓN</a></li>
+	<li><a href="#cifras">NUMERALES</a></li>
+	<li><a href="#fechas">FECHAS Y HORAS</a></li>
+</ol>
+<p></p>
+
+<hr>
+
+<ol class="nested">
+<li class="nested"><span class="title0">ADJETIVOS</span>
+<a name="adjetivos">
+
+<center>
+<table border="1" width="377">
+  <tbody>
+    <tr>
+      <th class="clase1" colspan="4">ADJETIVOS</th>
+    </tr>
+    <tr>
+      <th class="clase1" width="11%">Pos.</th>
+      <th class="clase1" width="37%">Atributo</th>
+      <th class="clase1" width="32%">Valor</th>
+      <th class="clase1" width="19%">Código</th>
+    </tr>
+    <tr align="center" valign="top">
+      <td width="11%">1</td>
+      <td width="37%">Categoría</td>
+      <td width="32%">Adjetivo</td>
+      <td width="19%">A</td>
+    </tr>
+    <tr align="center" valign="top">
+      <td rowspan="2" width="11%">2</td>
+      <td rowspan="2" width="37%">Tipo</td>
+      <td width="32%">Calificativo</td>
+      <td width="19%">Q</td>
+    </tr>
+    <tr align="center" valign="top">
+      <td width="32%">Ordinal</td>
+      <td width="19%">O</td>
+    </tr>
+    <tr align="center" valign="top">
+      <td rowspan="4" width="11%">3</td>
+      <td rowspan="4" width="37%">Grado</td>
+      <td width="32%">Aumentativo</td>
+      <td width="19%">A</td>
+    </tr>
+    <tr align="center" valign="top">
+      <td width="32%">Diminutivo</td>
+      <td width="19%">D</td>
+    </tr>
+    <tr align="center" valign="top">
+      <td width="32%">Comparativo</td>
+      <td width="19%">C</td>
+    </tr>
+    <tr align="center" valign="top">
+      <td width="32%">Superlativo</td>
+      <td width="19%">S</td>
+    </tr>
+    <tr align="center" valign="top">
+      <td rowspan="3" width="11%">4</td>
+      <td rowspan="3" width="37%">Género</td>
+      <td width="32%">Masculino</td>
+      <td width="19%">M</td>
+    </tr>
+    <tr align="center" valign="top">
+      <td width="32%">Femenino</td>
+      <td width="19%">F</td>
+    </tr>
+    <tr align="center" valign="top">
+      <td width="32%">Común</td>
+      <td width="19%">C</td>
+    </tr>
+    <tr align="center" valign="top">
+      <td rowspan="3" width="11%">5</td>
+      <td rowspan="3" width="37%">Número</td>
+      <td width="32%">Singular</td>
+      <td width="19%">S</td>
+    </tr>
+    <tr align="center" valign="top">
+      <td width="32%">Plural</td>
+      <td width="19%">P</td>
+    </tr>
+    <tr align="center" valign="top">
+      <td width="32%">Invariable</td>
+      <td width="19%">N</td>
+    </tr>
+    <tr align="center" valign="top">
+      <td rowspan="2" width="11%">6</td>
+      <td rowspan="2" width="37%">Función</td>
+      <td width="32%">-</td>
+      <td width="19%">0</td>
+    </tr>
+    <tr align="center" valign="top">
+      <td width="32%">Participi</td>
+      <td width="19%">P</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+</a><ol class="nested"><a name="adjetivos">
+</a><li class="nested"><a name="adjetivos"><span class="title1">Adjetivos calificativos</span>
+
+</a><ul><a name="adjetivos">
+<li>El lema
+de los adjetivos calificativos será siempre la forma masculina
+singular (<i>bonito</i>) o la forma singular si el adjetivo es de
+género común (<i>alegre</i>). Para los adjetivos invariables, es
+decir, aquellos que tanto para el singular como para el plural
+presentan la misma forma, el lema y la forma han de coincidir.</li>
+</a><li><a name="adjetivos">El valor del último dígito será normalmente <b>0</b>. Tan sólo aquellos
+adjetivos que tengan función de participio tendrán una <b>P</b>.
+En el caso que la forma del adjetivo coincida con la del participio,
+solo tomará la etiqueta de participio (véase </a><a href="#verbos">Verbos</a>).</li>
+<li>El atributo <i>grado</i> se
+especificará para aquellos adjetivos que tengan grado
+(comparativos, superlativos) o sufijación apreciativa
+(aumentativos, despectivos, etc.). Se distinguirán porque el tercer
+dígito de la etiqueta será <b>A</b> (aumentativo) o <b>D</b>
+(diminutivo), <b>C</b> (comparativo) o <b>S</b> (superlativo)
+mientras que para el resto de adjetivos este valor será <b>0</b>.</li>
+</ul>
+
+<div class="examples">Ejemplos:</div>
+
+<center>
+<table cellpadding="2" cellspacing="0" border="0" width="375">
+<colgroup><col width="123"><col width="120"><col width="120">
+</colgroup><tbody><tr valign="TOP">
+	<td bgcolor="#000066" width="123"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+	<td bgcolor="#000066" width="120"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+	<td bgcolor="#000066" width="120"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+</tr>
+<tr valign="TOP">
+	<td width="123"><p align="CENTER">alegres</p></td>
+	<td width="120"><p align="CENTER">alegre</p></td>
+	<td width="120"><p align="CENTER">AQ0CP0</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="123"><p align="CENTER">alegre</p></td>
+	<td width="120"><p align="CENTER">alegre</p></td>
+	<td width="120"><p align="CENTER">AQ0CS0</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="123"><p align="CENTER">bonita</p></td>
+	<td width="120"><p align="CENTER">bonito</p></td>
+	<td width="120"><p align="CENTER">AQ0FS0</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="123"><p align="CENTER">grandazo</p></td>
+	<td width="120"><p align="CENTER">grande</p></td>
+	<td width="120"><p align="CENTER">AQAMS0</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="123"><p align="CENTER">pésimo</p></td>
+	<td width="120"><p align="CENTER">malo</p></td>
+	<td width="120"><p align="CENTER">AQSMP0</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="123"><p align="CENTER">pequeñitas</p></td>
+	<td width="120"><p align="CENTER">pequeño</p></td>
+	<td width="120"><p align="CENTER">AQDFP0</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="123"><p align="CENTER">antiarrugas</p></td>
+	<td width="120"><p align="CENTER">antiarrugas</p></td>
+	<td width="120"><p align="CENTER">AQ0CN0</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="123"><p align="CENTER">desnuda</p></td>
+	<td width="120"><p align="CENTER">desnudo</p></td>
+	<td width="120"><p align="CENTER">AQ0FSP</p></td>
+</tr>
+</tbody></table>
+</center>
+</li>  <!-- close AQ -->
+
+<li class="nested"><span class="title1">Adjetivos Ordinales</span>
+
+<ul>
+<li>Los adjetivos de tipo ordinal tendrán como lema el masculino singular siendo también la forma
+masculina singular plena (<i>primero</i>, <i>tercero</i>) el lema de las formas apocopadas (<i>primer</i>, <i>tercer</i>). </li>
+</ul>
+
+<div class="examples">Ejemplos:</div>
+
+<center>
+<table cellpadding="2" cellspacing="2" width="375">
+<tbody><tr valign="TOP">
+	<td bgcolor="#000066" width="34%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+	<td bgcolor="#000066" width="33%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+	<td bgcolor="#000066" width="33%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+</tr>
+<tr valign="TOP">
+	<td width="34%"><p align="CENTER">primer</p></td>
+	<td width="33%"><p align="CENTER">primero</p></td>
+	<td width="33%"><p align="CENTER">AO0MS0</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="34%"><p align="CENTER">primera</p></td>
+	<td width="33%"><p align="CENTER">primero</p></td>
+	<td width="33%"><p align="CENTER">AO0FS0</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="34%"><p align="CENTER">primeras</p></td>
+	<td width="33%"><p align="CENTER">primero</p></td>
+	<td width="33%"><p align="CENTER">AO0FP0</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="34%"><p align="CENTER">primero</p></td>
+	<td width="33%"><p align="CENTER">primero</p></td>
+	<td width="33%"><p align="CENTER">AO0MS0</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="34%"><p align="CENTER">primeros</p></td>
+	<td width="33%"><p align="CENTER">primero</p></td>
+	<td width="3%"><p align="CENTER">AO0MP0</p></td>
+</tr>
+</tbody></table>
+</center>
+</li> <!-- close AO -->
+</ol>
+
+<p align="RIGHT"><a href="#index">índice</a><a>
+</a></p><hr><a>
+
+</a></li><li class="nested"><a><span class="title0">ADVERBIOS</span>
+</a><a name="adverbios">
+
+<center>
+<table cellpadding="2" cellspacing="2" border="1" width="377">
+<tbody><tr>
+	<th colspan="4" bgcolor="#ffffff" valign="TOP"><p align="CENTER">ADVERBIOS</p></th>
+</tr>
+<tr valign="TOP">
+	<th width="11%"><p align="CENTER">Pos.</p></th>
+	<th width="37%"><p align="CENTER">Atributo</p></th>
+	<th width="32%"><p align="CENTER">Valor</p></th>
+	<th width="19%"><p align="CENTER">Código</p></th>
+</tr>
+<tr valign="TOP">
+	<td width="11%"><p align="CENTER">1</p></td>
+	<td width="37%"><p align="CENTER">Categoría</p></td>
+	<td width="32%"><p align="CENTER">Adverbio</p></td>
+	<td width="19%"><p align="CENTER">R</p></td>
+</tr>
+<tr valign="TOP">
+	<td rowspan="2" width="11%"><p align="CENTER">2</p></td>
+	<td rowspan="2" width="37%"><p align="CENTER">Tipo</p></td>
+	<td width="32%"><p align="CENTER">General</p></td>
+	<td width="19%"><p align="CENTER">G</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="32%"><p align="CENTER">Negativo</p></td>
+	<td width="19%"><p align="CENTER">N</p></td>
+</tr>
+</tbody></table>
+</center>
+
+<p>
+</p></a><ul><a name="adverbios">
+	<li>Para los adverbios, de momento, tan sólo indicamos que es de tipo general o de tipo negativo.</li>
+	<li>La etiqueta de adverbio negativo (RN) está reservada exclusivamente para el adverbio <i>no</i>.</li>
+	</a><li><a name="adverbios"></a>Esta etiqueta sirve tanto para los adverbios y para las locuciones adverbiales. </li>
+	<li>El lema de los adverbios acabados en <i>-mente</i> es la misma forma adverbial acabada en <i>-mente</i>,
+         es decir, el lema de <i>rápidamente</i> será <i>rápidamente</i>. 
+	</li>
+</ul>
+<p></p>
+
+<div class="examples">Ejemplos:</div>
+
+<center>
+<table cellpadding="2" cellspacing="2" width="375">
+<tbody><tr valign="TOP">
+	<td bgcolor="#000066" width="34%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+	<td bgcolor="#000066" width="33%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+	<td bgcolor="#000066" width="33%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+</tr>
+<tr valign="TOP">
+	<td width="33%"><p align="CENTER">despacio</p></td>
+	<td width="33%"><p align="CENTER">despacio</p></td>
+	<td width="33%"><p align="CENTER">RG</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="33%"><p align="CENTER">ahora</p></td>
+	<td width="33%"><p align="CENTER">ahora</p></td>
+	<td width="33%"><p align="CENTER">RG</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="33%"><p align="CENTER">siempre</p></td>
+	<td width="33%"><p align="CENTER">siempre</p></td>
+	<td width="33%"><p align="CENTER">RG</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="33%"><p align="CENTER">hábilmente</p></td>
+	<td width="33%"><p align="CENTER">hábilmente</p></td>
+	<td width="33%"><p align="CENTER">RG</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="33%"><p align="CENTER">posteriormente</p></td>
+	<td width="33%"><p align="CENTER">posteriormente</p></td>
+	<td width="33%"><p align="CENTER">RG</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="555"><p align="CENTER">a_cuatro_patas</p></td>
+	<td width="33%"><p align="CENTER">a_cuatro_patas</p></td>
+	<td width="33%"><p align="CENTER">RG</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="33%"><p align="CENTER">a_granel</p></td>
+	<td width="33%"><p align="CENTER">a_granel</p></td>
+	<td width="33%"><p align="CENTER">RG</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="33%"><p align="CENTER">no</p></td>
+	<td width="33%"><p align="CENTER">no</p></td>
+	<td width="33%"><p align="CENTER">RN</p></td>
+</tr>
+</tbody></table>
+</center>
+
+<p align="RIGHT"><a href="#index">índice</a><a></a></p><a>
+<hr>
+</a></li><a> <!-- close R -->
+
+</a><li class="nested"><a><span class="title0">DETERMINANTES</span>
+</a><a name="determinantes">
+
+<center>
+<table cellpadding="2" cellspacing="3" border="1" width="377">
+<colgroup><col width="40"><col width="123"><col width="117"><col width="64">
+</colgroup><tbody><tr>
+	<th colspan="4" bgcolor="#ffffff" valign="TOP" width="365"><p align="CENTER">DETERMINANTES</p></th>
+</tr>
+<tr valign="TOP">
+	<th width="40"><p align="CENTER">Pos.</p></th>
+	<th width="123"><p align="CENTER">Atributo</p></th>
+	<th width="117"><p align="CENTER">Valor</p></th>
+	<th width="64"><p align="CENTER">Código</p></th>
+</tr>
+<tr valign="TOP">
+	<td width="40"><p align="CENTER">1</p></td>
+	<td width="123"><p align="CENTER">Categoría</p></td>
+	<td width="117"><p align="CENTER">Determinante</p></td>
+	<td width="64"><p align="CENTER">D</p></td>
+</tr>
+<tr valign="TOP">
+	<td rowspan="6" width="40"><p align="CENTER">2</p></td>
+	<td rowspan="6" width="123"><p align="CENTER">Tipo</p></td>
+	<td width="117"><p align="CENTER">Demostrativo</p></td>
+	<td width="64"><p align="CENTER">D</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="117"><p align="CENTER">Posesivo</p></td>
+	<td width="64"><p align="CENTER">P</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="117"><p align="CENTER">Interrogativo</p></td>
+	<td width="64"><p align="CENTER">T</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="117"><p align="CENTER">Exclamativo</p></td>
+	<td width="64"><p align="CENTER">E</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="117"><p align="CENTER">Indefinido</p></td>
+	<td width="64"><p align="CENTER">I</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="117"><p align="CENTER">Artículo</p></td>
+	<td width="64"><p align="CENTER">A</p></td>
+</tr>
+<tr valign="TOP">
+	<td rowspan="3" width="40"><p align="CENTER">3</p></td>
+	<td rowspan="3" width="123"><p align="CENTER">Persona</p></td>
+	<td width="117"><p align="CENTER">Primera</p></td>
+	<td width="64"><p align="CENTER">1</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="117"><p align="CENTER">Segunda</p></td>
+	<td width="64"><p align="CENTER">2</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="117"><p align="CENTER">Tercera</p></td>
+	<td width="64"><p align="CENTER">3</p></td>
+</tr>
+<tr valign="TOP">
+	<td rowspan="4" width="40"><p align="CENTER">4</p></td>
+	<td rowspan="4" width="123"><p align="CENTER">Género</p></td>
+	<td width="117"><p align="CENTER">Masculino</p></td>
+	<td width="64"><p align="CENTER">M</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="117"><p align="CENTER">Femenino</p></td>
+	<td width="64"><p align="CENTER">F</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="117"><p align="CENTER">Común</p></td>
+	<td width="64"><p align="CENTER">C</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="117"><p align="CENTER">Neutro</p></td>
+	<td width="64"><p align="CENTER">N</p></td>
+</tr>
+<tr valign="TOP">
+	<td rowspan="3" width="40"><p align="CENTER">5</p></td>
+	<td rowspan="3" width="123"><p align="CENTER">Número</p></td>
+	<td width="117"><p align="CENTER">Singular</p></td>
+	<td width="64"><p align="CENTER">S</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="117"><p align="CENTER">Plural</p></td>
+	<td width="64"><p align="CENTER">P</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="117"><p align="CENTER">Invariable</p></td>
+	<td width="64"><p align="CENTER">N</p></td>
+</tr>
+<tr valign="TOP">
+	<td rowspan="2" width="40"><p align="CENTER">6</p></td>
+	<td rowspan="2" width="123"><p align="CENTER">Poseedor</p></td>
+	<td width="117"><p align="CENTER">Singular</p></td>
+	<td width="64"><p align="CENTER">S</p></td>
+</tr>
+<tr valign="TOP">
+	<td width="117"><p align="CENTER">Plural</p></td>
+	<td width="64"><p align="CENTER">P</p></td>
+</tr>
+</tbody></table>
+</center>
+
+<p>
+</p><ul>
+	<li>El atributo <i>Persona</i> tendrá por defecto el valor 0, con
+	excepción de los determinantes posesivos que podrán tomar el valor
+	1, 2 y 3. </li>
+	<li>El atributo <i>Poseedor</i> sólo
+	se especificará para los determinantes posesivos. Si el referente
+	es singular, el valor será <i>S</i>, si es plural el valor será <i>P</i>.
+	Cuando el referente sea de tercera persona el valor de este atributo
+	será 0 ya que es imposible distinguir los referentes <i>de él-de
+	ellos</i>. </li>
+</ul>
+<p></p>
+
+</a><ol class="nested"><a name="determinantes">
+<li class="nested"><span class="title1">Determinantes Demostrativos</span>
+
+<div class="examples">Ejemplos:</div>
+
+<center>
+	<table cellpadding="2" cellspacing="2" width="375">
+		<tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="33%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+			<td bgcolor="#000066" width="37%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="33%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">aquel</p></td>
+			<td width="32%"><p align="CENTER">aquel</p></td>
+			<td width="32%"><p align="CENTER">DD0MS0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">aquella</p></td>
+			<td width="32%"><p align="CENTER">aquel</p></td>
+			<td width="32%"><p align="CENTER">DD0FS0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">aquellas</p></td>
+			<td width="32%"><p align="CENTER">aquel</p></td>
+			<td width="32%"><p align="CENTER">DD0FP0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">aquellos</p></td>
+			<td width="32%"><p align="CENTER">aquel</p></td>
+			<td width="32%"><p align="CENTER">DD0MP0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">esa</p></td>
+			<td width="32%"><p align="CENTER">ese</p></td>
+			<td width="32%"><p align="CENTER">DD0FS0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">esas</p></td>
+			<td width="32%"><p align="CENTER">ese</p></td>
+			<td width="32%"><p align="CENTER">DD0FP0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">ese</p></td>
+			<td width="32%"><p align="CENTER">ese</p></td>
+			<td width="32%"><p align="CENTER">DD0MS0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">esos</p></td>
+			<td width="32%"><p align="CENTER">ese</p></td>
+			<td width="32%"><p align="CENTER">DD0MP0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">esta</p></td>
+			<td width="32%"><p align="CENTER">este</p></td>
+			<td width="32%"><p align="CENTER">DD0FS0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">estas</p></td>
+			<td width="32%"><p align="CENTER">este</p></td>
+			<td width="32%"><p align="CENTER">DD0FP0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">este</p></td>
+			<td width="32%"><p align="CENTER">este</p></td>
+			<td width="32%"><p align="CENTER">DD0MS0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">estos</p></td>
+			<td width="32%"><p align="CENTER">este</p></td>
+			<td width="32%"><p align="CENTER">DD0MP0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">tal</p></td>
+			<td width="32%"><p align="CENTER">tal</p></td>
+			<td width="32%"><p align="CENTER">DD0CS0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">tales</p></td>
+			<td width="32%"><p align="CENTER">tal</p></td>
+			<td width="32%"><p align="CENTER">DD0CP0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">semejante</p></td>
+			<td width="32%"><p align="CENTER">semejante</p></td>
+			<td width="32%"><p align="CENTER">DD0CS0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="36%"><p align="CENTER">semejantes</p></td>
+			<td width="32%"><p align="CENTER">semejante</p></td>
+			<td width="32%"><p align="CENTER">DD0CP0</p></td>
+		</tr>
+	</tbody></table>
+</center>
+</li> <!-- close DD -->
+
+</a><li class="nested"><a name="determinantes"><span class="title1">Determinantes Posesivos</span>
+
+</a><ul><a name="determinantes">
+</a><li><a name="determinantes">Los posesivos <i>mío</i>, <i>tuyo</i>, <i>suyo</i>, <i>mía</i>, <i>tuya</i>, etc. se comportan como adjetivos y se etiquetan con  <b>PX</b>. Véase la sección sobre </a><a href="#pronombres">pronombres</a> para más detalles. </li>
+</ul>
+
+<div class="examples">Ejemplos:</div>
+
+	<center>
+		<table cellpadding="2" cellspacing="0" border="0" width="375">
+			<colgroup><col width="142">
+			<col width="116">
+			<col width="105">
+			</colgroup><tbody><tr valign="TOP">
+				<td bgcolor="#000066" width="142"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+				<td bgcolor="#000066" width="116"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+				<td bgcolor="#000066" width="105"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="142"><p align="CENTER">mi</p></td>
+				<td width="116"><p align="CENTER">mi</p></td>
+				<td width="105"><p align="CENTER">DP1CSS</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="142"><p align="CENTER">mis</p></td>
+				<td width="116"><p align="CENTER">mi</p></td>
+				<td width="105"><p align="CENTER">DP1CPS</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="142"><p align="CENTER">tu</p></td>
+				<td width="116"><p align="CENTER">tu</p></td>
+				<td width="105"><p align="CENTER">DP2CSS</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="142"><p align="CENTER">tus</p></td>
+				<td width="116"><p align="CENTER">tu</p></td>
+				<td width="105"><p align="CENTER">DP2CPS</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="142"><p align="CENTER">su</p></td>
+				<td width="116"><p align="CENTER">su</p></td>
+				<td width="105"><p align="CENTER">DP3CS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="142"><p align="CENTER">sus</p></td>
+				<td width="116"><p align="CENTER">su</p></td>
+				<td width="105"><p align="CENTER">DP3CP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="142"><p align="CENTER">nuestra</p></td>
+				<td width="116"><p align="CENTER">nuestro</p></td>
+				<td width="105"><p align="CENTER">DP1FSP</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="142"><p align="CENTER">nuestras</p></td>
+				<td width="116"><p align="CENTER">nuestro</p></td>
+				<td width="105"><p align="CENTER">DP1FPP</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="142"><p align="CENTER">nuestro</p></td>
+				<td width="116"><p align="CENTER">nuestro</p></td>
+				<td width="105"><p align="CENTER">DP1MSP</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="142"><p align="CENTER">nuestros</p></td>
+				<td width="116"><p align="CENTER">nuestro</p></td>
+				<td width="105"><p align="CENTER">DP1MPP</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="142"><p align="CENTER">vuestra</p></td>
+				<td width="116"><p align="CENTER">vuestro</p></td>
+				<td width="105"><p align="CENTER">DP2FSP</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="142"><p align="CENTER">vuestras</p></td>
+				<td width="116"><p align="CENTER">vuestro</p></td>
+				<td width="105"><p align="CENTER">DP2FPP</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="142"><p align="CENTER">vuestro</p></td>
+				<td width="116"><p align="CENTER">vuestro</p></td>
+				<td width="105"><p align="CENTER">DP2MSP</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="142"><p align="CENTER">vuestros</p></td>
+				<td width="116"><p align="CENTER">vuestro</p></td>
+				<td width="105"><p align="CENTER">DP2MPP</p></td>
+			</tr>
+		</tbody></table>
+	</center>
+</li> <!-- close DP -->
+
+<li class="nested"><span class="title1">Determinantes Interrogativos</span>
+
+<div class="examples">Ejemplos:</div>
+
+	<center>
+		<table cellpadding="2" cellspacing="2" width="375">
+			<tbody><tr valign="TOP">
+				<td bgcolor="#000066" width="34%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+				<td bgcolor="#000066" width="33%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+				<td bgcolor="#000066" width="33%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">cuánta</p></td>
+				<td width="32%"><p align="CENTER">cuánto</p></td>
+				<td width="32%"><p align="CENTER">DT0FS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">cuántas</p></td>
+				<td width="32%"><p align="CENTER">cuánto</p></td>
+				<td width="32%"><p align="CENTER">DT0FP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">cuánto</p></td>
+				<td width="32%"><p align="CENTER">cuánto</p></td>
+				<td width="32%"><p align="CENTER">DT0MS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">cuántos</p></td>
+				<td width="32%"><p align="CENTER">cuánto</p></td>
+				<td width="32%"><p align="CENTER">DT0MP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">qué</p></td>
+				<td width="32%"><p align="CENTER">qué</p></td>
+				<td width="32%"><p align="CENTER">DT0CN0</p></td>
+			</tr>
+		</tbody></table>
+	</center>
+</li> <!-- close DT -->
+
+<li class="nested"><span class="title1">Determinantes Exclamativos</span>
+
+<div class="examples">Ejemplos:</div>
+
+	<center>
+		<table cellpadding="2" cellspacing="2" width="375">
+			<tbody><tr valign="TOP">
+				<td bgcolor="#000066" width="35%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+				<td bgcolor="#000066" width="32%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+				<td bgcolor="#000066" width="32%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="35%"><p align="CENTER">qué</p></td>
+				<td width="32%"><p align="CENTER">qué</p></td>
+				<td width="32%"><p align="CENTER">DE0CN0</p></td>
+			</tr>
+		</tbody></table>
+	</center>
+</li> <!-- close DE -->
+
+<li class="nested"><span class="title1">Determinantes Indefinidos</span>
+
+<div class="examples">Ejemplos:</div>
+
+	<center>
+		<table cellpadding="2" cellspacing="2" width="375">
+			<tbody><tr valign="TOP">
+				<td bgcolor="#000066" width="36%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+				<td bgcolor="#000066" width="32%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+				<td bgcolor="#000066" width="32%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">alguna</p></td>
+				<td width="32%"><p align="CENTER">alguno</p></td>
+				<td width="32%"><p align="CENTER">DI0FS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">algunas</p></td>
+				<td width="32%"><p align="CENTER">alguno</p></td>
+				<td width="32%"><p align="CENTER">DI0FP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">alguno</p></td>
+				<td width="32%"><p align="CENTER">alguno</p></td>
+				<td width="32%"><p align="CENTER">DI0MS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">algún</p></td>
+				<td width="32%"><p align="CENTER">alguno</p></td>
+				<td width="32%"><p align="CENTER">DI0MS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">algunos</p></td>
+				<td width="32%"><p align="CENTER">alguno</p></td>
+				<td width="32%"><p align="CENTER">DI0MP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">bastante</p></td>
+				<td width="32%"><p align="CENTER">bastante</p></td>
+				<td width="32%"><p align="CENTER">DI0CS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">bastantes</p></td>
+				<td width="32%"><p align="CENTER">bastante</p></td>
+				<td width="32%"><p align="CENTER">DI0CP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">cada</p></td>
+				<td width="32%"><p align="CENTER">cada</p></td>
+				<td width="32%"><p align="CENTER">DI0CS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">ninguna</p></td>
+				<td width="32%"><p align="CENTER">ninguno</p></td>
+				<td width="32%"><p align="CENTER">DI0FS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">ningunas</p></td>
+				<td width="32%"><p align="CENTER">ninguno</p></td>
+				<td width="32%"><p align="CENTER">DI0FP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">ninguno</p></td>
+				<td width="32%"><p align="CENTER">ninguno</p></td>
+				<td width="32%"><p align="CENTER">DI0MS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">ningún</p></td>
+				<td width="32%"><p align="CENTER">ninguno</p></td>
+				<td width="32%"><p align="CENTER">DI0MS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">ningunos</p></td>
+				<td width="32%"><p align="CENTER">ninguno</p></td>
+				<td width="32%"><p align="CENTER">DI0MP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">otra</p></td>
+				<td width="32%"><p align="CENTER">otro</p></td>
+				<td width="32%"><p align="CENTER">DI0FS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">otras</p></td>
+				<td width="32%"><p align="CENTER">otro</p></td>
+				<td width="32%"><p align="CENTER">DI0FP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">otro</p></td>
+				<td width="32%"><p align="CENTER">otro</p></td>
+				<td width="32%"><p align="CENTER">DI0MS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">otros</p></td>
+				<td width="32%"><p align="CENTER">otro</p></td>
+				<td width="32%"><p align="CENTER">DI0MP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">sendas</p></td>
+				<td width="32%"><p align="CENTER">sendos</p></td>
+				<td width="32%"><p align="CENTER">DI0FP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">sendos</p></td>
+				<td width="32%"><p align="CENTER">sendos</p></td>
+				<td width="32%"><p align="CENTER">DI0MP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">tantas</p></td>
+				<td width="32%"><p align="CENTER">tanto</p></td>
+				<td width="32%"><p align="CENTER">DI0FP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">tanta</p></td>
+				<td width="32%"><p align="CENTER">tanto</p></td>
+				<td width="32%"><p align="CENTER">DI0FS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">tantos</p></td>
+				<td width="32%"><p align="CENTER">tanto</p></td>
+				<td width="32%"><p align="CENTER">DI0MP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">tanto</p></td>
+				<td width="32%"><p align="CENTER">tanto</p></td>
+				<td width="32%"><p align="CENTER">DI0MS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">todas</p></td>
+				<td width="32%"><p align="CENTER">todo</p></td>
+				<td width="32%"><p align="CENTER">DI0FP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">toda</p></td>
+				<td width="32%"><p align="CENTER">todo</p></td>
+				<td width="32%"><p align="CENTER">DI0FS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">todos</p></td>
+				<td width="32%"><p align="CENTER">todo</p></td>
+				<td width="32%"><p align="CENTER">DI0MP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">todo</p></td>
+				<td width="32%"><p align="CENTER">todo</p></td>
+				<td width="32%"><p align="CENTER">DI0MS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">unas</p></td>
+				<td width="32%"><p align="CENTER">uno</p></td>
+				<td width="32%"><p align="CENTER">DI0FP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">una</p></td>
+				<td width="32%"><p align="CENTER">uno</p></td>
+				<td width="32%"><p align="CENTER">DI0FS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">unos</p></td>
+				<td width="32%"><p align="CENTER">uno</p></td>
+				<td width="32%"><p align="CENTER">DI0MP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">un</p></td>
+				<td width="32%"><p align="CENTER">uno</p></td>
+				<td width="32%"><p align="CENTER">DI0MS0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">varias</p></td>
+				<td width="32%"><p align="CENTER">varios</p></td>
+				<td width="32%"><p align="CENTER">DI0FP0</p></td>
+			</tr>
+			<tr valign="TOP">
+				<td width="36%"><p align="CENTER">varios</p></td>
+				<td width="32%"><p align="CENTER">varios</p></td>
+				<td width="32%"><p align="CENTER">DI0MP0</p></td>
+			</tr>
+		</tbody></table>
+	</center>
+</li> <!-- close DI -->
+
+<li class="nested"><span class="title1">Artículos</span>
+
+<ul>
+ <li>Sólo tratamos como artículo las formas del <i>artículo definido</i>. No contemplamos la
+     categoría de <i>artículo indefinido</i> (<i>un</i>) puesto que hemos decidido tratarlas 
+     como determinantes indefinidos (véase arriba) o como numerales (véase seccion NUMERALES).</li>
+</ul>
+
+<div class="examples">Ejemplos:</div>
+
+<center>
+	<table cellpadding="2" cellspacing="2" width="375">
+		<tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="34%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+			<td bgcolor="#000066" width="34%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="31%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="33%"><p align="CENTER">el</p></td>
+			<td width="33%"><p align="CENTER">el</p></td>
+			<td width="33%"><p align="CENTER">DA0MS0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">los</p></td>
+			<td width="33%"><p align="CENTER">el</p></td>
+			<td width="37%"><p align="CENTER">DA0MP0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="33%"><p align="CENTER">lo</p></td>
+			<td width="33%"><p align="CENTER">el</p></td>
+			<td width="33%"><p align="CENTER">DA0NS0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="33%"><p align="CENTER">la</p></td>
+			<td width="33%"><p align="CENTER">el</p></td>
+			<td width="33%"><p align="CENTER">DA0FS0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="33%"><p align="CENTER">las</p></td>
+			<td width="33%"><p align="CENTER">el</p></td>
+			<td width="33%"><p align="CENTER">DA0FP0</p></td>
+		</tr>
+	</tbody></table>
+</center>
+</li> <!-- close DA -->
+
+<li class="nested"><span class="title1">Determinantes Numerales</span>
+
+<ul>
+  <li>Los determinantes numerales se etiquetan con Z. 
+     Véase sección sobre <a href="#cifras">numerales</a>. </li>
+</ul>
+</li> <!-- close DN -->
+
+</ol>
+
+<p align="RIGHT"><a href="#index">índice</a></p>
+<hr>
+</li> <!-- close D -->
+
+<li class="nested"><span class="title0">NOMBRES</span>
+<a name="nombres">
+
+<center>
+	<table cellpadding="2" cellspacing="3" border="1" width="377">
+		<colgroup><col width="40">
+		<col width="127">
+		<col width="111">
+		<col width="67">
+		</colgroup><tbody><tr>
+			<th colspan="4" bgcolor="#ffffff" valign="TOP" width="365">
+				<p align="CENTER">NOMBRES</p>
+			</th>
+		</tr>
+		<tr valign="TOP">
+			<th width="40">
+				<p align="CENTER">Pos.</p>
+			</th>
+			<th width="127">
+				<p align="CENTER">Atributo</p>
+			</th>
+			<th width="111">
+				<p align="CENTER">Valor</p>
+			</th>
+			<th width="67">
+				<p align="CENTER">Código</p>
+			</th>
+		</tr>
+		<tr valign="TOP">
+			<td width="40"><p align="CENTER">1</p></td>
+			<td width="127"><p align="CENTER">Categoría</p></td>
+			<td width="111"><p align="CENTER">Nombre</p></td>
+			<td width="67"><p align="CENTER">N</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="2" width="40"><p align="CENTER">2</p></td>
+			<td rowspan="2" width="127"><p align="CENTER">Tipo</p></td>
+			<td width="111"><p align="CENTER">Común</p></td>
+			<td width="67"><p align="CENTER">C</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="111"><p align="CENTER">Propio</p></td>
+			<td width="67"><p align="CENTER">P</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="3" width="40"><p align="CENTER">3</p></td>
+			<td rowspan="3" width="127"><p align="CENTER">Género</p></td>
+			<td width="111"><p align="CENTER">Masculino</p></td>
+			<td width="67"><p align="CENTER">M</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="111"><p align="CENTER">Femenino</p></td>
+			<td width="67"><p align="CENTER">F</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="111"><p align="CENTER">Común</p></td>
+			<td width="67"><p align="CENTER">C</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="3" width="40"><p align="CENTER">4</p></td>
+			<td rowspan="3" width="127"><p align="CENTER">Número</p></td>
+			<td width="111"><p align="CENTER">Singular</p></td>
+			<td width="67"><p align="CENTER">S</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="111"><p align="CENTER">Plural</p></td>
+			<td width="67"><p align="CENTER">P</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="111"><p align="CENTER">Invariable</p></td>
+			<td width="67"><p align="CENTER">N</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="4" width="40"><p align="CENTER">5-6</p></td>
+			<td rowspan="4" width="127"><p align="CENTER">Clasificación semántica</p></td>
+			<td width="111"><p align="CENTER">Persona</p></td>
+			<td width="67"><p align="CENTER">SP</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="111"><p align="CENTER">Lugar 				</p></td>
+			<td width="67"><p align="CENTER">G0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="111"><p align="CENTER">Organización</p></td>
+			<td width="67"><p align="CENTER">O0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="111"><p align="CENTER">Otros</p></td>
+			<td width="67"><p align="CENTER">V0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="2" width="40"><p align="CENTER">7</p></td>
+			<td rowspan="2" width="127"><p align="CENTER">Grado</p></td>
+			<td width="111"><p align="CENTER">Aumentativo</p></td>
+			<td width="67"><p align="CENTER">A</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="111"><p align="CENTER">Diminutivo</p></td>
+			<td width="67"><p align="CENTER">D</p></td>
+		</tr>
+	</tbody></table>
+</center>
+
+<p>
+</p><ul>
+	<li>Los nombres
+	tienen como lema la forma singular, tanto si es de género femenino
+	como masculino o neutro. Para los nombres invariables, es decir,
+	aquellos que tanto para el singular como para el plural presentan la
+	misma forma (<i>tesis</i>), el lema y la forma coincidirán. </li>
+	<li>Los nombres propios tendrán la
+	etiqueta NP00000 si no se usa clasificación semántica, o bien, el
+	valor correspondiente en los dígitos 5-6.</li>
+	<li>El atributo <i>grado</i> se
+	especificará para aquellos nombres que tengan sufijación
+	apreciativa (aumentativos, despectivos, etc.). Para el resto de
+	nombres este valor será <b>0</b>. </li>
+</ul>
+<p></p>
+
+<div class="examples">Ejemplos:</div>
+
+<center>
+	<table cellpadding="2" cellspacing="0" border="0" width="375">
+		<colgroup><col width="116">
+		<col width="131">
+		<col width="116">
+		</colgroup><tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="116"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+			<td bgcolor="#000066" width="131"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="116"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="116"><p align="CENTER">chico</p></td>
+			<td width="131"><p align="CENTER">chico</p></td>
+			<td width="116"><p align="CENTER">NCMS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="116"><p align="CENTER">chicas</p></td>
+			<td width="131"><p align="CENTER">chico</p></td>
+			<td width="116"><p align="CENTER">NCFP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="116"><p align="CENTER">gatito</p></td>
+			<td width="131"><p align="CENTER">gato</p></td>
+			<td width="116"><p align="CENTER">NCMS00D</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="116"><p align="CENTER">oyente</p></td>
+			<td width="131"><p align="CENTER">oyente</p></td>
+			<td width="116"><p align="CENTER">NCCS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="116"><p align="CENTER">oyentes</p></td>
+			<td width="131"><p align="CENTER">oyente</p></td>
+			<td width="116"><p align="CENTER">NCCP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="116"><p align="CENTER">cortapapeles</p></td>
+			<td width="131"><p align="CENTER">cortapapeles</p></td>
+			<td width="116"><p align="CENTER">NCMN000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="116"><p align="CENTER">tesis</p></td>
+			<td width="131"><p align="CENTER">tesis</p></td>
+			<td width="116"><p align="CENTER">NCFN000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="116"><p align="CENTER">Barcelona</p></td>
+			<td width="131"><p align="CENTER">barcelona</p></td>
+			<td width="116"><p align="CENTER">NP000G0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="116"><p align="CENTER">COI</p></td>
+			<td width="131"><p align="CENTER">coi</p></td>
+			<td width="116"><p align="CENTER">NP000O0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="116"><p align="CENTER">Pedro</p></td>
+			<td width="131"><p align="CENTER">pedro</p></td>
+			<td width="116"><p align="CENTER">NP000P0</p></td>
+		</tr>
+	</tbody></table>
+</center>
+
+</a><p align="RIGHT"><a name="nombres"></a><a href="#index">índice</a></p>
+
+<hr>
+</li> <!-- close N -->
+
+<li class="nested"><span class="title0">VERBOS</span>
+<a name="verbos">
+
+<center>
+	<table cellpadding="2" cellspacing="2" border="1" width="381">
+		<tbody><tr>
+			<th colspan="4" bgcolor="#ffffff" valign="TOP">
+				<p align="CENTER">VERBOS</p>
+			</th>
+		</tr>
+		<tr valign="TOP">
+			<th width="11%">
+				<p align="CENTER">Pos.</p>
+			</th>
+			<th width="37%">
+				<p align="CENTER">Atributo</p>
+			</th>
+			<th width="32%">
+				<p align="CENTER">Valor</p>
+			</th>
+			<th width="19%">
+				<p align="CENTER">Código</p>
+			</th>
+		</tr>
+		<tr valign="TOP">
+			<td width="11%"><p align="CENTER">1</p></td>
+			<td width="37%"><p align="CENTER">Categoría</p></td>
+			<td width="32%"><p align="CENTER">Verbo</p></td>
+			<td width="19%"><p align="CENTER">V</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="3" width="11%"><p align="CENTER">2</p></td>
+			<td rowspan="3" width="37%"><p align="CENTER">Tipo</p></td>
+			<td width="32%"><p align="CENTER">Principal</p></td>
+			<td width="19%"><p align="CENTER">M</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Auxiliar</p></td>
+			<td width="19%"><p align="CENTER">A</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Semiauxiliar</p></td>
+			<td width="19%"><p align="CENTER">S</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="6" width="11%"><p align="CENTER">3</p></td>
+			<td rowspan="6" width="37%"><p align="CENTER">Modo</p></td>
+			<td width="32%"><p align="CENTER">Indicativo</p></td>
+			<td width="19%"><p align="CENTER">I</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Subjuntivo</p></td>
+			<td width="19%"><p align="CENTER">S</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Imperativo</p></td>
+			<td width="19%"><p align="CENTER">M</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Infinitivo</p></td>
+			<td width="19%"><p align="CENTER">N</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Gerundio</p></td>
+			<td width="19%"><p align="CENTER">G</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Participio</p></td>
+			<td width="19%"><p align="CENTER">P</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="6" width="11%"><p align="CENTER">4</p></td>
+			<td rowspan="6" width="37%"><p align="CENTER">Tiempo</p></td>
+			<td width="32%"><p align="CENTER">Presente</p></td>
+			<td width="19%"><p align="CENTER">P</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Imperfecto</p></td>
+			<td width="19%"><p align="CENTER">I</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Futuro</p></td>
+			<td width="19%"><p align="CENTER">F</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Pasado</p></td>
+			<td width="19%"><p align="CENTER">S</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Condicional</p></td>
+			<td width="19%"><p align="CENTER">C</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">-</p></td>
+			<td width="19%"><p align="CENTER">0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="3" width="11%"><p align="CENTER">5</p></td>
+			<td rowspan="3" width="37%"><p align="CENTER">Persona</p></td>
+			<td width="32%"><p align="CENTER">Primera</p></td>
+			<td width="19%"><p align="CENTER">1</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Segunda</p></td>
+			<td width="19%"><p align="CENTER">2</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Tercera</p></td>
+			<td width="19%"><p align="CENTER">3</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="2" width="11%"><p align="CENTER">6</p></td>
+			<td rowspan="2" width="37%"><p align="CENTER">Número</p></td>
+			<td width="32%"><p align="CENTER">Singular</p></td>
+			<td width="19%"><p align="CENTER">S</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Plural</p></td>
+			<td width="19%"><p align="CENTER">P</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="2" width="11%"><p align="CENTER">7</p></td>
+			<td rowspan="2" width="37%"><p align="CENTER">Género</p></td>
+			<td width="32%"><p align="CENTER">Masculino</p></td>
+			<td width="19%"><p align="CENTER">M</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Femenino</p></td>
+			<td width="19%"><p align="CENTER">F</p></td>
+		</tr>
+	</tbody></table>
+</center>
+
+<p>
+</p><ul>
+	<li>El lema del verbo ha de ser <u>siempre</u> el infinitivo. </li>
+	<li>Etiquetamos
+	las formas del verbo <i>haber</i> como auxiliares (VA) cuando actúan
+	como tal, y como verbo principal (VM) en los existenciales (hay
+	dinero, cuando haya dinero), las del verbo <i>ser</i> como
+	semiauxiliares (VS) y las restantes como principales (VM). </li>
+	<li>El atributo	de <i>Género</i> sólo afecta a los participios, para el resto de
+	formas este atributo no se especifica (0). </li>
+	<li>Para las formas de infinitivo y
+	gerundio no se especifican los atributos de <i>Tiempo</i>, <i>Persona</i>,
+	<i>Número</i> y <i>Género</i>, por lo que su valor será 0. </li>
+</ul>
+<p></p>
+
+<center>
+	<table cellpadding="2" cellspacing="2" width="375">
+		<tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="32%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+			<td bgcolor="#000066" width="36%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="32%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cantada</p></td>
+			<td width="36%"><p align="CENTER">cantar</p></td>
+			<td width="32%"><p align="CENTER">VMP00S<i><b>F</b></i></p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cantadas</p></td>
+			<td width="36%"><p align="CENTER">cantar</p></td>
+			<td width="32%"><p align="CENTER">VMP00P<i><b>F</b></i></p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cantado</p></td>
+			<td width="36%"><p align="CENTER">cantar</p></td>
+			<td width="32%"><p align="CENTER">VMP00S<i><b>M</b></i></p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cantados</p></td>
+			<td width="36%"><p align="CENTER">cantar</p></td>
+			<td width="32%"><p align="CENTER">VMP00P<i><b>M</b></i></p></td>
+		</tr>
+	</tbody></table>
+</center>
+
+<div class="examples">Ejemplos:</div>
+
+<center>
+	<table cellpadding="2" cellspacing="2" border="1" width="732">
+		<tbody><tr>
+			<th rowspan="2" bgcolor="#000066" width="21%">
+				<p align="CENTER"><font color="#ffffff">Tiempo</font></p>
+			</th>
+			<th colspan="3" bgcolor="#000066" width="39%">
+				<p align="CENTER"><font color="#ffffff">VERBOS PRINCIPALES</font></p>
+			</th>
+			<th rowspan="67" width="2%">
+				<p align="CENTER">&nbsp;</p>
+			</th>
+			<th colspan="3" bgcolor="#000066" width="39%">
+				<p align="CENTER"><font color="#ffffff">VERBO SEMIAUXILIAR</font></p>
+			</th>
+		</tr>
+		<tr>
+			<th bgcolor="#000066" valign="TOP" width="16%">
+				<p align="CENTER"><font color="#ffffff">Forma</font></p>
+			</th>
+			<th bgcolor="#000066" valign="TOP" width="8%">
+				<p align="CENTER"><font color="#ffffff">Lema</font></p>
+			</th>
+			<th bgcolor="#000066" valign="TOP" width="15%">
+				<p align="CENTER"><font color="#ffffff">Etiqueta</font></p>
+			</th>
+			<th bgcolor="#000066" valign="TOP" width="13%">
+				<p align="CENTER"><font color="#ffffff">Forma</font></p>
+			</th>
+			<th bgcolor="#000066" valign="TOP" width="11%">
+				<p align="CENTER"><font color="#ffffff">Lema</font></p>
+			</th>
+			<th bgcolor="#000066" valign="TOP" width="15%">
+				<p align="CENTER"><font color="#ffffff">Etiqueta</font></p>
+			</th>
+		</tr>
+		<tr>
+			<td rowspan="6" width="21%"><p align="CENTER">PRESENTE DE INDICATIVO</p></td>
+			<td width="16%"><p align="CENTER">canto</p></td>
+			<td width="8%"><p align="CENTER">cantar</p></td>
+			<td width="15%"><p align="CENTER">VMIP1S0</p></td>
+			<td width="13%"><p align="CENTER">soy</p></td>
+			<td width="11%"><p align="CENTER">ser</p></td>
+			<td width="15%"><p align="CENTER">VSIP1S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantas</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIP2S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">eres</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIP2S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">canta</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIP3S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">es</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIP3S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantamos</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIP1P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">somos</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIP1P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantáis</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIP2P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">sois</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIP2P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantan</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIP3P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">son</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIP3P0</p></td>
+		</tr>
+		<tr>
+			<td rowspan="6" width="21%"><p align="CENTER">PRETÉRITO IMPERFECTO</p></td>
+			<td width="16%"><p align="CENTER">cantaba</p></td>
+			<td width="8%"><p align="CENTER">cantar</p></td>
+			<td width="15%"><p align="CENTER">VMII1S0</p></td>
+			<td width="13%"><p align="CENTER">era</p></td>
+			<td width="11%"><p align="CENTER">ser</p></td>
+			<td width="15%"><p align="CENTER">VSII1S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantabas</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMII2S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">eras</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSII2S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantaba</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMII3S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">era</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSII3S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantábamos</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMII1P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">éramos</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSII1P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantabais</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMII2P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">erais</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSII2P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantaban</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMII3P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">eran</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSII3P0</p></td>
+		</tr>
+		<tr>
+			<td rowspan="6" width="21%"><p align="CENTER">PRETÉRITO PERFECTO SIMPLE</p></td>
+			<td width="16%"><p align="CENTER">canté</p></td>
+			<td width="8%"><p align="CENTER">cantar</p></td>
+			<td width="15%"><p align="CENTER">VMIS1S0</p></td>
+			<td width="13%"><p align="CENTER">fui</p></td>
+			<td width="11%"><p align="CENTER">ser</p></td>
+			<td width="15%"><p align="CENTER">VSIS1S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantaste</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIS2S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fuiste</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIS2S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantó</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIS3S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fue</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIS3S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantamos</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIS1P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fuimos</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIS1P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantasteis</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIS2P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fuisteis</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIS2P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantaron</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIS3P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fueron</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIS3P0</p></td>
+		</tr>
+		<tr>
+			<td rowspan="6" width="21%"><p align="CENTER">FUTURO DE INDICATIVO</p></td>
+			<td width="16%"><p align="CENTER">cantaré</p></td>
+			<td width="8%"><p align="CENTER">cantar</p></td>
+			<td width="15%"><p align="CENTER">VMIF1S0</p></td>
+			<td width="13%"><p align="CENTER">seré</p></td>
+			<td width="11%"><p align="CENTER">ser</p></td>
+			<td width="15%"><p align="CENTER">VSIF1S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantarás</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIF2S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">serás</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIF2S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantará</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIF3S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">será</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIF3S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantaremos</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIF1P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">seremos</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIF1P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantaréis</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIF2P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">seréis</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIF2P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantarán</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIF3P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">serán</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIF3P0</p></td>
+		</tr>
+		<tr>
+			<td rowspan="6" width="21%"><p align="CENTER">CONDICIONAL</p></td>
+			<td width="16%"><p align="CENTER">cantaría</p></td>
+			<td width="8%"><p align="CENTER">cantar</p></td>
+			<td width="15%"><p align="CENTER">VMIC1S0</p></td>
+			<td width="13%"><p align="CENTER">sería</p></td>
+			<td width="11%"><p align="CENTER">ser</p></td>
+			<td width="15%"><p align="CENTER">VSIC1S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantarías</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIC2S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">serías</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIC2S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantaría</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIC3S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">sería</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIC3S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantaríamos</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIC1P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">seríamos</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIC1P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantaríais</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIC2P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">seríais</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIC2P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantarían</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMIC3P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">serían</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSIC3P0</p></td>
+		</tr>
+		<tr>
+			<td rowspan="6" width="21%"><p align="CENTER">PRESENTE DE SUBJUNTIVO</p></td>
+			<td width="16%"><p align="CENTER">cante</p></td>
+			<td width="8%"><p align="CENTER">cantar</p></td>
+			<td width="15%"><p align="CENTER">VMSP1S0</p></td>
+			<td width="13%"><p align="CENTER">sea</p></td>
+			<td width="11%"><p align="CENTER">ser</p></td>
+			<td width="15%"><p align="CENTER">VSSP1S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantes</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSP2S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">seas</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSP2S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cante</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSP3S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">sea</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSP3S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantemos</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSP1P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">seamos</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSP1P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantéis</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSP2P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">seáis</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSP2P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">canten</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSP3P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">sean</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSP3P0</p></td>
+		</tr>
+		<tr>
+			<td rowspan="12" width="21%"><p align="CENTER">PRETÉRITO IMPERFECTO</p></td>
+			<td width="16%"><p align="CENTER">cantara</p></td>
+			<td width="8%"><p align="CENTER">cantar</p></td>
+			<td width="15%"><p align="CENTER">VMSI1S0</p></td>
+			<td width="13%"><p align="CENTER">fuera</p></td>
+			<td width="11%"><p align="CENTER">ser</p></td>
+			<td width="15%"><p align="CENTER">VSSI1S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantaras</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSI2S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fueras</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSI2S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantara</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSI3S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fuera</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSI3S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantáramos</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSI1P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fuéramos</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSI1P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantarais</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSI2P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fuerais</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSI2P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantaran</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSI3P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fueran</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSI3P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantase</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSI1S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fuese</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSI1S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantases</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSI2S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fueses</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSI2S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantase</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSI3S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fuese</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSI3S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantásemos</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSI1P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fuésemos</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSI1P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantaseis</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSI2P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fueseis</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSI2P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantasen</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSI3P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fuesen</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSI3P0</p></td>
+		</tr>
+		<tr>
+			<td rowspan="6" width="21%"><p align="CENTER">FUTURO DE SUBJUNTIVO</p></td>
+			<td width="16%"><p align="CENTER">cantare</p></td>
+			<td width="8%"><p align="CENTER">cantar</p></td>
+			<td width="15%"><p align="CENTER">VMSF1S0</p></td>
+			<td width="13%"><p align="CENTER">fuere</p></td>
+			<td width="11%"><p align="CENTER">ser</p></td>
+			<td width="15%"><p align="CENTER">VSSF1S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantares</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSF2S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fueres</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSF2S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantare</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSF3S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fuere</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSF3S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantáremos</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSF1P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fuéremos</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSF1P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantareis</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSF2P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fuereis</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSF2P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantaren</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMSF3P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">fueren</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSSF3P0</p></td>
+		</tr>
+		<tr>
+			<td width="21%"><p align="CENTER">GERUNDIO</p></td>
+			<td width="16%"><p align="CENTER">cantando</p></td>
+			<td width="8%"><p align="CENTER">cantar</p></td>
+			<td width="15%"><p align="CENTER">VMG0000</p></td>
+			<td width="13%"><p align="CENTER">siendo</p></td>
+			<td width="11%"><p align="CENTER">ser</p></td>
+			<td width="15%"><p align="CENTER">VSG0000</p></td>
+		</tr>
+		<tr>
+			<td rowspan="5" width="21%"><p align="CENTER">IMPERATIVO</p></td>
+			<td width="16%"><p align="CENTER">canta</p></td>
+			<td width="8%"><p align="CENTER">cantar</p></td>
+			<td width="15%"><p align="CENTER">VMM02S0</p></td>
+			<td width="13%"><p align="CENTER">sé</p></td>
+			<td width="11%"><p align="CENTER">ser</p></td>
+			<td width="15%"><p align="CENTER">VSM02S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cante</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMM03S0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">sea</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSM03S0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantemos</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMM01P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">seamos</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSM01P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantad</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMM02P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">sed</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSM02P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">canten</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMM03P0</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">sean</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSM03P0</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="21%"><p align="CENTER">INFINITIVO</p></td>
+			<td valign="TOP" width="16%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMN0000</p></td>
+			<td valign="TOP" width="13%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="11%"><p align="CENTER">ser</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VSN0000</p></td>
+		</tr>
+		<tr>
+			<td rowspan="4" width="21%"><p align="CENTER">PARTICIPIO</p></td>
+			<td width="16%"><p align="CENTER">cantada</p></td>
+			<td width="8%"><p align="CENTER">cantar</p></td>
+			<td width="15%"><p align="CENTER">VMP00SF</p></td>
+			<td rowspan="4" width="13%"><p align="CENTER">sido</p></td>
+			<td rowspan="4" width="11%"><p align="CENTER">ser</p></td>
+			<td rowspan="4" width="15%"><p align="CENTER">VSP00SM</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantado</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMP00SM</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantadas</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMP00PF</p></td>
+		</tr>
+		<tr>
+			<td valign="TOP" width="16%"><p align="CENTER">cantados</p></td>
+			<td valign="TOP" width="8%"><p align="CENTER">cantar</p></td>
+			<td valign="TOP" width="15%"><p align="CENTER">VMP00PM</p></td>
+		</tr>
+	</tbody></table>
+</center>
+
+</a><p align="RIGHT"><a name="verbos"></a><a href="#index">índice</a><a></a></p><a>
+<hr>
+</a></li><a> <!-- close V -->
+
+</a><li class="nested"><a><span class="title0">PRONOMBRES</span>
+</a><a name="pronombres">
+
+<center>
+	<table cellpadding="2" cellspacing="3" border="1" width="377">
+		<colgroup><col width="40">
+		<col width="118">
+		<col width="120">
+		<col width="67">
+		</colgroup><tbody><tr>
+			<th colspan="4" bgcolor="#ffffff" valign="TOP" width="365"><p align="CENTER">PRONOMBRES</p></th>
+		</tr>
+		<tr valign="TOP">
+			<th width="40"><p align="CENTER">Pos.</p></th>
+			<th width="118"><p align="CENTER">Atributo</p></th>
+			<th width="120"><p align="CENTER">Valor</p></th>
+			<th width="67"><p align="CENTER">Código</p></th>
+		</tr>
+		<tr valign="TOP">
+			<td width="40"><p align="CENTER">1</p></td>
+			<td width="118"><p align="CENTER">Categoría</p></td>
+			<td width="120"><p align="CENTER">Pronombre</p></td>
+			<td width="67"><p align="CENTER">P</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="7" width="40"><p align="CENTER">2</p></td>
+			<td rowspan="7" width="118"><p align="CENTER">Tipo</p></td>
+			<td width="120"><p align="CENTER">Personal</p></td>
+			<td width="67"><p align="CENTER">P</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Demostrativo</p></td>
+			<td width="67"><p align="CENTER">D</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Posesivo</p></td>
+			<td width="67"><p align="CENTER">X</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Indefinido</p></td>
+			<td width="67"><p align="CENTER">I</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Interrogativo</p></td>
+			<td width="67"><p align="CENTER">T</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Relativo</p></td>
+			<td width="67"><p align="CENTER">R</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Exclamativo</p></td>
+			<td width="67"><p align="CENTER">E</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="3" width="40"><p align="CENTER">3</p></td>
+			<td rowspan="3" width="118"><p align="CENTER">Persona</p></td>
+			<td width="120"><p align="CENTER">Primera</p></td>
+			<td width="67"><p align="CENTER">1</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Segunda</p></td>
+			<td width="67"><p align="CENTER">2</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Tercera</p></td>
+			<td width="67"><p align="CENTER">3</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="4" width="40"><p align="CENTER">4</p></td>
+			<td rowspan="4" width="118"><p align="CENTER">Género</p></td>
+			<td width="120"><p align="CENTER">Masculino</p></td>
+			<td width="67"><p align="CENTER">M</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Femenino</p></td>
+			<td width="67"><p align="CENTER">F</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Común</p></td>
+			<td width="67"><p align="CENTER">C</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Neutro</p></td>
+			<td width="67"><p align="CENTER">N</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="3" width="40"><p align="CENTER">5</p></td>
+			<td rowspan="3" width="118"><p align="CENTER">Número</p></td>
+			<td width="120"><p align="CENTER">Singular</p></td>
+			<td width="67"><p align="CENTER">S</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Plural</p></td>
+			<td width="67"><p align="CENTER">P</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">ImpersonalMInvariable</p></td>
+			<td width="67"><p align="CENTER">N</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="4" width="40"><p align="CENTER">6</p></td>
+			<td rowspan="4" width="118"><p align="CENTER">Caso</p></td>
+			<td width="120"><p align="CENTER">Nominativo</p></td>
+			<td width="67"><p align="CENTER">N</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Acusativo</p></td>
+			<td width="67"><p align="CENTER">A</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Dativo</p></td>
+			<td width="67"><p align="CENTER">D</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Oblicuo</p></td>
+			<td width="67"><p align="CENTER">O</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="2" width="40"><p align="CENTER">7</p></td>
+			<td rowspan="2" width="118"><p align="CENTER">Poseedor</p></td>
+			<td width="120"><p align="CENTER">Singular</p></td>
+			<td width="67"><p align="CENTER">S</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="120"><p align="CENTER">Plural</p></td>
+			<td width="67"><p align="CENTER">P</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="40"><p align="CENTER">8</p></td>
+			<td width="118"><p align="CENTER">Politeness</p></td>
+			<td width="120"><p align="CENTER">Polite</p></td>
+			<td width="67"><p align="CENTER">P</p></td>
+		</tr>
+	</tbody></table>
+</center>
+
+<p>
+</p><ul>
+	<li>El atributo <i>Persona</i> se
+	especificará para los pronombres personales y posesivos, para el
+	resto de formas el valor será 0.</li>
+	<li>El atributo <i>Caso</i> es
+	específico para los pronombres personales, para el resto será 0.</li>
+	<li>El atributo <i>Poseedor</i> sólo se usará con los pronombres
+	posesivos para marcar el número del poseedor: singular para <i>mío</i>, <i>tuyo</i>,
+        plural para <i>nuestro</i> y <i>vuestro</i>. Para los pronombres en que el poseedor es una tercera
+	persona (<i>suyo</i>), como no se podrá distinguir si es de
+	singular o plural este atributo tomará valor 0. </li>
+	<li>El atributo <i>Politeness</i> (cortesía) se especificará para los
+	pronombres personales <i>usted</i>, <i>ustedes</i> y <i>vos</i>. </li>
+	<li>El lema será la forma masculina
+	del pronombre con las mismas características de caso y persona.</li>
+</ul>
+<p></p>
+
+</a><ol class="nested"><a name="pronombres">
+<li class="nested"><span class="title1">Pronombres Personales</span>
+
+<center>
+	<table cellpadding="2" cellspacing="2" width="375">
+		<tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="32%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+			<td bgcolor="#000066" width="36%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="32%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p>
+		</td></tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">yo</p></td>
+			<td width="36%"><p align="CENTER">yo</p></td>
+			<td width="32%"><p align="CENTER">PP1CSN00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">me</p></td>
+			<td width="36%"><p align="CENTER">me</p></td>
+			<td width="32%"><p align="CENTER">PP1CS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">mí</p></td>
+			<td width="36%"><p align="CENTER">mí</p></td>
+			<td width="32%"><p align="CENTER">PP1CSO00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">nos</p></td>
+			<td width="36%"><p align="CENTER">me</p></td>
+			<td width="32%"><p align="CENTER">PP1CP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">nosotras</p></td>
+			<td width="36%"><p align="CENTER">nosotros</p></td>
+			<td width="32%"><p align="CENTER">PP1FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">nosotros</p></td>
+			<td width="36%"><p align="CENTER">nosotros</p></td>
+			<td width="32%"><p align="CENTER">PP1MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">conmigo</p></td>
+			<td width="36%"><p align="CENTER">conmigo</p></td>
+			<td width="32%"><p align="CENTER">PP1CSO00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">te</p></td>
+			<td width="36%"><p align="CENTER">te</p></td>
+			<td width="32%"><p align="CENTER">PP2CS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">ti</p></td>
+			<td width="36%"><p align="CENTER">tí</p></td>
+			<td width="32%"><p align="CENTER">PP2CSO00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">tú</p></td>
+			<td width="36%"><p align="CENTER">tú</p></td>
+			<td width="32%"><p align="CENTER">PP2CSN00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">os</p></td>
+			<td width="36%"><p align="CENTER">te</p></td>
+			<td width="32%"><p align="CENTER">PP2CP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">usted</p></td>
+			<td width="36%"><p align="CENTER">usted</p></td>
+			<td width="32%"><p align="CENTER">PP2CS00P</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">ustedes</p></td>
+			<td width="36%"><p align="CENTER">usted</p></td>
+			<td width="32%"><p align="CENTER">PP2CP00P</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">vos</p></td>
+			<td width="36%"><p align="CENTER">tú</p></td>
+			<td width="32%"><p align="CENTER">PP3CN00P</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">vosotras</p></td>
+			<td width="36%"><p align="CENTER">vosotros</p></td>
+			<td width="32%"><p align="CENTER">PP2FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">vosotros</p></td>
+			<td width="36%"><p align="CENTER">vosotros</p></td>
+			<td width="32%"><p align="CENTER">PP2MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">contigo</p></td>
+			<td width="36%"><p align="CENTER">contigo</p></td>
+			<td width="32%"><p align="CENTER">PP2CNO00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">él</p></td>
+			<td width="36%"><p align="CENTER">él</p></td>
+			<td width="32%"><p align="CENTER">PP3MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">ella</p></td>
+			<td width="36%"><p align="CENTER">él</p></td>
+			<td width="32%"><p align="CENTER">PP3FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">ellas</p></td>
+			<td width="36%"><p align="CENTER">ellos</p></td>
+			<td width="32%"><p align="CENTER">PP3FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">ello</p></td>
+			<td width="36%"><p align="CENTER">ello</p></td>
+			<td width="32%"><p align="CENTER">PP3NS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">ellos</p></td>
+			<td width="36%"><p align="CENTER">ellos</p></td>
+			<td width="32%"><p align="CENTER">PP3MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">la</p></td>
+			<td width="36%"><p align="CENTER">lo</p></td>
+			<td width="32%"><p align="CENTER">PP3FSA00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">las</p></td>
+			<td width="36%"><p align="CENTER">lo</p></td>
+			<td width="32%"><p align="CENTER">PP3FPA00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">lo</p></td>
+			<td width="36%"><p align="CENTER">lo</p></td>
+			<td width="32%"><p align="CENTER">PP3MSA00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">lo</p></td>
+			<td width="36%"><p align="CENTER">lo</p></td>
+			<td width="32%"><p align="CENTER">PP3CNA00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">los</p></td>
+			<td width="36%"><p align="CENTER">lo</p></td>
+			<td width="32%"><p align="CENTER">PP3MPA00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">le</p></td>
+			<td width="36%"><p align="CENTER">le</p></td>
+			<td width="32%"><p align="CENTER">PP3CSD00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">les</p></td>
+			<td width="36%"><p align="CENTER">le</p></td>
+			<td width="32%"><p align="CENTER">PP3CPD00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">se</p></td>
+			<td width="36%"><p align="CENTER">se</p></td>
+			<td width="32%"><p align="CENTER">PP3CN000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">sí</p></td>
+			<td width="36%"><p align="CENTER">sí</p></td>
+			<td width="32%"><p align="CENTER">PP3CNO00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">consigo</p></td>
+			<td width="36%"><p align="CENTER">consigo</p></td>
+			<td width="32%"><p align="CENTER">PP3CNO00</p></td>
+		</tr>
+	</tbody></table>
+	</center>
+</li> <!-- close PP -->
+
+<li class="nested"><span class="title1">Pronombres Demostrativos</span>
+
+<center>
+	<table cellpadding="2" cellspacing="2" width="375">
+		<tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="37%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+			<td bgcolor="#000066" width="30%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="33%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p>
+			</td></tr>			
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">aquéllas</p></td>
+			<td width="30%"><p align="CENTER">aquel</p></td>
+			<td width="33%"><p align="CENTER">PD0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">aquélla</p></td>
+			<td width="30%"><p align="CENTER">aquel</p></td>
+			<td width="33%"><p align="CENTER">PD0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">aquéllos</p></td>
+			<td width="30%"><p align="CENTER">aquel</p></td>
+			<td width="33%"><p align="CENTER">PD0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">aquél</p></td>
+			<td width="30%"><p align="CENTER">aquel</p></td>
+			<td width="33%"><p align="CENTER">PD0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">aquellas</p></td>
+			<td width="30%"><p align="CENTER">aquel</p></td>
+			<td width="33%"><p align="CENTER">PD0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">aquella</p></td>
+			<td width="30%"><p align="CENTER">aquel</p></td>
+			<td width="33%"><p align="CENTER">PD0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">aquellos</p></td>
+			<td width="30%"><p align="CENTER">aquel</p></td>
+			<td width="33%"><p align="CENTER">PD0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">aquel</p></td>
+			<td width="30%"><p align="CENTER">aquel</p></td>
+			<td width="33%"><p align="CENTER">PD0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">aquello</p></td>
+			<td width="30%"><p align="CENTER">aquel</p></td>
+			<td width="33%"><p align="CENTER">PD0NS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">ésas</p></td>
+			<td width="30%"><p align="CENTER">ese</p></td>
+			<td width="33%"><p align="CENTER">PD0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">ésa</p></td>
+			<td width="30%"><p align="CENTER">ese</p></td>
+			<td width="33%"><p align="CENTER">PD0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">esas</p></td>
+			<td width="30%"><p align="CENTER">ese</p></td>
+			<td width="33%"><p align="CENTER">PD0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">esa</p></td>
+			<td width="30%"><p align="CENTER">ese</p></td>
+			<td width="33%"><p align="CENTER">PD0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">esos</p></td>
+			<td width="30%"><p align="CENTER">ese</p></td>
+			<td width="33%"><p align="CENTER">PD0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">ese</p></td>
+			<td width="30%"><p align="CENTER">ese</p></td>
+			<td width="33%"><p align="CENTER">PD0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">ésos</p></td>
+			<td width="30%"><p align="CENTER">ese</p></td>
+			<td width="33%"><p align="CENTER">PD0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">ése</p></td>
+			<td width="30%"><p align="CENTER">ese</p></td>
+			<td width="33%"><p align="CENTER">PD0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">eso</p></td>
+			<td width="30%"><p align="CENTER">ese</p></td>
+			<td width="33%"><p align="CENTER">PD0NS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">esotra</p></td>
+			<td width="30%"><p align="CENTER">esotro</p></td>
+			<td width="33%"><p align="CENTER">PD0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">esotro</p></td>
+			<td width="30%"><p align="CENTER">esotro</p></td>
+			<td width="33%"><p align="CENTER">PD0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">esta</p></td>
+			<td width="30%"><p align="CENTER">este</p></td>
+			<td width="33%"><p align="CENTER">PD0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">éstas</p></td>
+			<td width="30%"><p align="CENTER">este</p></td>
+			<td width="33%"><p align="CENTER">PD0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">ésta</p></td>
+			<td width="30%"><p align="CENTER">este</p></td>
+			<td width="33%"><p align="CENTER">PD0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">estas</p></td>
+			<td width="30%"><p align="CENTER">este</p></td>
+			<td width="33%"><p align="CENTER">PD0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">esta</p></td>
+			<td width="30%"><p align="CENTER">este</p></td>
+			<td width="33%"><p align="CENTER">PD0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">estos</p></td>
+			<td width="30%"><p align="CENTER">este</p></td>
+			<td width="33%"><p align="CENTER">PD0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">este</p></td>
+			<td width="30%"><p align="CENTER">este</p></td>
+			<td width="33%"><p align="CENTER">PD0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">éstos</p></td>
+			<td width="30%"><p align="CENTER">este</p></td>
+			<td width="33%"><p align="CENTER">PD0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">éste</p></td>
+			<td width="30%"><p align="CENTER">este</p></td>
+			<td width="33%"><p align="CENTER">PD0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">esto</p></td>
+			<td width="30%"><p align="CENTER">este</p></td>
+			<td width="33%"><p align="CENTER">PD0NS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">estotra</p></td>
+			<td width="30%"><p align="CENTER">estotro</p></td>
+			<td width="33%"><p align="CENTER">PD0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">estotro</p></td>
+			<td width="30%"><p align="CENTER">estotro</p></td>
+			<td width="33%"><p align="CENTER">PD0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">tal</p></td>
+			<td width="30%"><p align="CENTER">tal</p></td>
+			<td width="33%"><p align="CENTER">PD0CS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">tales</p></td>
+			<td width="30%"><p align="CENTER">tal</p></td>
+			<td width="33%"><p align="CENTER">PD0CP000</p></td>
+		</tr>
+	</tbody></table>
+	</center>
+</li> <!-- close PD -->
+
+<li class="nested"><span class="title1">Pronombres Posesivos</span>
+	<ul>
+		<li>Los pronombres posesivos (<i>mio,
+		tuyo, suyo</i>, etc.) se comportan como adjetivos. Se usa la
+		etiqueta <b>PX</b> ya que permite expresar el número del poseedor,
+		lo que no seria posible creando una nueva subcategoria de
+		adjetivos. Los PX apareceran siempre detrás de un determinante (<i>el
+		mio, la suya</i>, ...)</li>
+	</ul>
+
+<center>
+	<table cellpadding="2" cellspacing="2" width="375">
+		<tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="37%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>			<td bgcolor="#000066" width="29%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="34%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">mía</p></td>
+			<td width="29%"><p align="CENTER">mío</p></td>
+			<td width="34%"><p align="CENTER">PX1FS0S0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">mías</p></td>
+			<td width="29%"><p align="CENTER">mío</p></td>
+			<td width="34%"><p align="CENTER">PX1FP0S0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">mío</p></td>
+			<td width="29%"><p align="CENTER">mío</p></td>
+			<td width="34%"><p align="CENTER">PX1MS0S0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">míos</p></td>
+			<td width="29%"><p align="CENTER">mío</p></td>
+			<td width="34%"><p align="CENTER">PX1MP0S0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">mío</p></td>
+			<td width="29%"><p align="CENTER">mío</p></td>
+			<td width="34%"><p align="CENTER">PX1NS0S0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">nuestra</p></td>
+			<td width="29%"><p align="CENTER">nuestro</p></td>
+			<td width="34%"><p align="CENTER">PX1FS0P0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">nuestras</p></td>
+			<td width="29%"><p align="CENTER">nuestro</p></td>
+			<td width="34%"><p align="CENTER">PX1FP0P0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">nuestro</p></td>
+			<td width="29%"><p align="CENTER">nuestro</p></td>
+			<td width="34%"><p align="CENTER">PX1MS0P0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">nuestros</p></td>
+			<td width="29%"><p align="CENTER">nuestro</p></td>
+			<td width="34%"><p align="CENTER">PX1MP0P0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">nuestro</p></td>
+			<td width="29%"><p align="CENTER">nuestro</p></td>
+			<td width="34%"><p align="CENTER">PX1NS0P0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">suya</p></td>
+			<td width="29%"><p align="CENTER">suyo</p></td>
+			<td width="34%"><p align="CENTER">PX3FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">suyas</p></td>
+			<td width="29%"><p align="CENTER">suyo</p></td>
+			<td width="34%"><p align="CENTER">PX3FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">suyo</p></td>
+			<td width="29%"><p align="CENTER">suyo</p></td>
+			<td width="34%"><p align="CENTER">PX3MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">suyos</p></td>
+			<td width="29%"><p align="CENTER">suyo</p></td>
+			<td width="34%"><p align="CENTER">PX3MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">suyo</p></td>
+			<td width="29%"><p align="CENTER">suyo</p></td>
+			<td width="34%"><p align="CENTER">PX3NS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">tuya</p></td>
+			<td width="29%"><p align="CENTER">tuyo</p></td>
+			<td width="34%"><p align="CENTER">PX2FS0S0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">tuyas</p></td>
+			<td width="29%"><p align="CENTER">tuyo</p></td>
+			<td width="34%"><p align="CENTER">PX2FP0S0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">tuyo</p></td>
+			<td width="29%"><p align="CENTER">tuyo</p></td>
+			<td width="34%"><p align="CENTER">PX2MS0S0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">tuyos</p></td>
+			<td width="29%"><p align="CENTER">tuyo</p></td>
+			<td width="34%"><p align="CENTER">PX2MP0S0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">tuyo</p></td>
+			<td width="29%"><p align="CENTER">tuyo</p></td>
+			<td width="34%"><p align="CENTER">PX2NS0S0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">vuestra</p></td>
+			<td width="29%"><p align="CENTER">vuestro</p></td>
+			<td width="34%"><p align="CENTER">PX2FS0P0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">vuestras</p></td>
+			<td width="29%"><p align="CENTER">vuestro</p></td>
+			<td width="34%"><p align="CENTER">PX2FP0P0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">vuestro</p></td>
+			<td width="29%"><p align="CENTER">vuestro</p></td>
+			<td width="34%"><p align="CENTER">PX2MS0P0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">vuestros</p></td>
+			<td width="33%"><p align="CENTER">vuestro</p></td>
+			<td width="33%"><p align="CENTER">PX2MP0P0</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">vuestro</p></td>
+			<td width="33%"><p align="CENTER">vuestro</p></td>
+			<td width="33%"><p align="CENTER">PX2NS0P0</p></td>
+		</tr>
+	</tbody></table>
+</center>
+</li> <!-- close PX -->
+
+<li class="nested"><span class="title1">Pronombres Indefinidos</span>
+
+<center>
+	<table cellpadding="2" cellspacing="2" width="375">
+		<tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="34%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+			<td bgcolor="#000066" width="33%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="33%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p>
+		</td></tr>	
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">algo</p></td>
+			<td width="30%"><p align="CENTER">algo</p></td>
+			<td width="33%"><p align="CENTER">PI0CS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">alguien</p></td>
+			<td width="30%"><p align="CENTER">alguien</p></td>
+			<td width="33%"><p align="CENTER">PI0CS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">alguna</p></td>
+			<td width="30%"><p align="CENTER">alguno</p></td>
+			<td width="33%"><p align="CENTER">PI0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">algunas</p></td>
+			<td width="30%"><p align="CENTER">alguno</p></td>
+			<td width="33%"><p align="CENTER">PI0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">alguno</p></td>
+			<td width="30%"><p align="CENTER">alguno</p></td>
+			<td width="33%"><p align="CENTER">PI0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">algunos</p></td>
+			<td width="30%"><p align="CENTER">alguno</p></td>
+			<td width="33%"><p align="CENTER">PI0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">bastante</p></td>
+			<td width="30%"><p align="CENTER">bastante</p></td>
+			<td width="33%"><p align="CENTER">PI0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">bastantes</p></td>
+			<td width="30%"><p align="CENTER">bastante</p></td>
+			<td width="33%"><p align="CENTER">PI0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">cualesquiera</p></td>
+			<td width="30%"><p align="CENTER">cualquiera</p></td>
+			<td width="33%"><p align="CENTER">PI0CP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">cualquiera</p></td>
+			<td width="30%"><p align="CENTER">cualquiera</p></td>
+			<td width="33%"><p align="CENTER">PI0CS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">demás</p></td>
+			<td width="30%"><p align="CENTER">demás</p></td>
+			<td width="33%"><p align="CENTER">PI0CP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">misma</p></td>
+			<td width="30%"><p align="CENTER">mismo</p></td>
+			<td width="33%"><p align="CENTER">PI0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">mismas</p></td>
+			<td width="30%"><p align="CENTER">mismo</p></td>
+			<td width="33%"><p align="CENTER">PI0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">mismo</p></td>
+			<td width="30%"><p align="CENTER">mismo</p></td>
+			<td width="33%"><p align="CENTER">PI0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">mismos</p></td>
+			<td width="30%"><p align="CENTER">mismo</p></td>
+			<td width="33%"><p align="CENTER">PI0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">mucha</p></td>
+			<td width="30%"><p align="CENTER">mucho</p></td>
+			<td width="33%"><p align="CENTER">PI0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">muchas</p></td>
+			<td width="30%"><p align="CENTER">mucho</p></td>
+			<td width="33%"><p align="CENTER">PI0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">mucho</p></td>
+			<td width="30%"><p align="CENTER">mucho</p></td>
+			<td width="33%"><p align="CENTER">PI0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">muchos</p></td>
+			<td width="30%"><p align="CENTER">mucho</p></td>
+			<td width="33%"><p align="CENTER">PI0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">nada</p></td>
+			<td width="30%"><p align="CENTER">nada</p></td>
+			<td width="33%"><p align="CENTER">PI0CS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">nadie</p></td>
+			<td width="30%"><p align="CENTER">nadie</p></td>
+			<td width="33%"><p align="CENTER">PI0CS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">ninguna</p></td>
+			<td width="30%"><p align="CENTER">ninguno</p></td>
+			<td width="33%"><p align="CENTER">PI0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">ningunas</p></td>
+			<td width="30%"><p align="CENTER">ninguno</p></td>
+			<td width="33%"><p align="CENTER">PI0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">ninguno</p></td>
+			<td width="30%"><p align="CENTER">ninguno</p></td>
+			<td width="33%"><p align="CENTER">PI0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">ningunos</p></td>
+			<td width="30%"><p align="CENTER">ninguno</p></td>
+			<td width="33%"><p align="CENTER">PI0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">otra</p></td>
+			<td width="30%"><p align="CENTER">otro</p></td>
+			<td width="33%"><p align="CENTER">PI0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">otras</p></td>
+			<td width="30%"><p align="CENTER">otro</p></td>
+			<td width="33%"><p align="CENTER">PI0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">otro</p></td>
+			<td width="30%"><p align="CENTER">otro</p></td>
+			<td width="33%"><p align="CENTER">PI0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">otros</p></td>
+			<td width="30%"><p align="CENTER">otro</p></td>
+			<td width="33%"><p align="CENTER">PI0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">poca</p></td>
+			<td width="30%"><p align="CENTER">poco</p></td>
+			<td width="33%"><p align="CENTER">PI0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">pocas</p></td>
+			<td width="30%"><p align="CENTER">poco</p></td>
+			<td width="33%"><p align="CENTER">PI0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">poco</p></td>
+			<td width="30%"><p align="CENTER">poco</p></td>
+			<td width="33%"><p align="CENTER">PI0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">pocos</p></td>
+			<td width="30%"><p align="CENTER">poco</p></td>
+			<td width="33%"><p align="CENTER">PI0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">quienquier</p></td>
+			<td width="30%"><p align="CENTER">quienquiera</p></td>
+			<td width="33%"><p align="CENTER">PI0CS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">quienesquiera</p></td>
+			<td width="30%"><p align="CENTER">quienquiera</p></td>
+			<td width="33%"><p align="CENTER">PI0CP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">quienquiera</p></td>
+			<td width="30%"><p align="CENTER">quienquiera</p></td>
+			<td width="33%"><p align="CENTER">PI0CS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">tanta</p></td>
+			<td width="30%"><p align="CENTER">tanto</p></td>
+			<td width="33%"><p align="CENTER">PI0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">tantas</p></td>
+			<td width="30%"><p align="CENTER">tanto</p></td>
+			<td width="33%"><p align="CENTER">PI0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">tanto</p></td>
+			<td width="30%"><p align="CENTER">tanto</p></td>
+			<td width="33%"><p align="CENTER">PI0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">tantos</p></td>
+			<td width="30%"><p align="CENTER">tanto</p></td>
+			<td width="33%"><p align="CENTER">PI0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">toda</p></td>
+			<td width="30%"><p align="CENTER">todo</p></td>
+			<td width="33%"><p align="CENTER">PI0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">todas</p></td>
+			<td width="30%"><p align="CENTER">todo</p></td>
+			<td width="33%"><p align="CENTER">PI0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">todo</p></td>
+			<td width="30%"><p align="CENTER">todo</p></td>
+			<td width="33%"><p align="CENTER">PI0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">todos</p></td>
+			<td width="30%"><p align="CENTER">todo</p></td>
+			<td width="33%"><p align="CENTER">PI0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">una</p></td>
+			<td width="30%"><p align="CENTER">uno</p></td>
+			<td width="33%"><p align="CENTER">PI0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">unas</p></td>
+			<td width="30%"><p align="CENTER">uno</p></td>
+			<td width="33%"><p align="CENTER">PI0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">uno</p></td>
+			<td width="30%"><p align="CENTER">uno</p></td>
+			<td width="33%"><p align="CENTER">PI0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">unos</p></td>
+			<td width="30%"><p align="CENTER">uno</p></td>
+			<td width="33%"><p align="CENTER">PI0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">varias</p></td>
+			<td width="30%"><p align="CENTER">varios</p></td>
+			<td width="33%"><p align="CENTER">PI0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="37%"><p align="CENTER">varios</p></td>
+			<td width="30%"><p align="CENTER">varios</p></td>
+			<td width="33%"><p align="CENTER">PI0MP000</p></td>
+		</tr>
+	</tbody></table>
+</center>
+</li> <!-- close PI -->
+
+<li class="nested"><span class="title1">Pronombres Interrogativos</span>
+
+<center>
+	<table cellpadding="2" cellspacing="2" width="375">
+		<tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="32%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+			<td bgcolor="#000066" width="33%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="35%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">adónde</p></td>
+			<td width="33%"><p align="CENTER">adónde</p></td>
+			<td width="35%"><p align="CENTER">PT000000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cómo</p></td>
+			<td width="33%"><p align="CENTER">cómo</p></td>
+			<td width="35%"><p align="CENTER">PT000000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuál</p></td>
+			<td width="33%"><p align="CENTER">cuál</p></td>
+			<td width="35%"><p align="CENTER">PT0CS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuáles</p></td>
+			<td width="33%"><p align="CENTER">cuál</p></td>
+			<td width="35%"><p align="CENTER">PT0CP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuándo</p></td>
+			<td width="33%"><p align="CENTER">cuándo</p></td>
+			<td width="35%"><p align="CENTER">PT000000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuánta</p></td>
+			<td width="33%"><p align="CENTER">cuánto</p></td>
+			<td width="35%"><p align="CENTER">PT0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuántas</p></td>
+			<td width="33%"><p align="CENTER">cuánto</p></td>
+			<td width="35%"><p align="CENTER">PT0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuánto</p></td>
+			<td width="33%"><p align="CENTER">cuánto</p></td>
+			<td width="35%"><p align="CENTER">PT0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuántos</p></td>
+			<td width="33%"><p align="CENTER">cuánto</p></td>
+			<td width="35%"><p align="CENTER">PT0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">dónde</p></td>
+			<td width="33%"><p align="CENTER">dónde</p></td>
+			<td width="35%"><p align="CENTER">PT000000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">qué</p></td>
+			<td width="33%"><p align="CENTER">qué</p></td>
+			<td width="35%"><p align="CENTER">PT0CS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">quién</p></td>
+			<td width="33%"><p align="CENTER">quién</p></td>
+			<td width="35%"><p align="CENTER">PT0CS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">quiénes</p></td>
+			<td width="33%"><p align="CENTER">quién</p></td>
+			<td width="35%"><p align="CENTER">PT0CP000</p></td>
+		</tr>
+	</tbody></table>
+</center>
+</li> <!-- close PT -->
+
+<li class="nested"><span class="title1">Pronombres Relativos</span>
+
+<center>
+	<table cellpadding="2" cellspacing="2" width="375">
+		<tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="32%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+			<td bgcolor="#000066" width="33%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="35%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">como</p></td>
+			<td width="33%"><p align="CENTER">como</p></td>
+			<td width="35%"><p align="CENTER">PR000000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">donde</p></td>
+			<td width="33%"><p align="CENTER">donde</p></td>
+			<td width="35%"><p align="CENTER">PR000000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">adonde</p></td>
+			<td width="33%"><p align="CENTER">adonde</p></td>
+			<td width="35%"><p align="CENTER">PR000000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuando</p></td>
+			<td width="33%"><p align="CENTER">cuando</p></td>
+			<td width="35%"><p align="CENTER">PR000000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cual</p></td>
+			<td width="33%"><p align="CENTER">cual</p></td>
+			<td width="35%"><p align="CENTER">PR0CS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuales</p></td>
+			<td width="33%"><p align="CENTER">cual</p></td>
+			<td width="35%"><p align="CENTER">PR0CP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuanta</p></td>
+			<td width="33%"><p align="CENTER">cuanto</p></td>
+			<td width="35%"><p align="CENTER">PR0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuantas</p></td>
+			<td width="33%"><p align="CENTER">cuanto</p></td>
+			<td width="35%"><p align="CENTER">PR0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuanto</p></td>
+			<td width="33%"><p align="CENTER">cuanto</p></td>
+			<td width="35%"><p align="CENTER">PR0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuantos</p></td>
+			<td width="33%"><p align="CENTER">cuanto</p></td>
+			<td width="35%"><p align="CENTER">PR0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuya</p></td>
+			<td width="33%"><p align="CENTER">cuyo</p></td>
+			<td width="35%"><p align="CENTER">PR0FS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuyas</p></td>
+			<td width="33%"><p align="CENTER">cuyo</p></td>
+			<td width="35%"><p align="CENTER">PR0FP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuyo</p></td>
+			<td width="33%"><p align="CENTER">cuyo</p></td>
+			<td width="35%"><p align="CENTER">PR0MS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">cuyos</p></td>
+			<td width="33%"><p align="CENTER">cuyo</p></td>
+			<td width="35%"><p align="CENTER">PR0MP000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">que</p></td>
+			<td width="33%"><p align="CENTER">que</p></td>
+			<td width="35%"><p align="CENTER">PR0CN000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">quien</p></td>
+			<td width="33%"><p align="CENTER">quien</p></td>
+			<td width="35%"><p align="CENTER">PR0CS000</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">quienes</p></td>
+			<td width="33%"><p align="CENTER">quien</p></td>
+			<td width="35%"><p align="CENTER">PR0CP000</p></td>
+		</tr>
+	</tbody></table>
+</center>
+</li> <!-- close PR -->
+
+<li class="nested"><span class="title1">Pronombres Exclamativos</span>
+
+<center>
+	<table cellpadding="2" cellspacing="2" width="375">
+		<tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="34%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+			<td bgcolor="#000066" width="38%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="28%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">qué</p></td>
+			<td width="38%"><p align="CENTER">qué</p></td>
+			<td width="28%"><p align="CENTER">PE000000</p></td>
+		</tr>
+	</tbody></table>
+</center>
+</li> <!-- close PE -->
+
+</a><li class="nested"><a name="pronombres"><span class="title1">Pronombres Numerales</span>
+</a><ul><a name="pronombres">
+  </a><li><a name="pronombres">Los pronombres numerales se etiquetan con Z. 
+     Véase sección sobre </a><a href="#cifras">numerales</a>. </li>
+</ul>
+</li> <!-- close PN -->
+
+</ol>
+
+<p align="RIGHT"><a href="#index">índice</a></p>
+<hr>
+</li> <!-- close P -->
+
+<li class="nested"><span class="title0">CONJUNCIONES</span>
+<a name="conjunciones">
+
+<center>
+	<table cellpadding="2" cellspacing="2" border="1" width="377">
+		<tbody><tr>
+			<th colspan="4" bgcolor="#ffffff" valign="TOP"><p align="CENTER">CONJUNCIONES</p></th>
+		</tr>
+		<tr valign="TOP">
+			<th width="12%"><p align="CENTER">Pos.</p></th>
+			<th width="37%"><p align="CENTER">Atributo</p></th>
+			<th width="32%"><p align="CENTER">Valor</p></th>
+			<th width="19%"><p align="CENTER">Código&gt;</p></th>
+		</tr>
+		<tr valign="TOP">
+			<td width="12%"><p align="CENTER">1</p></td>
+			<td width="37%"><p align="CENTER">Categoría</p></td>
+			<td width="32%"><p align="CENTER">Conjunción</p></td>
+			<td width="19%"><p align="CENTER">C</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="2" width="12%"><p align="CENTER">2</p></td>
+			<td rowspan="2" width="37%"><p align="CENTER">Tipo</p></td>
+			<td width="32%"><p align="CENTER">Coordinada</p></td>
+			<td width="19%"><p align="CENTER">C</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Subordinada</p></td>
+			<td width="19%"><p align="CENTER">S</p></td>
+		</tr>
+	</tbody></table>
+</center>
+</a><ul><a name="conjunciones">
+
+<ol class="nested">
+<li class="nested"><span class="title1">Conjunciones Coordinadas</span>
+
+<center>
+	<table cellpadding="2" cellspacing="2" width="375">
+		<tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="31%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+			<td bgcolor="#000066" width="40%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="29%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p>
+		</td></tr>	
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">e</p></td>
+			<td width="40%"><p align="CENTER">e</p></td>
+			<td width="29%"><p align="CENTER">CC</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">empero</p></td>
+			<td width="40%"><p align="CENTER">empero</p></td>
+			<td width="29%"><p align="CENTER">CC</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">mas</p></td>
+			<td width="40%"><p align="CENTER">mas</p></td>
+			<td width="29%"><p align="CENTER">CC</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">ni</p></td>
+			<td width="40%"><p align="CENTER">ni</p></td>
+			<td width="29%"><p align="CENTER">CC</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">o</p></td>
+			<td width="40%"><p align="CENTER">o</p></td>
+			<td width="29%"><p align="CENTER">CC</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">ora</p></td>
+			<td width="40%"><p align="CENTER">ora</p></td>
+			<td width="29%"><p align="CENTER">CC</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">pero</p></td>
+			<td width="40%"><p align="CENTER">pero</p></td>
+			<td width="29%"><p align="CENTER">CC</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">sino</p></td>
+			<td width="40%"><p align="CENTER">sino</p></td>
+			<td width="29%"><p align="CENTER">CC</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">siquiera</p></td>
+			<td width="40%"><p align="CENTER">siquiera</p></td>
+			<td width="29%"><p align="CENTER">CC</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">u</p></td>
+			<td width="40%"><p align="CENTER">u</p></td>
+			<td width="29%"><p align="CENTER">CC</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">y</p></td>
+			<td width="40%"><p align="CENTER">y</p></td>
+			<td width="29%"><p align="CENTER">CC</p></td>
+		</tr>
+	</tbody></table>
+</center>
+</li> <!-- close CC -->
+
+<li class="nested"><span class="title1">Conjunciones Subordinadas</span>
+
+<center>
+	<table cellpadding="2" cellspacing="2" width="375">
+		<tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="31%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+			<td bgcolor="#000066" width="40%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="29%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">aunque</p></td>
+			<td width="40%"><p align="CENTER">aunque</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">como</p></td>
+			<td width="40%"><p align="CENTER">como</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">conque</p></td>
+			<td width="40%"><p align="CENTER">conque</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">cuando</p></td>
+			<td width="40%"><p align="CENTER">cuando</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">donde</p></td>
+			<td width="40%"><p align="CENTER">donde</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">entonces</p></td>
+			<td width="40%"><p align="CENTER">entonces</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">ergo</p></td>
+			<td width="40%"><p align="CENTER">ergo</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">incluso</p></td>
+			<td width="40%"><p align="CENTER">incluso</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">luego</p></td>
+			<td width="40%"><p align="CENTER">luego</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">mientras</p></td>
+			<td width="40%"><p align="CENTER">mientras</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">porque</p></td>
+			<td width="40%"><p align="CENTER">porque</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">pues</p></td>
+			<td width="40%"><p align="CENTER">pues</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">que</p></td>
+			<td width="40%"><p align="CENTER">que</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">sea</p></td>
+			<td width="40%"><p align="CENTER">sea</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">si</p></td>
+			<td width="40%"><p align="CENTER">si</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="31%"><p align="CENTER">ya</p></td>
+			<td width="40%"><p align="CENTER">ya</p></td>
+			<td width="29%"><p align="CENTER">CS</p></td>
+		</tr>
+	</tbody></table>
+</center>
+</li> <!-- close CS -->
+</ol>
+
+</a><p align="RIGHT"><a name="conjunciones"></a><a href="#index">índice</a></p>
+<hr>
+ <!-- close C -->
+
+<li class="nested"><span class="title0">INTERJECCIONES</span>
+<a name="interjecciones">
+
+<center>
+	<table cellpadding="2" cellspacing="2" border="1" width="377">
+		<tbody><tr>
+			<th colspan="4" bgcolor="#ffffff" valign="TOP">
+				<p align="CENTER">INTERJECCIONES</p>
+			</th>
+		</tr>
+		<tr valign="TOP">
+			<th width="12%">
+				<p align="CENTER">Pos.</p>
+			</th>
+			<th width="37%">
+				<p align="CENTER">Atributo</p>
+			</th>
+			<th width="32%">
+				<p align="CENTER">Valor</p>
+			</th>
+			<th width="19%">
+				<p align="CENTER">Código</p>
+			</th>
+		</tr>
+		<tr valign="TOP">
+			<td width="12%"><p align="CENTER">1</p></td>
+			<td width="37%"><p align="CENTER">Categoría</p></td>
+			<td width="32%"><p align="CENTER">Interjección</p></td>
+			<td width="19%"><p align="CENTER">I</p></td>
+		</tr>
+	</tbody></table>
+</center>
+
+<div class="examples">Ejemplos:</div>
+
+<center>
+	<table cellpadding="2" cellspacing="2" width="375">
+		<tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="34%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+			<td bgcolor="#000066" width="34%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="31%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">ah</p></td>
+			<td width="34%"><p align="CENTER">ah</p></td>
+			<td width="31%"><p align="CENTER">I</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">eh</p></td>
+			<td width="34%"><p align="CENTER">eh</p></td>
+			<td width="31%"><p align="CENTER">I</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">ejem</p></td>
+			<td width="34%"><p align="CENTER">ejem</p></td>
+			<td width="31%"><p align="CENTER">I</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">ele</p></td>
+			<td width="34%"><p align="CENTER">ele</p></td>
+			<td width="31%"><p align="CENTER">I</p></td>
+		</tr>
+	</tbody></table>
+</center>
+
+</a><p align="RIGHT"><a name="interjecciones"></a><a href="#index">índice</a></p>
+<hr>
+</li> <!-- close I -->
+
+<li class="nested"><span class="title0">PREPOSICIONES</span>
+<a name="preposiciones">
+
+<center>
+	<table cellpadding="2" cellspacing="2" border="1" width="377">
+		<tbody><tr>
+			<th colspan="4" bgcolor="#ffffff" valign="TOP">
+				<p align="CENTER">PREPOSICIONES</p>
+			</th>
+		</tr>
+		<tr valign="TOP">
+			<th width="12%">
+				<p align="CENTER">Pos.</p>
+			</th>
+			<th width="37%">
+				<p align="CENTER">Atributo</p>
+			</th>
+			<th width="32%">
+				<p align="CENTER">Valor</p>
+			</th>
+			<th width="19%">
+				<p align="CENTER">Código</p>
+			</th>
+		</tr>
+		<tr valign="TOP">
+			<td width="12%"><p align="CENTER">1</p></td>
+			<td width="37%"><p align="CENTER">Categoría</p></td>
+			<td width="32%"><p align="CENTER">Adposición</p></td>
+			<td width="19%"><p align="CENTER">S</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="12%"><p align="CENTER">2</p></td>
+			<td width="37%"><p align="CENTER">Tipo</p></td>
+			<td width="32%"><p align="CENTER">Preposición</p></td>
+			<td width="19%"><p align="CENTER">P</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="2" width="12%"><p align="CENTER">3</p></td>
+			<td rowspan="2" width="37%"><p align="CENTER">Forma</p></td>
+			<td width="32%"><p align="CENTER">Simple</p></td>
+			<td width="19%"><p align="CENTER">S</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="32%"><p align="CENTER">Contraída</p></td>
+			<td width="19%"><p align="CENTER">C</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="12%"><p align="CENTER">3</p></td>
+			<td width="37%"><p align="CENTER">Género</p></td>
+			<td width="32%"><p align="CENTER">Masculino</p></td>
+			<td width="19%"><p align="CENTER">M</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="12%"><p align="CENTER">4</p></td>
+			<td width="37%"><p align="CENTER">Número</p></td>
+			<td width="32%"><p align="CENTER">Singular</p></td>
+			<td width="19%"><p align="CENTER">S</p></td>
+		</tr>
+	</tbody></table>
+</center>
+
+<p>
+</p><ul>
+	<li>Los atributos de <i>género</i> y <i>número</i> tan sólo se
+	especifican para las preposiciones contraídas <b>al</b> y <b>del</b>.</li>
+	<li>El analizador actual separa las
+	contracciones en sus componentes, por lo que se obtienen las
+	categorias de la preposición mas el artículo por separado.</li>
+	<li>Estas etiquetas también se usan para las locuciones preposicionales. </li>
+</ul>
+<p></p>
+
+<div class="examples">Ejemplos:</div>
+
+<center>
+	<table cellpadding="2" cellspacing="2" width="375">
+		<tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="34%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+			<td bgcolor="#000066" width="34%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="31%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">al</p></td>
+			<td width="34%"><p align="CENTER">al</p></td>
+			<td width="31%"><p align="CENTER">SPCMS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">del</p></td>
+			<td width="34%"><p align="CENTER">del</p></td>
+			<td width="31%"><p align="CENTER">SPCMS</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">a</p></td>
+			<td width="34%"><p align="CENTER">a</p></td>
+			<td width="31%"><p align="CENTER">SPS00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">ante</p></td>
+			<td width="34%"><p align="CENTER">ante</p></td>
+			<td width="31%"><p align="CENTER">SPS00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">bajo</p></td>
+			<td width="34%"><p align="CENTER">bajo</p></td>
+			<td width="31%"><p align="CENTER">SPS00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">cabe</p></td>
+			<td width="34%"><p align="CENTER">cabe</p></td>
+			<td width="31%"><p align="CENTER">SPS00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">con</p></td>
+			<td width="34%"><p align="CENTER">con</p></td>
+			<td width="31%"><p align="CENTER">SPS00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">a_partir_de</p></td>
+			<td width="34%"><p align="CENTER">a_partir_de</p></td>
+			<td width="31%"><p align="CENTER">SPS00</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">a_causa_del</p></td>
+			<td width="34%"><p align="CENTER">a_causa_del</p></td>
+			<td width="31%"><p align="CENTER">SPCMS</p></td>
+		</tr>
+	</tbody></table>
+</center>
+
+</a><p align="RIGHT"><a name="preposiciones"></a><a href="#index">índice</a></p>
+<hr>
+</li> <!-- close S -->
+
+<li class="nested"><span class="title0">PUNTUACIÓN</span>
+<a name="puntuacion">
+
+<center>
+	<table cellpadding="2" cellspacing="2" border="1" width="377">
+		<tbody><tr>
+			<th colspan="4" bgcolor="#ffffff" valign="TOP">
+				<p align="CENTER">SIGNOS DE PUNTUACIÓN</p>
+			</th>
+		</tr>
+		<tr valign="TOP">
+			<th width="12%">
+				<p align="CENTER">Pos.</p>
+			</th>
+			<th width="37%">
+				<p align="CENTER">Atributo</p>
+			</th>
+			<th width="32%">
+				<p align="CENTER">Valor</p>
+			</th>
+			<th width="19%">
+				<p align="CENTER">Código</p>
+			</th>
+		</tr>
+		<tr valign="TOP">
+			<td width="12%"><p align="CENTER">1</p></td>
+			<td width="37%"><p align="CENTER">Categoría</p></td>
+			<td width="32%"><p align="CENTER">Puntuación</p></td>
+			<td width="19%"><p align="CENTER">F</p></td>
+		</tr>
+	</tbody></table>
+</center>
+
+<div class="examples">Ejemplos:</div>
+
+<center>
+	<table cellpadding="2" cellspacing="2" width="375">
+		<tbody><tr valign="TOP">
+			<td bgcolor="#000066" width="34%"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+			<td bgcolor="#000066" width="34%"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+			<td bgcolor="#000066" width="31%"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">¡</p></td>
+			<td width="34%"><p align="CENTER">¡</p></td>
+			<td width="31%"><p align="CENTER">Faa</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">!</p></td>
+			<td width="34%"><p align="CENTER">!</p></td>
+			<td width="31%"><p align="CENTER">Fat</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">,</p></td>
+			<td width="34%"><p align="CENTER">,</p></td>
+			<td width="31%"><p align="CENTER">Fc</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">[</p></td>
+			<td width="34%"><p align="CENTER">[</p></td>
+			<td width="31%"><p align="CENTER">Fca</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">]</p></td>
+			<td width="34%"><p align="CENTER">]</p></td>
+			<td width="31%"><p align="CENTER">Fct</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">:</p></td>
+			<td width="34%"><p align="CENTER">:</p></td>
+			<td width="31%"><p align="CENTER">Fd</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">"</p></td>
+			<td width="34%"><p align="CENTER">"</p></td>
+			<td width="31%"><p align="CENTER">Fe</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">-</p></td>
+			<td width="34%"><p align="CENTER">-</p></td>
+			<td width="31%"><p align="CENTER">Fg</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">/</p></td>
+			<td width="34%"><p align="CENTER">/</p></td>
+			<td width="31%"><p align="CENTER">Fh</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">¿</p></td>
+			<td width="34%"><p align="CENTER">¿</p></td>
+			<td width="31%"><p align="CENTER">Fia</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">?</p></td>
+			<td width="34%"><p align="CENTER">?</p></td>
+			<td width="31%"><p align="CENTER">Fit</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">{</p></td>
+			<td width="34%"><p align="CENTER">{</p></td>
+			<td width="31%"><p align="CENTER">Fla</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">}</p></td>
+			<td width="34%"><p align="CENTER">}</p></td>
+			<td width="31%"><p align="CENTER">Flt</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">.</p></td>
+			<td width="34%"><p align="CENTER">.</p></td>
+			<td width="31%"><p align="CENTER">Fp</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">(</p></td>
+			<td width="34%"><p align="CENTER">(</p></td>
+			<td width="31%"><p align="CENTER">Fpa</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">)</p></td>
+			<td width="34%"><p align="CENTER">)</p></td>
+			<td width="31%"><p align="CENTER">Fpt</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">«</p></td>
+			<td width="34%"><p align="CENTER">«</p></td>
+			<td width="31%"><p align="CENTER">Fra</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">»</p></td>
+			<td width="34%"><p align="CENTER">»</p></td>
+			<td width="31%"><p align="CENTER">Frc</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">...</p></td>
+			<td width="34%"><p align="CENTER">...</p></td>
+			<td width="31%"><p align="CENTER">Fs</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">%</p></td>
+			<td width="34%"><p align="CENTER">%</p></td>
+			<td width="31%"><p align="CENTER">Ft</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">;</p></td>
+			<td width="34%"><p align="CENTER">;</p></td>
+			<td width="31%"><p align="CENTER">Fx</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">_</p></td>
+			<td width="34%"><p align="CENTER">_</p></td>
+			<td width="31%"><p align="CENTER">Fz</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">+</p></td>
+			<td width="34%"><p align="CENTER">+</p></td>
+			<td width="31%"><p align="CENTER">Fz</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="34%"><p align="CENTER">=</p></td>
+			<td width="34%"><p align="CENTER">=</p></td>
+			<td width="31%"><p align="CENTER">Fz</p></td>
+		</tr>
+	</tbody></table>
+</center>
+
+</a><p align="RIGHT"><a name="puntuacion"></a><a href="#index">índice</a></p>
+<hr>
+</li> <!-- close F -->
+
+<li class="nested"><span class="title0">NUMERALES</span>
+<a name="cifras">
+
+<center>
+	<table cellpadding="2" cellspacing="3" border="1" width="377">
+		<colgroup><col width="40">
+		<col width="129">
+		<col width="111">
+		<col width="64">
+		</colgroup><tbody><tr>
+			<th colspan="4" bgcolor="#ffffff" valign="TOP" width="365">
+				<p align="CENTER">NUMERALES</p>
+			</th>
+		</tr>
+		<tr valign="TOP">
+			<th width="40">
+				<p align="CENTER">Pos.</p>
+			</th>
+			<th width="129">
+				<p align="CENTER">Atributo</p>
+			</th>
+			<th width="111">
+				<p align="CENTER">Valor</p>
+			</th>
+			<th width="64">
+				<p align="CENTER">Código</p>
+			</th>
+		</tr>
+		<tr valign="TOP">
+			<td width="40"><p align="CENTER">1</p></td>
+			<td width="129"><p align="CENTER">Categoría</p></td>
+			<td width="111"><p align="CENTER">Cifra</p></td>
+			<td width="64"><p align="CENTER">Z</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td rowspan="4" width="40"><p align="CENTER">2</p></td>
+			<td rowspan="4" width="129"><p align="CENTER">Tipo</p></td>
+			<td width="111"><p align="CENTER">partitivo</p></td>
+			<td width="64"><p align="CENTER">d</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="111"><p align="CENTER">Moneda</p></td>
+			<td width="64"><p align="CENTER">m</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="111"><p align="CENTER">porcentaje</p></td>
+			<td width="64"><p align="CENTER">p</p></td>
+		</tr>
+		<tr valign="TOP">
+			<td width="111"><p align="CENTER">unidad</p></td>
+			<td width="64"><p align="CENTER">u</p></td>
+		</tr>
+	</tbody></table>
+</center>
+
+<p>
+</p><ul>
+	<li>Las cifras y
+	numerales se etiquetarán con Z. Bajo esta etiqueta encontraremos:
+	números, direcciones, números de teléfono, tanteos, etc. </li>
+	<li>Los numerales partitivos tendrán tipo <i>d</i> (una docena, un
+	millón, un centenar,...)</li>
+	<li>Las cantidades monetarias recibirán la etiqueta Zm, tendrán como lema
+	la cantidad (en cifras) y el nombre de la unidad monetaria en
+	singular.</li>
+	<li>Las fracciones i porcentajes
+	recibirán la etiqueta Zp. El lema normalizará la proporcion</li>
+	<li>Las magnitudes físicas recibiran la etiqueta Zu. El lema normalizará
+        la unidad de medida y la magnitud</li>
+</ul>
+<p></p>
+
+<div class="examples">Ejemplos:</div>
+
+<center>
+<table cellpadding="2" cellspacing="0" border="0" width="435">
+	<colgroup><col width="185">
+	<col width="124">
+	<col width="114">
+	</colgroup><tbody><tr valign="TOP">
+		<th bgcolor="#000066" width="185">
+			<p align="CENTER"><font color="#ffffff"><b>Forma</b></font> </p>
+		</th>
+		<td bgcolor="#000066" width="124"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+		<td bgcolor="#000066" width="114"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+	</tr>
+	<tr valign="TOP">
+		<td width="185"><p align="CENTER">239</p></td>
+		<td width="124"><p align="CENTER">239</p></td>
+		<td width="114"><p align="CENTER">Z</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td width="185"><p align="CENTER">doscientos_veinte</p></td>
+		<td width="124"><p align="CENTER">220</p></td>
+		<td width="114"><p align="CENTER">Z</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td width="185"><p align="CENTER">un_millón</p></td>
+		<td width="124"><p align="CENTER">1000000</p></td>
+		<td width="114"><p align="CENTER">Zd</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td width="185"><p align="CENTER">una_docena</p></td>
+		<td width="124"><p align="CENTER">12</p></td>
+		<td width="114"><p align="CENTER">Zd</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td width="185"><p align="CENTER">tres_de_cada_cuatro</p></td>
+		<td width="124"><p align="CENTER">3/4</p></td>
+		<td width="114"><p align="CENTER">Zp</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td width="185"><p align="CENTER">seis_octavas_partes</p></td>
+		<td width="124"><p align="CENTER">6/8</p></td>
+		<td width="114"><p align="CENTER">Zp</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td width="185"><p align="CENTER">ochenta por ciento</p></td>
+		<td width="124"><p align="CENTER">80/100</p></td>
+		<td width="114"><p align="CENTER">Zp</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td width="185"><p align="CENTER">74_%</p></td>
+		<td width="124"><p align="CENTER">74/100</p></td>
+		<td width="114"><p align="CENTER">Zp</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td width="185"><p align="CENTER">2000_dólares</p></td>
+		<td width="124"><p align="CENTER">$_USD:2000</p></td>
+		<td width="114"><p align="CENTER">Zm</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td width="185"><p align="CENTER">30_Km_por_hora</p></td>
+		<td width="124"><p align="CENTER">SP_km/h:30</p></td>
+		<td width="114"><p align="CENTER">Zu</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td width="185"><p align="CENTER">ocho_gramos_/_litro</p></td>
+		<td width="124"><p align="CENTER">DN_g/l:8</p></td>
+		<td width="114"><p align="CENTER">Zu</p></td>
+	</tr>
+</tbody></table>
+</center>
+
+</a><p align="RIGHT"><a name="cifras"></a><a href="#index">índice</a></p>
+<hr>
+</li> <!-- close Z -->
+
+<li class="nested"><span class="title0">FECHAS Y HORAS</span>
+<a name="fechas">
+
+<center>
+	<table cellpadding="2" cellspacing="2" border="1" width="377">
+		<tbody><tr>
+			<th colspan="4" bgcolor="#ffffff" valign="TOP"><p align="CENTER">FECHAS Y HORAS</p></th>
+		</tr>
+		<tr valign="TOP">
+			<th width="12%"><p align="CENTER">Pos.</p></th>
+			<th width="37%"><p align="CENTER">Atributo</p></th>
+			<th width="32%"><p align="CENTER">Valor</p></th>
+			<th width="19%"><p align="CENTER">Código</p></th>
+		</tr>
+		<tr valign="TOP">
+			<td width="12%"><p align="CENTER">1</p></td>
+			<td width="37%"><p align="CENTER">Categoría</p></td>
+			<td width="32%"><p align="CENTER">Fecha/Hora</p></td>
+			<td width="19%"><p align="CENTER">W</p></td>
+		</tr>
+	</tbody></table>
+</center>
+
+<div class="examples">Ejemplos:</div>
+
+<center>
+<table cellpadding="2" cellspacing="0" border="0" width="500">
+	<colgroup><col width="40%">
+	<col width="40%">
+	<col width="20%">
+	</colgroup><tbody><tr valign="TOP">
+		<td bgcolor="#000066"><p align="CENTER"><font color="#ffffff"><b>Forma</b></font></p></td>
+		<td bgcolor="#000066"><p align="CENTER"><font color="#ffffff"><b>Lema</b></font></p></td>
+		<td bgcolor="#000066"><p align="CENTER"><font color="#ffffff"><b>Etiqueta</b></font></p></td>
+	</tr>
+	<tr valign="TOP">
+		<td><p align="CENTER">viernes_26_de_septiembre_de_1992</p></td>
+		<td><p align="CENTER">[V:26:09:1992:??.??]</p></td>
+		<td><p align="CENTER">W</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td><p align="CENTER">las_tres_de_la_tarde_del_26_de_septiembre_de_1992</p></td>
+		<td><p align="CENTER">[??:26:09:1992:03.00:pm]</p></td>
+		<td><p align="CENTER">W</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td><p align="CENTER">sábado por la tarde</p></td>
+		<td><p align="CENTER">[S:??:??:??:??.??:pm]</p></td>
+		<td><p align="CENTER">W</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td><p align="CENTER">marzo_de_1954</p></td>
+		<td><p align="CENTER">[??:??:03:1954:??.??:??]</p></td>
+		<td><p align="CENTER">W</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td><p align="CENTER">siglo_XIX</p></td>
+		<td><p align="CENTER">[s:xix]</p></td>
+		<td><p align="CENTER">W</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td><p align="CENTER">año_1987</p></td>
+		<td><p align="CENTER">[??:??:??:1987:??.??:??:??]</p></td>
+		<td><p align="CENTER">W</p></td>
+	</tr>
+	<tr valign="TOP">
+		<td><p align="CENTER">cinco_de_la_mañana</p></td>
+		<td><p align="CENTER">[??:??/??/??:05.00:am]</p></td>
+		<td><p align="CENTER">W</p></td>
+	</tr>
+</tbody></table>
+</center>
+
+</a><p align="RIGHT"><a name="fechas"></a><a href="#index">índice</a></p>
+<hr>
+</li> <!-- close W -->
+
+</ul></li></ol>
+
+
+
+</body>
+</html>

@@ -1,0 +1,1079 @@
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class="js svg no-lowbandwidth video adownload supports no-touchevents cssvhunit cssvmaxunit cssvminunit cssvwunit requestanimationframe raf cssanimations backgroundsize csstransforms csstransforms3d preserve3d csstransitions desktop landscape" slick-uniqueid="3">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" type="text/css" href="index.css" media="all">
+</head>
+<body data-gets-modal="" class="single single-post postid-11873 single-format-standard without-series"><div class="ig_inline_container ig_loop_start ig_before"></div>
+
+  
+  
+    <meta charset="UTF-8">
+
+<meta name="description" content="IT Security Training &amp; Resources by InfoSec Institute">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="pingback" href="http://resources.infosecinstitute.com/xmlrpc.php">
+
+
+<!-- This site is optimized with the Yoast SEO plugin v2.3.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>PDF File Format: Basic Structure - InfoSec Resources</title>
+<meta name="description" content="1. Introduction We all know that there are a number of attacks where an attacker includes some shellcode into a PDF document, which uses some kind of vulne">
+<link rel="canonical" href="http://resources.infosecinstitute.com/pdf-file-format-basic-structure/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PDF File Format: Basic Structure - InfoSec Resources">
+<meta property="og:description" content="1. Introduction We all know that there are a number of attacks where an attacker includes some shellcode into a PDF document, which uses some kind of vulne">
+<meta property="og:url" content="http://resources.infosecinstitute.com/pdf-file-format-basic-structure/">
+<meta property="og:site_name" content="InfoSec Resources">
+<meta property="article:tag" content="feature">
+<meta property="article:tag" content="pdf">
+<meta property="article:section" content="Exploit Development">
+<meta property="article:published_time" content="2012-11-06T06:39:39+00:00">
+<meta property="article:modified_time" content="2015-02-12T16:55:54+00:00">
+<meta property="og:updated_time" content="2015-02-12T16:55:54+00:00">
+<meta property="og:image" content="http://resources.infosecinstitute.com/wp-content/uploads/keyboard1.jpg">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="InfoSec Resources » PDF File Format: Basic Structure Comments Feed" href="http://resources.infosecinstitute.com/pdf-file-format-basic-structure/feed/">
+		
+		
+
+
+
+
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.4 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+
+<!-- / Google Analytics by Yoast -->
+
+
+
+
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://resources.infosecinstitute.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://resources.infosecinstitute.com/wp-includes/wlwmanifest.xml"> 
+<link rel="shortlink" href="http://resources.infosecinstitute.com/?p=11873">
+
+
+  
+
+  
+    
+    <div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="index_1.html" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0"></iframe><iframe src="index_2.html" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+    
+          <header class="masthead">
+  
+  <div>
+    <div class="col-3-3">
+      
+      <nav class="top-left">
+        <ul>
+                      <li>
+  <a href="http://infosecinstitute.com/">InfoSec Institute</a>
+      <ul>
+              <li>
+          <a href="http://www.infosecinstitute.com/courses/security.html">IT Security Boot Camps</a>
+        </li>
+              <li>
+          <a href="http://www.infosecinstitute.com/infosec_institute/contact_us.html">Contact InfoSec</a>
+        </li>
+              <li>
+          <a href="http://www.infosecinstitute.com/enterprise-wide-training2.html">Enterprise &amp; Government</a>
+        </li>
+          </ul>
+  </li>                      <li>
+  <a href="http://www.intenseschool.com/">Intense School</a>
+  </li>                      <li>
+  <a href="http://certs.infosecinstitute.com/">Certification Tracker</a>
+  </li>                  </ul>
+      </nav>
+      
+      <nav class="top-right">
+        <ul>
+                  </ul>
+      </nav>
+      
+    </div>
+  </div>
+  
+  <div>
+    <div class="col-3-3">
+      
+              
+        <div class="logo">
+          <a href="http://resources.infosecinstitute.com/">
+            <img src="logo.svg" alt="InfoSec Resources" title="InfoSec Resources" width="126">
+          </a>
+        </div>
+          
+            
+      <a class="menu-button mobile" href="#site-navigation" data-attr="main:toggle">Menu</a>
+
+      <nav class="main" id="site-navigation">
+        
+        <a class="mobile" href="#" data-attr="main:remove" aria-hidden="true">Close Menu</a>
+        <a class="mobile" href="#" data-attr="topics:remove" aria-hidden="true">Back</a>
+        <a class="mobile" href="#" data-attr="content-archives:remove" aria-hidden="true">Back</a>
+      
+        <ul>
+          <li class="mobile menu-item menu-item-type-custom menu-item-object-custom menu-item-4748"><a href="http://infosec.wpengine.com/">Return Home</a></li><li class="has-dropdown  menu-item menu-item-type-custom menu-item-object-custom menu-item-4750 menu-item-has-children"><a href="http://resources.infosecinstitute.com/pdf-file-format-basic-structure/" data-attr="topics:set">Topics</a><ul data-menu-container="topics"><li><a href="http://resources.infosecinstitute.com/category/hacking-2/" title="Hacking">
+                          Hacking
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/certifications-training/" title="IT Certifications">
+                          IT Certifications
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/forensics-2/" title="Forensics">
+                          Forensics
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/application-security-2/" title="Secure Coding">
+                          Secure Coding
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/pen-testing-1/" title="Penetration Testing">
+                          Penetration Testing
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/general-security-2/" title="General Security">
+                          General Security
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/cloud-computing/" title="Cloud Computing">
+                          Cloud Computing
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/interviews/" title="Interviews">
+                          Interviews
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/virtualization-security/" title="Virtualization Security">
+                          Virtualization Security
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/wireless-security/" title="Wireless Security">
+                          Wireless Security
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/scada-2/" title="SCADA">
+                          SCADA
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/reverse-engineering-2/" title="Reverse Engineering">
+                          Reverse Engineering
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/data-recovery/" title="Data Recovery">
+                          Data Recovery
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/exploit-development/" title="Exploit Development">
+                          Exploit Development
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/compliance-auditing/" title="Management, Compliance, &amp; Auditing">
+                          Management, Compliance, &amp; Auditing
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/incident-response-resources/" title="Incident Response">
+                          Incident Response
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/certifications-training/" title="IT Certifications">
+                          IT Certifications
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/certifications-training/securityplus/" title="Security+">
+                          Security+
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/security-awareness/" title="Security Awareness">
+                          Security Awareness
+                        </a></li><li><a href="http://resources.infosecinstitute.com/category/phishing/" title="Phishing">
+                          Phishing
+                        </a></li></ul></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-4758"><a href="http://resources.infosecinstitute.com/contributors/">Contributors</a></li><li class="has-dropdown desktop menu-item menu-item-type-custom menu-item-object-custom menu-item-30046 menu-item-has-children"><a href="#" data-attr="content-archives:set">Content Archives</a><ul data-menu-container="content-archives"><li><a href="http://resources.infosecinstitute.com/2015/" title="2015">
+                          2015
+                        </a></li><li><a href="http://resources.infosecinstitute.com/2014/" title="2014">
+                          2014
+                        </a></li><li><a href="http://resources.infosecinstitute.com/2013/" title="2013">
+                          2013
+                        </a></li><li><a href="http://resources.infosecinstitute.com/2012" title="2012">
+                          2012
+                        </a></li><li><a href="http://resources.infosecinstitute.com/2011" title="2011">
+                          2011
+                        </a></li><li><a href="http://resources.infosecinstitute.com/2010" title="2010">
+                          2010
+                        </a></li></ul></li><li class="mobile menu-item menu-item-type-custom menu-item-object-custom menu-item-30121"><a href="http://resources.infosecinstitute.com/2015">Content Archives</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-32428"><a href="http://resources.infosecinstitute.com/careers/">Job Board</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-32427"><a href="http://resources.infosecinstitute.com/job-titles/">Careers</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-32598"><a href="http://www.phish.io/">phish.io</a></li>          
+        </ul>
+      </nav>
+      
+      <nav class="search">
+        <form class="search-form" action="http://www2.infosecinstitute.com/s/12882/ntpoCCBNQ1ttbNTP3ylPLZZeUqLrVgCT" method="get">
+  <fieldset>
+    <input name="s" class="icon search" id="search" value="" type="text">
+    <input class="icon search" title="Search" type="submit">
+  </fieldset>
+</form>
+      </nav>
+      
+    </div>
+  </div>
+  
+</header>          
+    <main>
+      
+      <section class="hero full">
+          
+	<div class="post-col-3-3 wrapper">
+    
+    <div class="post-col-2-3 hook" style="background-image: url('keyboard1-1024x0-c-default.jpg');">
+      <header>
+        <h1>PDF File Format: Basic Structure</h1>
+                <div class="meta">
+  Posted in  <a href="http://resources.infosecinstitute.com/category/exploit-development">Exploit Development</a> on November 6, 2012
+</div>      </header>
+      <div class="share horizontal">
+  
+  <span data-attr="share:toggle" class="icon share-l">Share</span>
+  
+  <ul>
+    
+    <li class="twitter">
+      <iframe data-url="http://resources.infosecinstitute.com/pdf-file-format-basic-structure/" src="index_3.html" title="Twitter Tweet Button" style="position: static; visibility: visible; width: 63px; height: 20px;" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" allowtransparency="true" scrolling="no" id="twitter-widget-1" frameborder="0"></iframe>
+    </li>
+    
+    <li class="google">
+      <div id="___plus_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 117px; height: 20px;"><iframe title="+Compartir" data-gapiattached="true" src="index_4.html" name="I0_1453700916892" id="I0_1453700916892" vspace="0" tabindex="0" style="position: static; top: 0px; width: 117px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" frameborder="0" width="100%"></iframe></div>
+    </li>
+    
+    <li class="linkedin">
+      <span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center;"><span style="padding: 0px ! important; margin: 0px ! important; text-indent: 0px ! important; display: inline-block ! important; vertical-align: baseline ! important; font-size: 1px ! important;"><span id="li_ui_li_gen_1453700922745_0"><a id="li_ui_li_gen_1453700922745_0-link" href="javascript:void(0);"><span id="li_ui_li_gen_1453700922745_0-logo">in</span><span id="li_ui_li_gen_1453700922745_0-title"><span id="li_ui_li_gen_1453700922745_0-mark"></span><span id="li_ui_li_gen_1453700922745_0-title-text">Share</span></span></a></span></span><span style="padding: 0px ! important; margin: 0px ! important; text-indent: 0px ! important; display: inline-block ! important; vertical-align: baseline ! important; font-size: 1px ! important;"><span id="li_ui_li_gen_1453700922799_1-container" class="IN-right"><span id="li_ui_li_gen_1453700922799_1" class="IN-right"><span id="li_ui_li_gen_1453700922799_1-inner" class="IN-right"><span id="li_ui_li_gen_1453700922799_1-content" class="IN-right">8</span></span></span></span></span></span>
+    </li>
+    
+    <li class="reddit">
+      <iframe src="index_5.html" scrolling="no" frameborder="0" height="22" width="120"></iframe>
+    </li>
+    
+    <li class="facebook">
+      <div fb-iframe-plugin-query="action=like&amp;app_id=552038044933986&amp;container_width=0&amp;href=http%3A%2F%2Fresources.infosecinstitute.com%2Fpdf-file-format-basic-structure%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=false&amp;width=90" fb-xfbml-state="rendered" class="fb-like fb_iframe_widget" data-width="90" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"><span style="vertical-align: bottom; width: 80px; height: 22px;"><iframe class="" src="index_6.html" style="border: medium none; visibility: visible; width: 80px; height: 22px;" title="fb:like Facebook Social Plugin" scrolling="no" allowfullscreen="true" allowtransparency="true" name="f372d85c1650f0a" frameborder="0" height="1000px" width="90px"></iframe></span></div>
+    </li>
+    
+  </ul>
+  
+</div>    </div>
+    
+    <div class="post-col-1-3">
+      
+              <div class="endemic-ad" style="background-image: url('5-17.png');">
+  <div>
+    <h3>Ethical Hacking Boot Camp</h3>
+    <h4>Our most popular course!</h4>
+    <p></p>
+    <a href="http://www2.infosecinstitute.com/l/12882/2015-05-05/mxr5t" target="_top">Click Here!</a>
+  </div>
+</div>            
+      <div class="skillset box  ">
+  
+  <h3>Skillset</h3>
+  
+  <a href="#skillset-modal" rel="modal:open">What's this?</a>
+  
+    
+  <ul>
+          <li>
+        <a href="https://www.skillset.com/skillsets/malware-essentials" title="Malware" target="_top">Malware</a>
+      </li>
+          <li>
+        <a href="https://www.skillset.com/skillsets/network-security-essentials" title="Network Security" target="_top">Network Security</a>
+      </li>
+          <li>
+        <a href="https://www.skillset.com/skills/trojan-fundamentals" title="Trojans" target="_top">Trojans</a>
+      </li>
+          <li>
+        <a href="https://www.skillset.com/skillsets/threats-and-vulnerabilities" title="Vulnerabilities" target="_top">Vulnerabilities</a>
+      </li>
+          <li>
+        <a href="https://www.skillset.com/skills/web-application-security-fundamentals" title="Web App Security" target="_top">Web App Security</a>
+      </li>
+      </ul>
+  
+  
+</div>      
+    </div>
+    
+  </div>
+  
+      </section>
+      
+      <section class="content full">
+        <div class="col-3-3 wrapper">
+                      
+  <div class="main post-col-2-3">
+    <article class="post-content">
+      <div class="ig_inline_container ig_the_content ig_before"></div><p><strong>1. Introduction</strong></p>
+<p>We all know that there are a number of attacks where an attacker includes some shellcode into a PDF document, which uses some kind of vulnerability in how the PDF document is analyzed and presented to the user to execute malicious code on the targeted system.</p>
+<p>The next picture presents the number of vulnerabilities discovered in popular PDF Reader <strong>Adobe Acrobat Reader</strong>. The number of vulnerabilities is increasing over the years, but there are a little less vulnerabilities discovered this year (but the year isn’t over yet). The most important vulnerabilities are the <strong>Code Execution</strong> vulnerabilities, which an attacker can use to execute arbitrary code on the target system (if the Acrobat Reader hasn’t been patched yet).</p>
+<p><img src="110612_1237_pdffileform1.png" alt="" align="left">This is an important indicator that we should regularly update our PDF Reader, because the number of vulnerabilities discovered recently is quite daunting.</p>
+<p><strong>2. PDF File Structure</strong></p>
+<p>Whenever we want to discover new vulnerabilities in software we should first understand the protocol or file format in which we’re trying to discover new vulnerabilities. In our case, we should first understand the PDF file format in detail. In this article we’ll take a look at the PDF file format and its internals.</p>
+<p>PDF is a portable document format that can be used to present documents that include text, images, multimedia elements, web page links, etc. It has a wide range of features. The first thing we must understand is that the PDF file format specification is publicly available <a href="http://www.adobe.com/devnet/pdf/pdf_reference.html" onclick="__gaTracker('send', 'event', 'outbound-article', 'http://www.adobe.com/devnet/pdf/pdf_reference.html', 'here');">here</a> and can be used by anyone interested in PDF file format. There are almost 800 pages of the documentation for the PDF file format alone, so reading through that is not a one-day quick read, but it takes a lot of time.</p>
+<p>PDF has a lot more functions than just text; it can include images and other multimedia elements, it can be password protected, it can execute JavaScript, etc. The basic structure of a PDF file is presented in the picture below:</p>
+<p><img style="margin-left: 215px; margin-right: 215px;" src="110612_1237_pdffileform2.png" alt="" align="left" height="369" width="224"></p>
+<p>Every PDF document has the following elements:</p>
+<p><strong>– Header: </strong>This is the first line of a PDF file and specifies the version number of the used PDF specification which the document uses. If we want to find that out, we can use the hex editor or simply use the <strong>xxd</strong> command as below:</p>
+<pre class="brush: plain; title: ; notranslate" title=""># xxd temp.pdf | head -n 1
+0000000: 2550 4446 2d31 2e33 0a25 c4e5 f2e5 eba7  %PDF-1.3.%......
+</pre>
+<p>The temp.pdf PDF document uses the PDF specification 1.3. The ‘%’ character is a comment in PDF, so the above example actually presents the first and second line being comments, which is true for all PDF documents. The following bytes are taken from the output below: 2550 4446 2d31 2e33 0a25 c4e5 and correspond to the ASCII text “%PDF-1.3.%”. What follows are some ASCII characters that are using non-printable characters (note the ‘.’ dots), which are usually there to tell some of the software products that the file contains binary data and shouldn’t be treated as 7-bit ASCII text. Currently the version numbers are of the form 1.N, where the N is from range 0-7.</p>
+<p><strong>– Body: </strong>In the body of the PDF document, there are objects that typically include text streams, images, other multimedia elements, etc. The Body section is used to hold all the document’s data being shown to the user.<strong><br>
+</strong></p>
+<p><strong>– xref Table: </strong>This is the cross reference table, which contains contains the references to all the objects in the document. The purpose of a cross reference table is that it allows random access to objects in the file, so we don’t need to read the whole PDF document to locate the particular object. Each object is represented by one entry in the cross reference table, which is always 20 bytes long. Let’s show an example:<strong><br>
+</strong></p>
+<pre class="brush: plain; title: ; notranslate" title="">xref
+0 1
+0000000023 65535 f
+3 1
+0000025324 00000 n
+21 4
+0000025518 00002 n
+0000025632 00000 n
+0000000024 00001 f
+0000000000 00001 f
+36 1
+0000026900 00000 n
+</pre>
+<p><strong><br>
+</strong></p>
+<p>We can display the cross reference table of the PDF document by simply opening the PDF with a text editor and scrolling to the bottom of the document. In the example above, we can see that we have four subsections (note the four lines that only contain two numbers). The first number in those lines corresponds to the object number, while the second line states the number of objects in the current subsection. Each object is represented by one entry, which is 20 bytes long (including the CRLF). The first 10 bytes are the object’s offset from the start of the PDF document to the beginning of that object. What follows is a space separator with another number specifying the object’s generation number. After that there is another space separator followed by a letter ‘f’ or ‘n’ to indicate whether the object is free or in use. <strong><br>
+</strong></p>
+<p>The first object has an ID 0 and always contains one entry with generation number 65535 that is at the head of the list of free objects (note the letter ‘f’ that means free). The last object in the cross reference table uses the generation number 0.<strong><br>
+</strong></p>
+<p>The second subsection has an object ID 3 and contains 1 element, the object 3 that starts at an offset 25324 bytes from the beginning of the document. The third subsection has four objects, the first of which has an ID 21 and start at an offset 25518 from the beginning of the file. Other objects have subsequent numbers 22, 23 and 24. All objects are marked with either flag ‘f’ or ‘n’. Flag ‘f’ means that the object may still be present in a file, but is marked free, so it shouldn’t be used. These objects contain a reference to the next free object and the generation number to be used if the object becomes valid again. The flag ‘n’ is used to represent valid and used objects that contain the offset from the beginning of the file and the generation number of the object.<strong><br>
+</strong></p>
+<p>Note that the object zero points to the next free object in the table, the object 23. But since the object 23 is also free, it itself points to the next free object in the table, the object 24. But the object 24 is the last free object on the file, so it’s pointing back to the object zero. If we represent the above cross reference table with every object number it would look as follows:<strong><br>
+</strong></p>
+<pre class="brush: plain; title: ; notranslate" title="">xref
+0 1
+0000000023 65535 f
+3 1
+0000025324 00000 n
+21 1
+0000025518 00002 n
+22 1
+0000025632 00000 n
+23 1
+0000000024 00001 f
+24 1
+0000000000 00001 f
+36 1
+0000026900 00000 n
+</pre>
+<p><strong><br>
+</strong></p>
+<p>The generation number of the object is incremented when the object is freed, so if the object becomes valid again (changes the flag from ‘f’ to ‘n’), the generation number is still valid without having to increment it. The generation number of object 23 is 1, so if it becomes valid again, the generation number will still be 1, but if it’s removed again, the generation number would increase to 2. <strong><br>
+</strong></p>
+<p>Multiple subsections are usually present in PDF documents that have been incrementally updated, otherwise only one subsection starting with the number zero should be present. <strong><br>
+</strong></p>
+<p><strong>– Trailer: </strong>The PDF trailer specifies how the application reading the PDF document should find the cross reference table and other special objects. All PDF readers should start reading a PDF from the end of the file. An example trailer is presented below:<strong><br>
+</strong></p>
+<pre class="brush: plain; title: ; notranslate" title="">trailer
+&amp;lt;&amp;lt;
+/Size 22
+/Root 2 0 R
+/Info 1 0 R
+&amp;gt;&amp;gt;
+startxref
+24212
+%%EOF
+</pre>
+<p><strong><br>
+</strong></p>
+<p>The last line of the PDF document contains the end of file string ‘%%EOF’. Before the end of file tag, there is a line with a string <strong>startxref</strong> that specifies the offset from beginning of the file to the cross reference table. In our case the cross reference table starts at offset 24212 bytes. Before that is a string <strong>trailer</strong> that specifies the start of the Trailer section. The contents of the trailer sections are embedded within the &lt;&lt; and &gt;&gt; characters (this is a dictionary that accepts key-value pairs). We can see that the trailer sections defines several keys, each of them for a particular action. The trailer section can specify the following keys:</p>
+<p>– <strong>/Size </strong>[integer]: specifies the number of entries in the cross reference table (counting the objects in updated sections as well). The used number shouldn’t be an indirect reference.</p>
+<p>– /Prev [integer]: specifies the offset from the beginning of the file to the previous cross reference section, which is used if there are multiple cross reference sections. The number should be a cross reference.</p>
+<p>– <strong>/Root </strong>[dictionary]: specifies the reference object for the document catalog object, which is a special object that contains various pointers to different kind of other special objects (more about that later).</p>
+<p>– /Encrypt [dictionary]: specifies the document’s encryption dictionary.</p>
+<p>– /Info [dictionary]: specifies the reference object for the document’s information dictionary.</p>
+<p>– /ID [array]: specifies an array of two byte unencrypted strings that form a file identifier.</p>
+<p>– /XrefStm [integer]: specifies the offset from the beginning of the file to the cross-reference stream in the decoded stream. This is only present in hybrid-reference files, which is specified if we would also like to open documents even if the applications don’t support compressed reference streams.<strong><br>
+</strong></p>
+<p>We must remember that the initial structure can be modified if we update the PDF document at a later time. The update usually appends additional elements to the end of the file.<strong><br>
+</strong></p>
+<p><span class="pardot-title">Ethical Hacking Training – Resources</span><iframe scrolling="no" class="pardotform" src="index_7.html" type="text/html" allowtransparency="true" style="border: 0px none;" frameborder="0" height="554" width="100%"></iframe></p>
+<p><strong>3. Incremental Updates<br>
+</strong></p>
+<p>The PDF has been designed with incremental updates in mind, since we can append some objects to the end of the PDF file without rewriting the entire file. Because of this, changes to a PDF document can be saved quickly. The new structure of the PDF document can be seen in the picture below:<strong><br>
+</strong></p>
+<p><img style="margin-left: 215px; margin-right: 215px;" src="110612_1237_pdffileform3.png" alt="" align="left" height="543" width="221"><strong><br>
+</strong></p>
+<p>We can see that the PDF document still contains the original Header, Body, Cross-reference Table and the Trailer. Additionally, there are also other Body, Cross-reference and Trailer sections that were added to the PDF document. The additional cross-reference sections will contain only the entries for objects that have been changed, replaced or deleted. Deleted objects will stay in the file, but will be marked with a flag ‘f’. Each trailed needs to be terminated by the ‘%%EOF’ tag and should contain the /Prev entry which points to the previous cross-reference section.<strong><br>
+</strong></p>
+<p>In PDF versions 1.4 and higher, we can specify the <strong>Version</strong> entry in the document’s catalog dictionary to override the default version from the PDF header.<strong><br>
+</strong></p>
+<p><strong>4. Example<br>
+</strong></p>
+<p>Let’s present a simple PDF example and analyze it. Let’s download a sample PDF document from <a href="http://http//www.stluciadance.com/prospectus_file/sample.pdf" onclick="__gaTracker('send', 'event', 'download', 'http://http//www.stluciadance.com/prospectus_file/sample.pdf');">here</a> and analyze it. Upon opening this PDF document it looks as shown below:</p>
+<p><img style="margin-left: 150px; margin-right: 150px;" src="110612_1237_pdffileform4.png" alt="" align="left" height="233" width="369"></p>
+<p>The cross-reference and trailer sections are presented in the picture below:</p>
+<p><img style="margin-left: 135px; margin-right: 135px;" src="110612_1237_pdffileform5.png" alt="" align="left" height="246" width="336"></p>
+<p>The cross-reference section has been reduced for clarity. The cross-reference sections contains one subsections that itself contains 223 objects. The trailer section starts at byte offset 50291, includes 223 objects where the Root element points to object 221 and the Info element points to object 222.</p>
+<p>In the next section we’ll take a look at the PDF structure’s basic data types.</p>
+<p><strong>5. PDF Data Types<br>
+</strong></p>
+<p>The PDF document contains eight basic types of objects described below. Namely these types of objects are: booleans, numbers, strings, names, arrays, dictionaries, streams and the null object. Objects may be labeled so that they can be referenced by other objects. A labeled object is also called an indirect object.<strong><br>
+</strong></p>
+<p><strong>5.1. Booleans</strong></p>
+<p>There are two keywords: <strong>true</strong> and <strong>false</strong> that represent the boolean values.</p>
+<p><strong>5.2. Numbers</strong></p>
+<p>There are two types of numbers in PDF document: integer and real. An integer consists of one or more digits optionally preceded by a sign plus (character ‘+’) or minus (character ‘-‘). An example of integer objects may be seen below:</p>
+<pre class="brush: plain; title: ; notranslate" title="">123 +123 -123
+</pre>
+<p>The real value can be represented with one or more digits with an optional sign and a leading, trailing or embedded decimal point (period – character ‘.’). An example of real numbers can be seen below:</p>
+<pre class="brush: plain; title: ; notranslate" title="">123.0 -123.0 +123.0 123. -.123
+</pre>
+<p><strong>5.3. Names</strong></p>
+<p>The names in PDF documents are represented by a sequence of ASCII characters in the range 0x21 – 0x7E. The exception are the characters: %, (, ), &lt;, &gt;, [, ], {, }, / and #, which must be preceded by a slash. An alternative representation of the characters is with their hexadecimal equivalent, preceded by the character ‘#’. There is a limitation of the length of the name element, which may be only 127 bytes long.</p>
+<p>When writing a name a slash must be used to introduce a name; the slash is not part of the name, but is a prefix indicating that what follows is a sequence of characters representing the name. If we want to use whitespace or any other special character as part of the name it must be encoded with 2-digit hexadecimal notation.</p>
+<p>The examples of names can be seen in the table below, that is taken from [1]:</p>
+<p><img style="margin-left: 65px; margin-right: 65px;" src="110612_1237_pdffileform6.png" alt="" align="left" height="308" width="456"></p>
+<p><strong>5.4. Strings</strong></p>
+<p>Strings in a PDF document are represented as a series of bytes surrounded by parenthesis or angle brackets, but can be a maximum of 65535 bytes long. Any character may be represented by ASCII representation, and alternatively with octal or hexadecimal representations. Octal representation requires the character to be written in the form \ddd, where ddd is an octal number. Hexadecimal representation required the character to be written in the form &lt;dd&gt;, where dd is a hexadecimal number.</p>
+<p>An example of representing a string embedded in parentheses can be seen below:</p>
+<pre class="brush: plain; title: ; notranslate" title="">(mystring)
+</pre>
+<p>An example of representing a string embedded in angle brackets can be seen below (the hexadecimal representation below is the same as above and it reads as ‘mystring’):</p>
+<pre class="brush: plain; title: ; notranslate" title="">&amp;lt;6d79737472696e67&amp;gt;
+</pre>
+<p>We can also use special well known characters when representing a string: those are: \n for new line, \r for carriage return, \t for horizontal tabulator, \b for backspace, \f for form feed, \( for left parenthesis, \) for right parenthesis and \\ for backslash.</p>
+<p><strong>5.5. Arrays</strong></p>
+<p>Arrays in PDF documents are represented as a sequence of PDF objects, which may be of different types and enclosed in square brackets. This is why an array in a PDF document can hold any object types, like numbers, strings, dictionaries, and even other arrays. An array may also have zero elements. An array is presented with a square bracket. An example of an array is presented below:</p>
+<pre class="brush: plain; title: ; notranslate" title="">123 123.0 true (mystring) /myname]
+</pre>
+<p><strong>5.6. Dictionaries</strong></p>
+<p>Dictionaries in a PDF document are represented as a table of key/value pairs. The key must be the Name object, whereas the value can be any object, including another dictionary. The maximum number of entries in a dictionary is 4096 entries. A dictionary can be presented with the entries enclosed in double angle brackets &lt;&lt; and &gt;&gt;. An example of a dictionary is presented below:</p>
+<pre class="brush: plain; title: ; notranslate" title="">&amp;lt;&amp;lt; /mykey1 123
+     /mykey2 0.123
+     /mykey3 &amp;lt;&amp;lt; /mykey4 true
+                         /mykey5 (mystring)
+                    &amp;gt;&amp;gt;
+&amp;gt;&amp;gt;
+ </pre>
+<p><strong>5.7. Streams</strong></p>
+<p>A stream object is represented by a sequence of bytes and may be unlimited in length, which is why images and other big data blocks are usually represented as streams. A stream object is represented by a dictionary object followed by the keywords <strong>stream </strong>followed by newline and <strong>endstream</strong>.</p>
+<p>An example of a stream object can be seen below:</p>
+<pre class="brush: plain; title: ; notranslate" title="">&amp;lt;&amp;lt;
+/Type /Page
+     /Length 23 0 R
+     /Filter /LZWDecode
+&amp;gt;&amp;gt;
+stream
+…
+endstream
+</pre>
+<p>All stream objects shall be indirect objects and the stream dictionary shall be a direct object. The stream dictionary specifies the exact number of bytes of the stream. After the data there should be a newline and the <strong>endstream</strong> keyword.</p>
+<p>Common keywords used in all stream dictionaries are the following (note that the <strong>Length</strong> entry is mandatory):</p>
+<p>– Length: how many bytes of the PDF file are used for the stream’s data. If the stream contains a <strong>Filter</strong> entry, the <strong>Length</strong> shall specify the number of bytes of encoded data.</p>
+<p>– Type: the type of the PDF object that the dictionary describes.</p>
+<p>– Filter: the name of the filter that will be applied in processing the stream data. Multiple filters can be specified in the order in which they shall be applied.</p>
+<p>– DecodeParms: a dictionary or an array of dictionaries used by the filters specified by <strong>Filter</strong>. This value specifies the parameters that need to be passed to the filters when they are applied. This isn’t necessary if the filters use the default values.</p>
+<p>– F: specifies the file containing the stream data.</p>
+<p>– FFilter: the name of the filter to be applied in processing the data found in the stream’s external file.</p>
+<p>– FDecodeParms: a dictionary or an array of dictionaries used by the filters specified by <strong>FFilter.</strong></p>
+<p>– DL: specifies the number of bytes in the decoded stream. This can be used if enough disk space is available to write a stream to a file.</p>
+<p>– N: the number of indirect objects stored in the stream.</p>
+<p>– First: the offset in the decoded stream of the first compressed object.</p>
+<p>– Extends: specifies a reference to other object stream, which form an inheritance tree.</p>
+<p>The stream data in object stream will contain <strong>N</strong> pairs of integers, where the first integer represents the object number and the second integer represents the offset in the decoded stream of that object. The objects in object streams are consecutive and don’t need to be stored in increasing order relative to object number. The <strong>First </strong>entry in dictionary identifies the first object in object stream.</p>
+<p>We shouldn’t store the following information in an object stream:</p>
+<p>– stream objects</p>
+<p>– objects with a generation number that is not equal to zero</p>
+<p>– document’s encryption dictionary</p>
+<p>– indirect object of the <strong>Length</strong> entry in object stream dictionary</p>
+<p>– document catalog, linearization dictionary, page objects</p>
+<p>In PDF 1.5, cross-reference information may be stored in a cross-reference stream instead of in a cross-reference table. Each cross-reference stream contains the information equivalent to the cross-reference table and trailer.</p>
+<p><strong>5.8. Null Object</strong></p>
+<p>The null object is represented by a keyword <strong>null</strong>.</p>
+<p><strong>5.9. Indirect Objects</strong></p>
+<p>First of all, we must know that any object in a PDF document can be labeled as an indirect object, which gives the object a unique object identifier, which other objects can use to reference the indirect object. An indirect object is a numbered object represented with keywords <strong>obj</strong> and <strong>endobj</strong>. The endobj must be present in its own line, but the obj must occur at the end of object ID line, which is the first line of the indirect object. The object ID line consists of object number, generation number and keyword ‘obj’. An example of an indirect object is as follows:</p>
+<pre class="brush: plain; title: ; notranslate" title="">2 1 obj
+12345
+endobj
+</pre>
+<p>In the example above, we’re creating a new indirect object, which holds the number 12345 object. By declaring an object an indirect object, we are able to use it in the PDF document cross-reference table and reuse it by any page, dictionary, etc, in the document. Since every indirect object has its own entry in the cross-reference table, the indirect objects may be accessed very quickly.</p>
+<p>The object identifier of the indirect object consists of two parts; the first part is a object number of current indirect object. The indirect objects don’t need to be numbered sequentially in the PDF document. The second part is the generation number, which is set to zero for all objects in a newly created file. This number is later incremented when the objects are updated.</p>
+<p>We can refer to the indirect objects with indirect reference, which consist of the object number, the generation number and the keyword <strong>R</strong>. To reference the above indirect object, we must write something like below:</p>
+<pre class="brush: plain; title: ; notranslate" title="">2 1 R
+</pre>
+<p>If we’re trying to reference an undefined object, we’re actually referring to a null object.</p>
+<p><strong>6. Document Structure</strong></p>
+<p>A PDF document consists of objects contained in the body section of a PDF file. Most of the objects in a PDF document are dictionaries. Each page of the document is represented by a page object, which is a dictionary that includes references to the page’s contents. Page objects are connected together and form a page tree, which is declared with an indirect reference in the document catalog.</p>
+<p>The whole structure of the PDF document can be represented with the picture below [1]:</p>
+<p><img style="margin-left: 30px; margin-right: 30px;" src="110612_1237_pdffileform7.png" alt="" align="left" height="666" width="557"></p>
+<p>In the picture above, we can see that the document catalog contains references to the page tree, outline hierarchy, article threads, named destinations and interactive form. We won’t go into details what each of those sections do, but we’ll present just the most important section, the Page Tree.</p>
+<p><strong>6.1. Document Catalog</strong></p>
+<p>From the picture above, we can see that the <strong>Document Catalog<em><br>
+</em></strong>is the root of the objects in the PDF document. We’ve already said that it is the <strong>/Root</strong> element in the <strong>Trailer</strong> PDF section that specifies the document catalog. The document catalog contains references to other objects that define the document’s contents. It also contains the information that declares how the document will be displayed on the screen. The entries in the document catalog are as follows:</p>
+<p>– /Type: the type of the PDF object the directory describes (in our case this is <strong>Catalog</strong> since this is the document catalog object).</p>
+<p>– /Version: the version of the PDF specification the document was built against.</p>
+<p>– /Extensions: information about the developer extensions in this document.</p>
+<p>– /Pages: an indirect reference to the object that is the root of document’s page tree.</p>
+<p>– /Dests: an indirect reference to the object that is the root of the named destinations object.</p>
+<p>– /Outlines: an indirect reference to the outline directory object that is the root of the document’s outline hierarchy.</p>
+<p>– /Threads: an indirect reference to the array of thread dictionaries that represent the document’s article threads.</p>
+<p>– /Metadata: an indirect reference to the metadata stream that contains metadata for the document.</p>
+<p>There are many other entries that we can see being part of the document catalog, but won’t describe them here. The reader can take a look at the [1] for details. An example of the document catalog is presented below:</p>
+<pre class="brush: plain; title: ; notranslate" title="">1 0 obj
+&amp;lt;&amp;lt; /Type /Catalog
+/Pages 2 0 R
+/PageMode /UseOutlines
+/Outlines 3 0 R
+&amp;gt;&amp;gt;
+endobj
+</pre>
+<p><strong>6.2. Page Tree</strong></p>
+<p>The pages of the document are accessed through the page tree, which defines all the pages in the PDF document. The tree contains nodes that represent pages of the PDF document, which can be of two types: intermediate and leaf nodes. Intermediate nodes are also called page tree nodes, whereas the leaf nodes are called page objects. The simplest page tree structure can consist of a single page tree node that references all of the page object directly (so all the of the page objects are leafs).</p>
+<p>Each node in a page tree has to have the following entries:</p>
+<p>– /Type: the type of the PDF object this object describes (in our case it’s <strong>Pages</strong>, since we’re talking about page tree nodes).</p>
+<p>– /Parent: should be present in all page tree nodes except in root, where this entry mustn’t be present. This entry specifies its parent.</p>
+<p>– /Kids: should be present in all page tree nodes except in leafs and specifies all the child elements directly accessible from the current node.</p>
+<p>– /Count: Specifies the number of leaf nodes that are descendants of this node in the subsequent page tree.</p>
+<p>We must remember that page tree doesn’t relate to anything in the PDF document, like pages or chapters.</p>
+<p>A basic example of a page tree can be seen below [1]:</p>
+<pre class="brush: plain; title: ; notranslate" title="">2 0 obj
+&amp;lt;&amp;lt; /Type /Pages
+/Kids [ 4 0 R
+10 0 R
+24 0 R
+]
+/Count 3
+&amp;gt;&amp;gt;
+endobj
+
+4 0 obj
+&amp;lt;&amp;lt; /Type /Page
+...
+&amp;gt;&amp;gt;
+endobj
+
+10 0 obj
+&amp;lt;&amp;lt; /Type /Page
+...
+&amp;gt;&amp;gt;
+endobj
+
+24 0 obj
+&amp;lt;&amp;lt; /Type /Page
+...
+&amp;gt;&amp;gt;
+endobj
+</pre>
+<p>The page tree above defines the <strong>Root</strong> object with the ID of 2, which has three children, objects 4, 10 and 20. We can also see that the leaves of the page tree are dictionaries specifying the attributes of a single page of the document. There are multiple attributes that we can use when defining them for each document page; all of them are specified in [1].</p>
+<p>We’ve seen the basic structure of the PDF document and it’s data types. If we want to start finding vulnerabilities in PDF readers, we need to change the PDF document in such a way that PDF reader won’t be able to handle it and crash. Usually, if we can get the PDF reader to crash, we’ve discovered a security vulnerability, which we can use to execute arbitrary code on the target machine.</p>
+<p><strong>7. An Example</strong></p>
+<p>In this article we’ll take a look at a very simple example of a PDF document. First we need to create the PDF document so that we’ll then try to analyze it. To create a PDF document, let’s first create a very simple latex .tex document that contains what can be seen in the picture below:</p>
+<p><img src="110612_1237_pdffileform8.png" alt="" align="left"></p>
+<p>We can see that the .tex document doesn’t really contain much. First we’re defining the document to be an article and then including the contents of the article inside the <strong>begin </strong> and <strong>end </strong>document. We’re including a new section with a title <strong>Introduction</strong> and including a static text <strong>“Hello World!”</strong>. We can compile the .tex document into the PDF document with the <strong>pdflatex</strong> command and specifying the name of the .tex file as an argument. The resulting PDF then looks like this shown in the picture below:</p>
+<p><img src="110612_1237_pdffileform9.png" alt="" align="left"></p>
+<p>We can see that the PDF document really doesn’t contain very much, only the text we’ve actually included and no pictures, JavaScript or other elements.</p>
+<p><strong>8. Example 1</strong></p>
+<p>Let’s take a look at the PDF document structure, which is presented in the output below:</p>
+<pre class="brush: plain; title: ; notranslate" title="">%PDF-1.5
+%ÐÔÅØ
+3 0 obj &amp;lt;&amp;lt;
+/Length 138
+/Filter /FlateDecode
+&amp;gt;&amp;gt;
+stream
+...
+endstream
+endobj
+10 0 obj &amp;lt;&amp;lt;
+/Length1 1526
+/Length2 7193
+/Length3 0
+/Length 8194
+/Filter /FlateDecode
+&amp;gt;&amp;gt;
+stream
+...
+endstream
+endobj
+12 0 obj &amp;lt;&amp;lt;
+/Length1 1509
+/Length2 9410
+/Length3 0
+/Length 10422
+/Filter /FlateDecode
+&amp;gt;&amp;gt;
+stream
+...
+endstream
+endobj
+15 0 obj &amp;lt;&amp;lt;
+/Producer (pdfTeX-1.40.12)
+/Creator (TeX)
+/CreationDate (D:20121012175007+02'00')
+/ModDate (D:20121012175007+02'00')
+/Trapped /False
+/PTEX.Fullbanner (This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) kpathsea version 6.0.1)
+&amp;gt;&amp;gt; endobj
+6 0 obj &amp;lt;&amp;lt;
+/Type /ObjStm
+/N 10
+/First 65
+/Length 761
+/Filter /FlateDecode
+&amp;gt;&amp;gt;
+stream
+...
+endstream
+endobj
+16 0 obj &amp;lt;&amp;lt;
+/Type /XRef
+/Index [0 17]
+/Size 17
+/W [1 2 1]
+/Root 14 0 R
+/Info 15 0 R
+/ID [&amp;lt;1DC2E3E09458C9B4BEC8B67F56B57B63&amp;gt; &amp;lt;1DC2E3E09458C9B4BEC8B67F56B57B63&amp;gt;]
+/Length 60
+/Filter /FlateDecode
+&amp;gt;&amp;gt;
+stream
+...
+endstream
+endobj
+startxref
+20215
+%%EOF
+</pre>
+<p>There’s quite a lot of the necessary elements to create such a simple PDF document, so we can imagine how a really complicated PDF document would look. We also need to remember that all the encoded data streams were removed and replaced with three dots (as follows: ‘…’) for clarity and brevity.</p>
+<p>Let’s present each of the PDF sections. The <strong>Header</strong> can be seen in the picture below:</p>
+<p><img src="110612_1237_pdffileform10.png" alt="" align="left"></p>
+<p>The <strong>Body</strong> can be seen in the picture below:</p>
+<p><img src="110612_1237_pdffileform11.png" alt="" align="left"></p>
+<p>The <strong>Xref</strong> section can be seen in the picture below:</p>
+<p><img src="110612_1237_pdffileform12.png" alt="" align="left"></p>
+<p>And last, the <strong>Trailer</strong> section is represented below:</p>
+<p><img src="110612_1237_pdffileform13.png" alt="" align="left"></p>
+<p>We presented all of the sections of the PDF document, but we still have to analyze them further. The header of the PDF document is standard and we don’t really need to talk about it, and let’s leave the body section for later. This is why we must first take a look at the Xref section. We can see that the offset from the beginning of the file to the Xref table is 20215 bytes, which in hexadecimal form is 0x4ef7. If we take a look at the hexadecimal representation of the file as we can get with the <strong>xxd</strong> tool, we can see what’s presented in the picture below:</p>
+<p><img style="margin-left: 65px; margin-right: 65px;" src="110612_1237_pdffileform14.png" alt="" align="left" height="265" width="473"></p>
+<p>The highlighted bytes lie exactly at the start of the offset 20125 bytes from the beginning of the file. The preceding 0x0a bytes is the new line and the current 0x31 bytes represents the number 1, which is exactly the start of the Xref table. This is why the Xref table is represented with an indirect object with an ID 16 and generation number 0 (this should be the case for all objects, since we just created the PDF document and none of the objects has been changed yet; if we look at the whole PDF document we can see that this is clearly true; all objects have a generation number zero).</p>
+<p>The <strong>/Type</strong> of the indirect object classifies this as an Xref table. The <strong>/Index</strong> array contains a pair of integers for each subsection in this section. The first integer specifies the first object number in the subsection and the second integer specifies the number of entries in the subsection. In our example the object number is zero and there are 17 entries in this subsection. This is also specified by the <strong>/Size</strong> directive. Note that this number is one larger than the largest number of any object number in the subsection. The <strong>/W</strong> attribute specifies an array of integers representing the size of the fields in cross-reference entry. [1 2 1] means that the fields are one byte, two bytes and one byte.</p>
+<p>After that there is the <strong>/Root</strong> element that specifies the catalog directory for the PDF document to be object number 14. The <strong>/Info </strong>is the PDF document’s information directory that is contained in object number 15. The <strong>/ID</strong> array is required because the <strong>Encrypt</strong> entry is present and contains two strings that constitute a file identifier. Those two strings are used as input to the encryption algorithm. The <strong>/Length</strong> specifies the length of the encryption key in bits; the value should be multiple of 8 in the range 40 t o128 (default value is 40). In our case the length of the encryption key is 60 bits. The <strong>/Filter</strong> specifies the name of the security handler for this document; this is also the security handler that was used to encrypt the document. In our case this is <strong>FlateDecode</strong>, which encodes the data using zlib/deflate compression method.</p>
+<p>We can see that the other part of the Xref table is compressed, so we can’t really read that. We could of course applied some zlib decompression algorithm over the compressed data, but there’s a better option. Why would we write a program for that if a tool already exists? With <strong>pdftk</strong> we can repair a PDF’s corrupted Xref table with the following command:</p>
+<pre class="brush: bash; title: ; notranslate" title=""># pdftk in.pdf output out.pdf
+</pre>
+<p>After that the out.pdf file contains the following Xref and Trailer sections:</p>
+<p><img src="110612_1237_pdffileform15.png" alt="" align="left"></p>
+<p>Clearly the /Root and /Info object numbers have changed and other stuff as well, but we got the <strong>trailer</strong> and <strong>xref</strong> keywords that define the Xref table. We can see that there are 14 objects in the Xref table.</p>
+<p>We could go on and try to decode other sections as well, but I guess this is out of the scope of this article. Next, we’ll rather check the document that isn’t encoded.</p>
+<p><strong>9. Example 2</strong></p>
+<p>Let’s take a look at the sample PDF document that is accessible here: <a href="http://www.stluciadance.com/prospectus_file/sample.pdf" onclick="__gaTracker('send', 'event', 'download', 'http://www.stluciadance.com/prospectus_file/sample.pdf');">www.stluciadance.com/prospectus_file/sample.pdf</a>. Some of the stream objects are encrypted, but aren’t so important now. Since we already know how to handle PDF documents, we won’t lose too many words on simple stuff. Let’s open that PDF in a text editor, like gvim and check out the <strong>Trailer</strong> section. We must know by now that all PDF documents should be read from the end to the start. The Trailer is represented in the picture below:</p>
+<p><img style="margin-left: 100px; margin-right: 100px;" src="110612_1237_pdffileform16.png" alt="" align="left" height="138" width="482"></p>
+<p>Let’s also present the Xref with just a few objects (the rest of them were discarded for clarity):</p>
+<p><img style="margin-left: 150px; margin-right: 150px;" src="110612_1237_pdffileform17.png" alt="" align="left" height="106" width="431"></p>
+<p>We can see that the <strong>/Root</strong> of the PDF document is contained in the object with ID 221 and there is additional information in object 222. The object 221 is the most important object in the whole document, so let’s present it; it can be seen in the picture below:</p>
+<p><img style="margin-left: 150px; margin-right: 150px;" src="110612_1237_pdffileform18.png" alt="" align="left" height="125" width="435"></p>
+<p>We can see that the object is indeed the <strong>Document Catalog</strong>. The <strong>Page Tree</strong> object is 212, the <strong>Outlines </strong>object is 213, the <strong>Names</strong> object is 220 and the <strong>OpenAction</strong> object is 58. We haven’t talked about any other types than Page Tree object, so we’ll continue with the Page Tree talk only.</p>
+<p>The Page Tree object with an ID 212 is represented in the picture below:</p>
+<p><img style="margin-left: 150px; margin-right: 150px;" src="110612_1237_pdffileform19.png" alt="" align="left" height="79" width="372"></p>
+<p>So the 212 object contains the actual pages of the PDF document. It contains 10 pages, which is exactly right (we can check this out if we open the PDF file with any PDF reader and check the number of pages). We know that the <strong>Kids</strong> attribute specifies all the child elements directly accessible from the current node. In our case, there are two direct child nodes with an object id 66 and 135. The object 66 is presented below:</p>
+<p><img style="margin-left: 55px; margin-right: 55px;" src="110612_1237_pdffileform20.png" alt="" align="left" height="93" width="520"></p>
+<p>The object 66 contains other child elements with an ID 57, 69, 75, 97, 108 and 120.</p>
+<p><img style="margin-left: 100px; margin-right: 100px;" src="110612_1237_pdffileform21.png" alt="" align="left" height="93" width="444"></p>
+<p>The object 135 further defines objects 129, 138, 133 and 158.</p>
+<p>If we count all the elements, we can see that there are exactly 10 elements, which means 10 pages out of 10 pages. This further implies that all of the presented objects are in fact the actual pages of the PDF document and don’t contain any further children nodes. All of the presented objects are declared similarly, so we won’t look at each of the objects in turn. Instead, we’ll just take a look at one object, namely the object 57. The object 57 contains is declared as follows:</p>
+<p><img style="margin-left: 55px; margin-right: 55px;" src="110612_1237_pdffileform22.png" alt="" align="left" height="110" width="501"></p>
+<p>We can see that the object’s type is <strong>/Page</strong>, which directly implies that this is a leaf node that presents one of the pages of the PDF document. The contents of that PDF page can be found in an object 62; that object is presented in the picture below:</p>
+<p><img src="110612_1237_pdffileform23.png" alt="" align="left"></p>
+<p>We can see that the actual content of the PDF page is encoded with the FlateDecode, which is just a simple zlib encoding algorithm.</p>
+<p><strong>10. Conclusion</strong></p>
+<p>We’ve seen two examples of how PDF documents can be constructed. With the knowledge we obtained, we can start generating incorrect PDF documents and feeding them to the various PDF readers. In the case that a certain PDF reader crashes while reading a certain PDF document, that document contains something that the PDF reader couldn’t handle and crashes. This implies the possibility of a vulnerability, which would need to be studied further.</p>
+<p>At the end, if the vulnerability provides to be present, we can even write a PDF document that contains malicious code that is executed when the victim opens the PDF document with the vulnerable PDF reader on their target machine. In such cases, the whole machine might be compromised, since arbitrary malicious code can be executed just by opening a malicious PDF document.</p>
+<p style="text-align: center;"><strong>INTERESTED IN LEARNING MORE? CHECK OUT OUR ETHICAL HACKING TRAINING COURSE. FILL OUT THE FORM BELOW FOR A COURSE SYLLABUS AND PRICING INFORMATION.</strong></p>
+<p style="text-align: center;"><strong><span class="pardot-title">Ethical Hacking Instant Pricing – Resources</span><iframe class="pardotform" src="index_8.html" type="text/html" allowtransparency="true" style="border: 0px none;" frameborder="0" height="200" width="650"></iframe></strong></p>
+<p>References:</p>
+<p>[1]: The PDF File Format, accessible on: http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf.</p>
+<div class="ig_inline_container ig_the_content ig_after"></div>
+      <div class="share vertical">
+
+  <ul>
+    
+    <li class="twitter">
+      <iframe data-url="http://resources.infosecinstitute.com/pdf-file-format-basic-structure/" src="index_9.html" title="Twitter Tweet Button" style="position: static; visibility: visible; width: 63px; height: 20px;" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" allowtransparency="true" scrolling="no" id="twitter-widget-2" frameborder="0"></iframe>
+    </li>
+    
+    <li class="google">
+      <div id="___plus_1" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 84px; height: 60px;"><iframe title="+Compartir" data-gapiattached="true" src="index_10.html" name="I1_1453700916914" id="I1_1453700916914" vspace="0" tabindex="0" style="position: static; top: 0px; width: 84px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 60px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" frameborder="0" width="100%"></iframe></div>
+    </li>
+    
+    <li class="linkedin">
+      <span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center;"><span style="padding: 0px ! important; margin: 0px ! important; text-indent: 0px ! important; display: inline-block ! important; vertical-align: baseline ! important; font-size: 1px ! important;"><span id="li_ui_li_gen_1453700922852_3-container" class="IN-top"><span id="li_ui_li_gen_1453700922852_3" class="IN-top"><span id="li_ui_li_gen_1453700922852_3-inner" class="IN-top"><span id="li_ui_li_gen_1453700922852_3-content" class="IN-top">8</span></span></span></span></span><br><span style="padding: 0px ! important; margin: 0px ! important; text-indent: 0px ! important; display: inline-block ! important; vertical-align: baseline ! important; font-size: 1px ! important;"><span id="li_ui_li_gen_1453700922835_2"><a id="li_ui_li_gen_1453700922835_2-link" href="javascript:void(0);"><span id="li_ui_li_gen_1453700922835_2-logo">in</span><span id="li_ui_li_gen_1453700922835_2-title"><span id="li_ui_li_gen_1453700922835_2-mark"></span><span id="li_ui_li_gen_1453700922835_2-title-text">Share</span></span></a></span></span></span>
+    </li>
+    
+    <li class="reddit">
+      <iframe src="index_11.html" scrolling="no" frameborder="0" height="69" width="51"></iframe>
+    </li>
+    
+    <li class="facebook">
+      <div fb-iframe-plugin-query="action=like&amp;app_id=552038044933986&amp;container_width=0&amp;href=http%3A%2F%2Fresources.infosecinstitute.com%2Fpdf-file-format-basic-structure%2F&amp;layout=box_count&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=false&amp;width=90" fb-xfbml-state="rendered" class="fb-like fb_iframe_widget" data-width="90" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"><span style="vertical-align: bottom; width: 51px; height: 61px;"><iframe class="" src="index_12.html" style="border: medium none; visibility: visible; width: 51px; height: 61px;" title="fb:like Facebook Social Plugin" scrolling="no" allowfullscreen="true" allowtransparency="true" name="f353a8f5143059" frameborder="0" height="1000px" width="90px"></iframe></span></div>
+    </li>
+    
+  </ul>
+
+</div>    </article>
+    <section class="post-author ">
+  
+  <div class="image">
+    <img alt="" src="b3aadda5449aa070725f7e0593cd0d9d" srcset="http://2.gravatar.com/avatar/b3aadda5449aa070725f7e0593cd0d9d?s=192&amp;d=mm&amp;r=g 2x" class="avatar avatar-96 photo" height="96" width="96">
+  </div>
+  
+  <div class="name">
+    <span>Author</span>
+    <h5>
+      <a href="http://resources.infosecinstitute.com/author/dejan-lukan">Dejan Lukan</a>
+    </h5>
+  </div>
+  
+  <div class="description">
+    Dejan Lukan is a security researcher for InfoSec Institute and penetration tester from Slovenia. He is very interested in finding new bugs in real world software products with source code analysis, fuzzing and reverse engineering. He also has a great passion for developing his own simple scripts for security related problems and learning about new hacking techniques. He knows a great deal about programming languages, as he can write in couple of dozen of them. His passion is also Antivirus bypassing techniques, malware research and operating systems, mainly Linux, Windows and BSD. He also has his own blog available here: http://www.proteansec.com/.
+  </div>
+  
+    
+</section>  </div>
+  
+      <ul class="sidebar post-col-1-3">
+
+  
+  
+    
+  
+  
+    
+  
+  
+          <li class="editors-choice">
+        <h4>Editors Choice</h4>
+        <ul>
+                      <li>
+              <a class="icon post-s" href="http://resources.infosecinstitute.com/cracking-damn-insecure-and-vulnerable-app-diva-part-4/">Cracking Damn Insecure and Vulnerable App (DIVA) – part 4:</a>
+            </li>
+                      <li>
+              <a class="icon download-s" href="http://resources.infosecinstitute.com/download/developing-secure-java-code-best-practices-for-a-team/">Developing Secure Java Code – Best Practices for a Team</a>
+            </li>
+                      <li>
+              <a class="icon post-s" href="http://resources.infosecinstitute.com/cheating-voip-security-by-flooding-the-sip/">Cheating VoIP Security by Flooding the SIP</a>
+            </li>
+                  </ul>
+      </li>
+    
+  
+  
+          <li class="bootcamps">
+        <h4>Related Boot Camps</h4>
+        <ul>
+                      <li>
+              <a class="icon right-arrow" href="http://www.infosecinstitute.com/courses/security.html" target="_top">Information Security</a>
+            </li>
+                      <li>
+              <a class="icon right-arrow" href="http://www.infosecinstitute.com/courses/security_awareness_training.html" target="_top">Security Awareness</a>
+            </li>
+                      <li>
+              <a class="icon right-arrow" href="http://www.intenseschool.com/boot_camp/cisco/ccna" target="_top">CCNA</a>
+            </li>
+                      <li>
+              <a class="icon right-arrow" href="http://www.intenseschool.com/boot_camp/pm/pm_professional" target="_top">PMP</a>
+            </li>
+                      <li>
+              <a class="icon right-arrow" href="http://www.infosecinstitute.com/courses/microsoft-training.html" target="_top">Microsoft</a>
+            </li>
+                      <li>
+              <a class="icon right-arrow" href="http://www.infosecinstitute.com/courses/incident_respone_network_forensics.html" target="_top">Incident Response</a>
+            </li>
+                      <li>
+              <a class="icon right-arrow" href="http://www.infosecinstitute.com/courses/information-assurance.html" target="_top">Information Assurance</a>
+            </li>
+                      <li>
+              <a class="icon right-arrow" href="http://www.infosecinstitute.com/courses/ethical_hacking_training.html" target="_top">Ethical Hacking</a>
+            </li>
+                      <li>
+              <a class="icon right-arrow" href="http://www.infosecinstitute.com/courses/hacker_training_online.html" target="_top">Hacker Training Online</a>
+            </li>
+                  </ul>
+      </li>
+    
+  
+  
+    
+  
+  
+          <li class="author-posts">
+        <h4>More Posts by Author</h4>
+        <ul>
+                      <li>
+              <a class="icon arrow-right" href="http://resources.infosecinstitute.com/deep-packet-inspection-in-cloud-containers/">
+                <img src="122115_2337_deeppacketi3-76x76-c-default.png" alt="Deep Packet Inspection in Cloud Containers" height="38" width="38">
+                <h5>Deep Packet Inspection in Cloud Containers</h5>
+              </a>
+            </li>
+                      <li>
+              <a class="icon arrow-right" href="http://resources.infosecinstitute.com/security-vulnerabilities-in-cloud-applications/">
+                <img src="cloud05012014-76x76-c-default.gif" alt="Security Vulnerabilities in Cloud Applications" height="38" width="38">
+                <h5>Security Vulnerabilities in Cloud Applications</h5>
+              </a>
+            </li>
+                      <li>
+              <a class="icon arrow-right" href="http://resources.infosecinstitute.com/analyzing-the-internals-of-cloud-applications/">
+                <img src="102715_2319_analyzingth4-76x76-c-default.png" alt="Analyzing the Internals of Cloud Applications" height="38" width="38">
+                <h5>Analyzing the Internals of Cloud Applications</h5>
+              </a>
+            </li>
+                  </ul>
+      </li>
+    
+  
+  
+</ul>    
+  <ul class="random-posts ">
+      <li style="background-image: url('012016_2302_crackingdam13-237x237-c-default.png');">
+      <a class="icon post-l" href="http://resources.infosecinstitute.com/cracking-damn-insecure-and-vulnerable-app-diva-part-4/" title="Cracking Damn Insecure and Vulnerable App (DIVA) – part 4:">
+        <h3>Cracking Damn Insecure and Vulnerable App…</h3>
+      </a>
+    </li>
+      <li style="background-image: url('java-12192013-237x237-c-default.jpg');">
+      <a class="icon download-l" href="http://resources.infosecinstitute.com/download/developing-secure-java-code-best-practices-for-a-team/" title="Developing Secure Java Code – Best Practices for a Team">
+        <h3>Developing Secure Java Code – Best…</h3>
+      </a>
+    </li>
+      <li style="background-image: url('011916_2247_cheatingvoi2-237x237-c-default.gif');">
+      <a class="icon post-l" href="http://resources.infosecinstitute.com/cheating-voip-security-by-flooding-the-sip/" title="Cheating VoIP Security by Flooding the SIP">
+        <h3>Cheating VoIP Security by Flooding the…</h3>
+      </a>
+    </li>
+      <li style="background-image: url('human-behavior-analysis-next-big-thing-showcase_image-10-p-1937-237x237-c-default.jpg');">
+      <a class="icon post-l" href="http://resources.infosecinstitute.com/breaking-bad-behavior-why-non-siem-behavioral-analysis-may-not-be-all-its-cracked-up-to-be/" title="Breaking Bad Behavior: Why Non-SIEM Behavioral Analysis May Not Be All It’s Cracked Up to Be">
+        <h3>Breaking Bad Behavior: Why Non-SIEM Behavioral…</h3>
+      </a>
+    </li>
+  </ul>  
+      
+<div id="disqus_thread"><iframe verticalscrolling="no" horizontalscrolling="no" src="index_13.html" style="width: 1px ! important; min-width: 100% ! important; border: medium none ! important; overflow: hidden ! important; height: 861px ! important;" title="Disqus" tabindex="0" scrolling="no" allowtransparency="true" name="dsq-app2" id="dsq-app2" frameborder="0" width="100%"></iframe></div>
+
+
+  
+        </div>
+      </section>
+      
+              <footer class="site-footer">
+  
+  <div class="ctas full">
+    
+    <div class="col-3-3 wrapper">
+      
+      <div class="col-1-3">
+        <h6>About InfoSec</h6>
+        <p>InfoSec Institute is the best source for high quality <a href="http://www.infosecinstitute.com/" style="color: rgb(255, 255, 255);">information security training</a>. We have been training Information Security and IT Professionals since 1998 with a diverse lineup of relevant training courses. In the past 16 years, over 50,000 individuals have trusted InfoSec Institute for their professional development needs! </p>
+
+      </div>
+      
+      <div class="col-1-3">
+        <h6>Connect with us</h6>
+        <p>Stay up to date with <a href="http://www.infosecinstitute.com/" style="color: rgb(255, 255, 255);">InfoSec Institute</a> and <a href="http://www.intenseschool.com/" style="color: rgb(255, 255, 255);">Intense School</a> - at info@infosecinstitute.com</p>
+
+        <ul class="footer-social">
+  <li>
+    <div fb-iframe-plugin-query="action=like&amp;app_id=552038044933986&amp;container_width=0&amp;href=http%3A%2F%2Fresources.infosecinstitute.com%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=false&amp;width=90" fb-xfbml-state="rendered" class="fb-like fb_iframe_widget" data-href="http://resources.infosecinstitute.com" data-width="90" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"><span style="vertical-align: bottom; width: 86px; height: 22px;"><iframe class="" src="index_14.html" style="border: medium none; visibility: visible; width: 86px; height: 22px;" title="fb:like Facebook Social Plugin" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fbcda71ff6d9e6" frameborder="0" height="1000px" width="90px"></iframe></span></div>
+  </li>
+  <li>
+    <iframe data-screen-name="infosecedu" src="index_15.html" title="Twitter Follow Button" style="position: static; visibility: visible; width: 142px; height: 20px;" class="twitter-follow-button twitter-follow-button-rendered" allowtransparency="true" scrolling="no" id="twitter-widget-0" frameborder="0"></iframe>
+  </li>
+</ul>      </div>
+      
+      <div class="col-1-3">
+        <form action="http://resources.infosecinstitute.com/newsletter/signup" method="post" class="mailchimp has-loader" novalidate="">
+  
+  <aside>
+    <h6>Join our newsletter</h6>
+    <p>Get the latest news, updates &amp; offers straight to your inbox.</p>
+
+  </aside>
+  
+  <fieldset>
+    <input title="Email address" value="" name="EMAIL" placeholder="Enter your email" type="email">
+    <input value="Subscribe" class="generic-cta green" type="submit">
+    <input name="b_2593cfe26893087ed36e00fe3_ba06ce498c" tabindex="-1" value="" type="text">
+  </fieldset>
+  
+</form>      </div>
+      
+    </div>
+    
+  </div>
+  
+  <div class="navigation full">
+    
+    <div class="col-3-3 wrapper">
+      
+      <nav class="footer">
+        <ul>
+                  </ul>
+      </nav>
+
+      <div class="copyright">© InfoSec Resources 2016</div>
+      
+    </div>
+    
+  </div>
+
+</footer>            
+    </main>
+    
+      <div class="modal">
+  <div class="modal-inner">
+    <a rel="modal:close">Close</a>
+    <div class="modal-content"></div>
+  </div>
+</div>
+
+<div id="modal-hidden">
+                <div id="download">
+  <div class="pardot form">
+    <h4 class="pardot-title">File download</h4>
+    <form id="download-form" action="https://go.pardot.com/l/12882/2014-12-11/cqhcw" method="post"><input name="entry_title" value="PDF File Format: Basic Structure" type="hidden">
+      <input name="download_title" value="" type="hidden">
+      <input name="resources_training" value="" type="hidden">
+
+      
+      <input name="url" value="http://resources.infosecinstitute.com/pdf-file-format-basic-structure/" type="hidden">
+      <input name="entry_id" value="11873" type="hidden">
+      <input name="entry_url" value="http://resources.infosecinstitute.com/pdf-file-format-basic-structure/" type="hidden">
+      <input name="entry_type" value="" type="hidden">
+
+      <ul>
+        <li data-required="">
+          <label>First Name</label>
+          <input value="" name="first_name">
+        </li>
+        <li data-required="">
+          <label>Last Name</label>
+          <input value="" name="last_name">
+        </li>
+        <li data-required="">
+          <label>Work Phone Number</label>
+          <input value="" name="phone">
+        </li>
+        <li data-required="">
+          <label>Work Email Address</label>
+          <input value="" name="email">
+        </li>
+        <li>
+          <label>Job Title</label>
+          <input value="" name="job_title">
+        </li>
+                  <li class="training-fund">
+            <label>How will you fund your training?</label>
+            <div data-selected="No current plan" class="dd">
+              <select name="training_fund">
+                                  <option value="No current plan
+">No current plan
+</option>
+                                  <option value="Employer Paid
+">Employer Paid
+</option>
+                                  <option value="GI Bill
+">GI Bill
+</option>
+                                  <option value="Tuition Assistance
+">Tuition Assistance
+</option>
+                                  <option value="Self Pay
+">Self Pay
+</option>
+                                  <option value="Other">Other</option>
+                              </select>
+            </div>
+          </li>
+                          <li class="training-why">
+            <label>Why Take This Training?</label>
+            <div data-selected="I'm not interested in training" class="dd">
+              <select name="training_why">
+                                  <option value="I'm not interested in training
+" title="I'm not interested in training
+">I'm not interested in training
+</option>
+                                  <option value="To get certified - company mandated
+" title="To get certified - company mandated
+">To get certified - company mandated
+</option>
+                                  <option value="To get certified - my own reasons
+" title="To get certified - my own reasons
+">To get certified - my own reasons
+</option>
+                                  <option value="To improve my skillset - get a promotion
+" title="To improve my skillset - get a promotion
+">To improve my skillset - get a promotion
+</option>
+                                  <option value="To improve my skillset- for a new job
+" title="To improve my skillset- for a new job
+">To improve my skillset- for a new job
+</option>
+                                  <option value="Other" title="Other">Other</option>
+                              </select>
+            </div>
+          </li>
+                          <li class="training-timeline">
+            <label>What is your timeline for training?</label>
+            <div data-selected="I have no current timeline for training" class="dd">
+              <select name="training_timeline">
+                                  <option value="I have no current timeline for training
+">I have no current timeline for training
+</option>
+                                  <option value="Within a month
+">Within a month
+</option>
+                                  <option value="1-3 months
+">1-3 months
+</option>
+                                  <option value="3-6 months
+">3-6 months
+</option>
+                                  <option value="6-12 months
+">6-12 months
+</option>
+                                  <option value="Over 1 year">Over 1 year</option>
+                              </select>
+            </div>
+          </li>
+                <li class="full">
+          <input class="generic-cta green" value="Download files" type="submit">
+        </li>
+      </ul>
+
+      <p>InfoSec institute respects your privacy and will never use your personal information for anything other than to notify you of your requested course pricing. We will never sell your information to third parties. You will not be spammed.</p>
+
+      <div style="position: absolute; left: -9999px; top: -9999px;">
+        <label for="pardot_extra_field">Comments</label>
+        <input value="" id="pardot_extra_field" name="pardot_extra_field" type="text">
+      </div>
+
+    </form>
+  </div>
+</div>            <div id="skillset-modal">
+  <div class="skillset window">
+    <h4>What is Skillset?</h4>
+    <aside>
+      
+      <div class="left">
+        <h3>Skillset</h3>
+        <h5>Practice tests &amp; assessments.</h5>
+      </div>
+      
+      <div class="right">
+        <p>Practice for certification success with the Skillset library of over 100,000 practice test questions. We analyze your responses and can determine when you are ready to sit for the test. Along your journey to exam readiness, we will:</p>
+<p></p>
+<p>1. Determine which required skills your knowledge is sufficient<br>
+2. Which required skills you need to work on<br>
+3. Recommend specific skills to practice on next<br>
+4. Track your progress towards a certification exam</p>
+
+      </div>
+      
+    </aside>
+  </div>
+</div>    </div>      
+    
+
+
+
+
+
+      
+      
+    
+    
+
+
+
+
+
+
+
+
+
+
+<iframe tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;" src="index_16.html" id="oauth2relay860074729" name="oauth2relay860074729"></iframe>
+
+
+
+    
+  
+  
+<div id="icegram_messages_container"><div class="icegram action_bar_32821"><div style="display: block;" class="ig_action_bar ig_container ig_hello ig_no_hide ig_top ig_show ig_anim_slide_in" id="icegram_message_32821"><div class="ig_content ig_clear_fix"><div class="ig_close" id="ig_close_32821"><span></span></div><div class="ig_data ig_clear_fix"><div class="ig_headline">Check Out Our New HANDS-ON Computer Forensics Training</div><div style="display: none;" class="ig_message"></div></div><div style="cursor: pointer;" class="ig_button">Click Here</div></div></div></div></div><iframe src="index_17.html" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: medium none;" allowfullscreen="true" allowtransparency="true" scrolling="no" id="rufous-sandbox" frameborder="0"></iframe></body>
+</html>

@@ -1,0 +1,6 @@
+/* ::::: http://www.unixuser.org/~euske/python/pdfminer/style.css ::::: */
+
+blockquote { background: none repeat scroll 0% 0% rgb(238, 238, 238); }
+h1 { border-bottom: 2px solid black; }
+h2 { border-bottom: 1px solid black; }
+.comment { color: darkgreen; }

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python package — textract 1.4.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+
+  
+    <link rel="top" title="textract 1.4.0 documentation" href="http://textract.readthedocs.org/en/latest/index.html">
+        <link rel="next" title="Installation" href="http://textract.readthedocs.org/en/latest/installation.html">
+        <link rel="prev" title="Command line interface" href="http://textract.readthedocs.org/en/latest/command_line_interface.html">
+ 
+<!-- RTD Extra Head -->
+
+    
+    
+
+<!-- 
+Always link to the latest version, as canonical.
+http://docs.readthedocs.org/en/latest/canonical.html
+-->
+<link rel="canonical" href="http://textract.readthedocs.org/en/latest/python_package.html">
+
+<!-- RTD Analytics Code -->
+<!-- Included in the header because you don't have a footer block. -->
+
+<!-- end RTD Analytics Code -->
+<!-- end RTD <extrahead> -->
+
+
+  
+  
+
+
+<link rel="stylesheet" type="text/css" href="index.css" media="all">
+</head>
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="http://textract.readthedocs.org/en/latest/index.html" class="icon icon-home"> textract
+          
+
+          
+          </a>
+
+          
+            
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="http://textract.readthedocs.org/en/latest/search.html" method="get">
+    <input value="" name="q" placeholder="Search docs" type="text">
+    <input name="check_keywords" value="yes" type="hidden">
+    <input name="area" value="default" type="hidden">
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="http://textract.readthedocs.org/en/latest/command_line_interface.html">Command line interface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="http://textract.readthedocs.org/en/latest/python_package.html"><span class="toctree-expand"></span>Python package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#additional-options">Additional options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-look-under-the-hood">A look under the hood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-few-specific-examples">A few specific examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://textract.readthedocs.org/en/latest/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://textract.readthedocs.org/en/latest/contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://textract.readthedocs.org/en/latest/changelog.html">Change Log</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="http://textract.readthedocs.org/en/latest/index.html">textract</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="http://textract.readthedocs.org/en/latest/index.html">Docs</a> »</li>
+      
+    <li>Python package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/deanmalmgren/textract/blob/master/docs/python_package.rst" class="fa fa-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-package">
+<span id="id1"></span><h1>Python package<a class="headerlink" href="#python-package" title="Permalink to this headline">¶</a></h1>
+<p>This package is organized to make it as easy as possible to add new
+extensions and support the continued growth and coverage of
+textract. For almost all applications, you will just have to do
+something like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">textract</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">textract</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="s">'path/to/file.extension'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>to obtain text from a document. You can also pass keyword arguments to
+<code class="docutils literal"><span class="pre">textract.process</span></code>, for example, to use a particular method for
+parsing a pdf like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">textract</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">textract</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="s">'path/to/a.pdf'</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s">'pdfminer'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>or to specify a particular output encoding (input encodings are
+inferred using <a class="reference external" href="https://github.com/chardet/chardet">chardet</a>):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">textract</span>
+<span class="n">text</span> <span class="o">=</span> <span class="n">textract</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="s">'path/to/file.extension'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'ascii'</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="additional-options">
+<span id="id2"></span><h2>Additional options<a class="headerlink" href="#additional-options" title="Permalink to this headline">¶</a></h2>
+<p>Some parsers also enable additional options which can be passed in as keyword
+arguments to the <code class="docutils literal"><span class="pre">textract.process</span></code> function. Here is a quick table of
+available options that are available to the different types of parsers:</p>
+<div class="wy-table-responsive"><table class="docutils" border="1">
+<colgroup>
+<col width="8%">
+<col width="12%">
+<col width="80%">
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">parser</th>
+<th class="head">option</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>gif</td>
+<td>language</td>
+<td>Specify <a class="reference external" href="https://code.google.com/p/tesseract-ocr/downloads/list">the language</a> for OCR-ing text with tesseract</td>
+</tr>
+<tr class="row-odd"><td>jpg</td>
+<td>language</td>
+<td>Specify <a class="reference external" href="https://code.google.com/p/tesseract-ocr/downloads/list">the language</a> for OCR-ing text with tesseract</td>
+</tr>
+<tr class="row-even"><td>pdf</td>
+<td>language</td>
+<td>For use when <code class="docutils literal"><span class="pre">method='tesseract'</span></code>, specify <a class="reference external" href="https://code.google.com/p/tesseract-ocr/downloads/list">the language</a></td>
+</tr>
+<tr class="row-odd"><td>pdf</td>
+<td>layout</td>
+<td>With <code class="docutils literal"><span class="pre">method='pdftotext'</span></code> (default), preserve the layout</td>
+</tr>
+<tr class="row-even"><td>png</td>
+<td>language</td>
+<td>Specify <a class="reference external" href="https://code.google.com/p/tesseract-ocr/downloads/list">the language</a> for OCR-ing text with tesseract</td>
+</tr>
+<tr class="row-odd"><td>tiff</td>
+<td>language</td>
+<td>Specify <a class="reference external" href="https://code.google.com/p/tesseract-ocr/downloads/list">the language</a> for OCR-ing text with tesseract</td>
+</tr>
+</tbody>
+</table></div>
+<p>As an example of using these additional options, you can extract text from a
+Norwegian PDF using Tesseract OCR like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">text</span> <span class="o">=</span> <span class="n">textract</span><span class="o">.</span><span class="n">process</span><span class="p">(</span>
+    <span class="s">'path/to/norwegian.pdf'</span><span class="p">,</span>
+    <span class="n">method</span><span class="o">=</span><span class="s">'tesseract'</span><span class="p">,</span>
+    <span class="n">language</span><span class="o">=</span><span class="s">'nor'</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="a-look-under-the-hood">
+<h2>A look under the hood<a class="headerlink" href="#a-look-under-the-hood" title="Permalink to this headline">¶</a></h2>
+<p>When <code class="docutils literal"><span class="pre">textract.process('path/to/file.extension')</span></code> is called,
+<code class="docutils literal"><span class="pre">textract.process</span></code> looks for a module called
+<code class="docutils literal"><span class="pre">textract.parsers.extension_parser</span></code> that also contains a <code class="docutils literal"><span class="pre">Parser</span></code>.</p>
+<dl class="function">
+<dt id="textract.parsers.process">
+<code class="descclassname">textract.parsers.</code><code class="descname">process</code><span class="sig-paren">(</span><em>filename</em>, <em>encoding='utf_8'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="http://textract.readthedocs.org/en/latest/_modules/textract/parsers.html#process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#textract.parsers.process" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the core function used for extracting text. It routes the
+<code class="docutils literal"><span class="pre">filename</span></code> to the appropriate parser and returns the extracted
+text as a byte-string encoded with <code class="docutils literal"><span class="pre">encoding</span></code>.</p>
+</dd></dl>
+
+<p>Importantly, the <code class="docutils literal"><span class="pre">textract.parsers.extension_parser.Parser</span></code> class
+must inherit from <code class="docutils literal"><span class="pre">textract.parsers.utils.BaseParser</span></code>.</p>
+<dl class="class">
+<dt id="textract.parsers.utils.BaseParser">
+<em class="property">class </em><code class="descclassname">textract.parsers.utils.</code><code class="descname">BaseParser</code><a class="reference internal" href="http://textract.readthedocs.org/en/latest/_modules/textract/parsers/utils.html#BaseParser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#textract.parsers.utils.BaseParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>The <a class="reference internal" href="#textract.parsers.utils.BaseParser" title="textract.parsers.utils.BaseParser"><code class="xref py py-class docutils literal"><span class="pre">BaseParser</span></code></a> abstracts out some common functionality
+that is used across all document Parsers. In particular, it has
+the responsibility of handling all unicode and byte-encoding.</p>
+<dl class="method">
+<dt id="textract.parsers.utils.BaseParser.decode">
+<code class="descname">decode</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="reference internal" href="http://textract.readthedocs.org/en/latest/_modules/textract/parsers/utils.html#BaseParser.decode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#textract.parsers.utils.BaseParser.decode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decode <code class="docutils literal"><span class="pre">text</span></code> using the <a class="reference external" href="https://github.com/chardet/chardet">chardet</a> package.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="textract.parsers.utils.BaseParser.encode">
+<code class="descname">encode</code><span class="sig-paren">(</span><em>text</em>, <em>encoding</em><span class="sig-paren">)</span><a class="reference internal" href="http://textract.readthedocs.org/en/latest/_modules/textract/parsers/utils.html#BaseParser.encode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#textract.parsers.utils.BaseParser.encode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode the <code class="docutils literal"><span class="pre">text</span></code> in <code class="docutils literal"><span class="pre">encoding</span></code> byte-encoding. This ignores
+code points that can’t be encoded in byte-strings.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="textract.parsers.utils.BaseParser.extract">
+<code class="descname">extract</code><span class="sig-paren">(</span><em>filename</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="http://textract.readthedocs.org/en/latest/_modules/textract/parsers/utils.html#BaseParser.extract"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#textract.parsers.utils.BaseParser.extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method must be overwritten by child classes to extract raw
+text from a filename. This method can return either a
+byte-encoded string or unicode.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="textract.parsers.utils.BaseParser.process">
+<code class="descname">process</code><span class="sig-paren">(</span><em>filename</em>, <em>encoding</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="http://textract.readthedocs.org/en/latest/_modules/textract/parsers/utils.html#BaseParser.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#textract.parsers.utils.BaseParser.process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process <code class="docutils literal"><span class="pre">filename</span></code> and encode byte-string with <code class="docutils literal"><span class="pre">encoding</span></code>. This
+method is called by <a class="reference internal" href="#textract.parsers.process" title="textract.parsers.process"><code class="xref py py-func docutils literal"><span class="pre">textract.parsers.process()</span></code></a> and wraps
+the <a class="reference internal" href="#textract.parsers.utils.BaseParser.extract" title="textract.parsers.utils.BaseParser.extract"><code class="xref py py-meth docutils literal"><span class="pre">BaseParser.extract()</span></code></a> method in <a class="reference external" href="http://nedbatchelder.com/text/unipain.html">a delicious unicode
+sandwich</a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<p>Many of the parsers rely on command line utilities to do some of the
+parsing. For convenience, the <code class="docutils literal"><span class="pre">textract.parsers.utils.ShellParser</span></code>
+class includes some convenience methods for streamlining access to the
+command line.</p>
+<dl class="class">
+<dt id="textract.parsers.utils.ShellParser">
+<em class="property">class </em><code class="descclassname">textract.parsers.utils.</code><code class="descname">ShellParser</code><a class="reference internal" href="http://textract.readthedocs.org/en/latest/_modules/textract/parsers/utils.html#ShellParser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#textract.parsers.utils.ShellParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#textract.parsers.utils.BaseParser" title="textract.parsers.utils.BaseParser"><code class="xref py py-class docutils literal"><span class="pre">textract.parsers.utils.BaseParser</span></code></a></p>
+<p>The <a class="reference internal" href="#textract.parsers.utils.ShellParser" title="textract.parsers.utils.ShellParser"><code class="xref py py-class docutils literal"><span class="pre">ShellParser</span></code></a> extends the <a class="reference internal" href="#textract.parsers.utils.BaseParser" title="textract.parsers.utils.BaseParser"><code class="xref py py-class docutils literal"><span class="pre">BaseParser</span></code></a> to make
+it easy to run external programs from the command line with
+<a class="reference external" href="http://www.fabfile.org/">Fabric</a>-like behavior.</p>
+<dl class="method">
+<dt id="textract.parsers.utils.ShellParser.run">
+<code class="descname">run</code><span class="sig-paren">(</span><em>command</em><span class="sig-paren">)</span><a class="reference internal" href="http://textract.readthedocs.org/en/latest/_modules/textract/parsers/utils.html#ShellParser.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#textract.parsers.utils.ShellParser.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run <code class="docutils literal"><span class="pre">command</span></code> and return the subsequent <code class="docutils literal"><span class="pre">stdout</span></code> and <code class="docutils literal"><span class="pre">stderr</span></code>
+as a tuple. If the command is not successful, this raises a
+<code class="xref py py-exc docutils literal"><span class="pre">textract.exceptions.ShellError</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="textract.parsers.utils.ShellParser.temp_filename">
+<code class="descname">temp_filename</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="http://textract.readthedocs.org/en/latest/_modules/textract/parsers/utils.html#ShellParser.temp_filename"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#textract.parsers.utils.ShellParser.temp_filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a unique tempfile name.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="a-few-specific-examples">
+<h2>A few specific examples<a class="headerlink" href="#a-few-specific-examples" title="Permalink to this headline">¶</a></h2>
+<p>There are quite a few parsers included with <code class="docutils literal"><span class="pre">textract</span></code>. Rather than
+elaborating all of them, here are a few that demonstrate how parsers
+work.</p>
+<dl class="class">
+<dt id="textract.parsers.epub_parser.Parser">
+<em class="property">class </em><code class="descclassname">textract.parsers.epub_parser.</code><code class="descname">Parser</code><a class="reference internal" href="http://textract.readthedocs.org/en/latest/_modules/textract/parsers/epub_parser.html#Parser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#textract.parsers.epub_parser.Parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#textract.parsers.utils.BaseParser" title="textract.parsers.utils.BaseParser"><code class="xref py py-class docutils literal"><span class="pre">textract.parsers.utils.BaseParser</span></code></a></p>
+<p>Extract text from epub using python epub library</p>
+<dl class="method">
+<dt id="textract.parsers.epub_parser.Parser.extract">
+<code class="descname">extract</code><span class="sig-paren">(</span><em>filename</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="http://textract.readthedocs.org/en/latest/_modules/textract/parsers/epub_parser.html#Parser.extract"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#textract.parsers.epub_parser.Parser.extract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="textract.parsers.doc_parser.Parser">
+<em class="property">class </em><code class="descclassname">textract.parsers.doc_parser.</code><code class="descname">Parser</code><a class="reference internal" href="http://textract.readthedocs.org/en/latest/_modules/textract/parsers/doc_parser.html#Parser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#textract.parsers.doc_parser.Parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#textract.parsers.utils.ShellParser" title="textract.parsers.utils.ShellParser"><code class="xref py py-class docutils literal"><span class="pre">textract.parsers.utils.ShellParser</span></code></a></p>
+<p>Extract text from doc files using antiword.</p>
+<dl class="method">
+<dt id="textract.parsers.doc_parser.Parser.extract">
+<code class="descname">extract</code><span class="sig-paren">(</span><em>filename</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="http://textract.readthedocs.org/en/latest/_modules/textract/parsers/doc_parser.html#Parser.extract"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#textract.parsers.doc_parser.Parser.extract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="http://textract.readthedocs.org/en/latest/installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="http://textract.readthedocs.org/en/latest/command_line_interface.html" class="btn btn-neutral" title="Command line interface" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    <p>
+        © Copyright 2014, Dean Malmgren.
+      
+        <span class="commit">
+          Revision <code>2d598ad8</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions"><!-- Inserted RTD Footer -->
+<div class="injected">
+
+  
+
+      
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+         <strong> 
+        <dd><a href="http://textract.readthedocs.org/en/latest/python_package.html">latest</a></dd>
+         </strong> 
+        
+        
+        <dd><a href="http://textract.readthedocs.org/en/stable/python_package.html">stable</a></dd>
+        
+        
+        
+        <dd><a href="http://textract.readthedocs.org/en/v1.4.0/python_package.html">v1.4.0</a></dd>
+        
+        
+        
+        <dd><a href="http://textract.readthedocs.org/en/v1.3.0/python_package.html">v1.3.0</a></dd>
+        
+        
+        
+        <dd><a href="http://textract.readthedocs.org/en/v1.2.0/python_package.html">v1.2.0</a></dd>
+        
+        
+        
+        <dd><a href="http://textract.readthedocs.org/en/v1.1.0/python_package.html">v1.1.0</a></dd>
+        
+        
+        
+        <dd><a href="http://textract.readthedocs.org/en/v1.0.0/python_package.html">v1.0.0</a></dd>
+        
+        
+        
+        <dd><a href="http://textract.readthedocs.org/en/v0.5.1/python_package.html">v0.5.1</a></dd>
+        
+        
+        
+        <dd><a href="http://textract.readthedocs.org/en/v0.4.0/python_package.html">v0.4.0</a></dd>
+        
+        
+        
+        <dd><a href="http://textract.readthedocs.org/en/v0.3.0/python_package.html">v0.3.0</a></dd>
+        
+        
+      </dl>
+      
+      
+
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+        <dd><a href="http://readthedocs.org/projects/textract/downloads/pdf/latest/">PDF</a></dd>
+        
+        <dd><a href="http://readthedocs.org/projects/textract/downloads/htmlzip/latest/">HTML</a></dd>
+        
+        <dd><a href="http://readthedocs.org/projects/textract/downloads/epub/latest/">Epub</a></dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        <!-- These are kept as relative links for internal installs that are http -->
+        <dt>On Read the Docs</dt>
+        <dd>
+          <a href="http://readthedocs.org/projects/textract/">Project Home</a>
+        </dd>
+        <dd>
+          <a href="http://readthedocs.org/projects/textract/builds/">Builds</a>
+        </dd>
+        <dd>
+          <a href="http://readthedocs.org/projects/textract/downloads/">Downloads</a>
+        </dd>
+      </dl>
+      
+
+      
+
+      
+      <dl>
+        <dt>On GitHub</dt>
+        <dd>
+          <a href="https://github.com/deanmalmgren/textract/blob/master/docs/python_package.rst">View</a>
+        </dd>
+        <dd>
+          <a href="https://github.com/deanmalmgren/textract/edit/master/docs/python_package.rst">Edit</a>
+        </dd>
+      </dl>
+      
+      
+
+      
+      <dl>
+        <dt>Search</dt>
+        <dd>
+          <div style="padding: 6px;">
+            <form id="flyout-search-form" class="wy-form" target="_blank" action="https://readthedocs.org/projects/textract/search/" method="get">
+              <input value="" name="q" placeholder="Search docs" type="text">
+              </form>
+          </div>
+        </dd>
+      </dl>
+      
+
+
+
+      <hr>
+      
+      Free document hosting provided by <a href="https://readthedocs.org/">Read the Docs</a>. 
+      
+
+      
+
+</div>
+</div>
+  </div>
+
+
+
+  
+
+    
+      
+      
+      
+      
+      
+
+  
+
+  
+  
+
+  
+  
+  
+   
+
+
+</body>
+</html>

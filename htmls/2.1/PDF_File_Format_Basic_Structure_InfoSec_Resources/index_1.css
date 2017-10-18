@@ -1,0 +1,14 @@
+html, body, div, span { margin: 0px; padding: 0px; }
+body { height: 22px; width: 120px; white-space: nowrap; font-size: 10px; font-family: verdana,arial,sans-serif; }
+.wrap { height: 18px; border-radius: 2px; border: 1px solid rgb(199, 222, 247); }
+.logo { background: url('undefined') no-repeat scroll left center / 16px auto rgb(199, 222, 247); width: 18px; height: 18px; display: block; text-indent: -9999px; float: left; }
+.votebox { height: 18px; background-color: white; margin-left: 2px; }
+.vote { text-indent: -9999px; float: left; margin: 0px 2px; width: 0px; height: 0px; border: 8px solid transparent; position: relative; }
+.vote.up { top: -7px; border-bottom-color: rgb(198, 198, 198); }
+.vote.down { bottom: -7px; border-top-color: rgb(198, 198, 198); }
+.vote:before { width: 6px; height: 8px; right: -3px; content: ""; position: absolute; display: block; }
+.vote.up:before { top: 7px; background: linear-gradient(to bottom, rgb(198, 198, 198) 0%, rgba(198, 198, 198, 0.898), rgba(198, 198, 198, 0) 100%) repeat scroll 0% 0% transparent; }
+.vote.down:before { top: -14px; background: linear-gradient(to top, rgb(198, 198, 198) 0%, rgba(198, 198, 198, 0.898), rgba(198, 198, 198, 0) 100%) repeat scroll 0% 0% transparent; }
+a { color: rgb(51, 102, 153); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.submission-details { display: block; height: 18px; line-height: 18px; margin-left: 46px; text-align: center; width: 65px; color: rgb(136, 136, 136); }

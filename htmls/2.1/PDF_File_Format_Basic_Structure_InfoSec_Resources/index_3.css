@@ -1,0 +1,17 @@
+/* ::::: http://www2.infosecinstitute.com/css/form.css?ver=20121030 ::::: */
+
+form.form { color: rgb(102, 102, 102); font: 13px/120% Tahoma,Arial,Helvetica,Verdana,sans-serif; margin: 0.5em 0px 1em; padding: 0.5em; }
+form.form p.required, form.form span.required, form.form label.required { font-weight: bold; }
+form.form p.required label, form.form span.required label { background: url('required.gif') no-repeat scroll right top transparent; }
+form.form p span { font-weight: normal; }
+form.form p { clear: left; line-height: 1.4em; margin: 3px 5px; padding: 3px 2px; }
+form.form p label { display: block; float: left; margin: 0px; padding: 3px 13px 0px 0px; text-align: right; width: 140px; }
+form.form p.submit { margin: 1em 0.5em 0.2em 160px; padding: 0px; }
+:first-child + html form.form p.inline {  }
+form.form p.submit input { margin: 0px 10px 0px 0px; padding: 2px 12px; }
+form.form select { font-weight: normal; }
+form.form select option { margin: 0px; padding: 0px 0.3em; }
+form.form input { font-weight: normal; padding: 2px; }
+:first-child + html form.form input { margin-right: 2px; }
+form.form input.text { width: 200px; }
+form.form p label { color: rgb(0, 0, 0); }

@@ -1,0 +1,6 @@
+ol.nested { counter-reset: item; }
+li.nested { display: block; }
+li.nested:before { content: counters(item, ".", decimal) ". "; counter-increment: item; }
+div.examples { text-indent: 3em; line-height: 300%; vertical-align: middle; }
+span.title0 { font-size: 120%; font-weight: bold; line-height: 300%; vertical-align: middle; }
+span.title1 { font-weight: bold; line-height: 300%; vertical-align: middle; }

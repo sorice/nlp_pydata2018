@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Parsing pdf files with Python and PDFMiner | Quant Corner</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://quantcorner.wordpress.com/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="https://s0.wp.com/wp-content/themes/pub/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Quant Corner » Feed" href="https://quantcorner.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Quant Corner » RSS de los comentarios" href="https://quantcorner.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Quant Corner » Parsing pdf files with Python and&nbsp;PDFMiner RSS de los comentarios" href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/feed/">
+
+
+
+
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='https://s0.wp.com/wp-content/themes/pub/twentytwelve/css/ie.css?m=1423935238g&#038;ver=20121010' type='text/css' media='all' />
+<![endif]-->
+
+
+
+
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://quantcorner.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Scraping data from the internet with Python and&nbsp;BeautifulSoup" href="https://quantcorner.wordpress.com/2014/03/05/scraping-data-from-the-internet-with-python-and-beautifulsoup/">
+<link rel="next" title="Plotting forward curves with&nbsp;R" href="https://quantcorner.wordpress.com/2014/03/23/plotting-forward-curves-with-r/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/">
+<link rel="shortlink" href="http://wp.me/p1jlIn-nU">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=https%3A%2F%2Fquantcorner.wordpress.com%2F2014%2F03%2F16%2Fparsing-pdf-files-with-python-and-pdfminer%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=https%3A%2F%2Fquantcorner.wordpress.com%2F2014%2F03%2F16%2Fparsing-pdf-files-with-python-and-pdfminer%2F&amp;for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Parsing pdf files with Python and PDFMiner">
+<meta property="og:url" content="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/">
+<meta property="og:description" content="This time I needed a time series of cash biodiesel prices in Iowa (yes, I did ....). Weekly biodiesel prices in Iowa are available in the National Weekly Ag Energy Round-Up report released every Fr...">
+<meta property="article:published_time" content="2014-03-16T14:32:36+00:00">
+<meta property="article:modified_time" content="2014-03-16T14:45:04+00:00">
+<meta property="og:site_name" content="Quant Corner">
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:card" content="summary">
+<meta property="fb:app_id" content="249643311490">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="https://s0.wp.com/i/webclip.png">
+<link rel="openid.server" href="https://quantcorner.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="https://quantcorner.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="https://quantcorner.wordpress.com/osd.xml" title="Quant Corner">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wordpress.com/opensearch.xml" title="WordPress.com">
+		
+		<meta name="application-name" content="Quant Corner"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-task" content="name=Suscribir;action-uri=https://quantcorner.wordpress.com/feed/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Registrar un blog gratuito;action-uri=http://wordpress.com/signup/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Soporte de WordPress.com;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Foros de WordPress.com;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="title" content="Parsing pdf files with Python and&nbsp;PDFMiner | Quant Corner en WordPress.com">
+<meta name="description" content="This time I needed a time series of cash biodiesel prices in Iowa (yes, I did ....). Weekly biodiesel prices in Iowa are available in the National Weekly Ag Energy Round-Up report released every Friday by the&nbsp;The Agricultural Marketing Service (AMS/USDA). This report is published in pdf format while we recently parsed html&nbsp;with Python and…">
+		
+		
+				<!-- IPONWEB header script -->
+		
+		
+
+
+
+
+<link rel="stylesheet" type="text/css" href="index.css" media="all">
+</head>
+<body data-pin-hover="true" class="single single-post postid-1482 single-format-standard mp6 customizer-styles-applied custom-font-enabled single-author highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+				<hgroup>
+			<h1 class="site-title"><a href="https://quantcorner.wordpress.com/" title="Quant Corner" rel="home">Quant Corner</a></h1>
+			<h2 class="site-description"></h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menú</button>
+			<a class="assistive-text" href="#content" title="Saltar al contenido.">Saltar al contenido.</a>
+			<div class="nav-menu"><ul><li><a href="https://quantcorner.wordpress.com/">Inicio</a></li><li class="page_item page-item-35"><a href="https://quantcorner.wordpress.com/goodies/">Goodies!</a></li><li class="page_item page-item-2"><a href="https://quantcorner.wordpress.com/about/">Blablabla</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-1482" class="post-1482 post type-post status-publish format-standard hentry category-python tag-http tag-parse tag-pdf tag-pdfminer tag-python tag-time-series tag-url">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">Parsing pdf files with Python and&nbsp;PDFMiner</h1>
+										<div class="comments-link">
+					<a href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/#comments">7 respuestas</a>				</div><!-- .comments-link -->
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>This time I needed a time series of cash biodiesel prices in Iowa (yes, I did ….).</p>
+<p>Weekly biodiesel prices in Iowa are available in the <a title="National Weekly Ag Energy Round-Up" href="http://www.ams.usda.gov/mnreports/lswagenergy.pdf" target="_top">National Weekly Ag Energy Round-Up</a> report released every Friday by the&nbsp;The Agricultural Marketing Service (AMS/USDA). This report is published in <strong>pdf</strong> format while we recently parsed <strong>html&nbsp;</strong>with <a title="Scraping data from the internet with Python and BeautifulSoup" href="https://quantcorner.wordpress.com/2014/03/05/scraping-data-from-the-internet-with-python-and-beautifulsoup/" target="_top">Python and BeautifulSoup</a>.</p>
+<p>Below is a <strong>Python</strong> snippet using the <a title="PDFMiner" href="http://www.unixuser.org/~euske/python/pdfminer/" target="_top">PDFMiner</a> library. It gets through a certain number AMS’s online pdf files and extracts the data desired.</p>
+<p>One can’t say it is robust, but it does the job quite okay. We wrote a basic error handling mechanism so that the program goes on whatever happens. In fact, there shall be Fridays when the weekly report in question was not released eg due to &nbsp;banking holidays, some reports of the US agriculture agency are missing due to last November’s partial US Government shutdown, … . Other possible error types would also be ignored and NAs would be output instead.</p>
+<pre style="background: none repeat scroll 0% 0% rgb(0, 0, 0); color: rgb(248, 248, 248);"><span style="color: rgb(174, 174, 174); font-style: italic;">#############################################################</span>
+<span style="color: rgb(174, 174, 174); font-style: italic;"># Edouard TALLENT @ <span class="skimlinks-unlinked">TaGoMa.Tech</span>, March, 2014                #</span>
+<span style="color: rgb(174, 174, 174); font-style: italic;"># Parse a series of online PDF documents to  build          #</span>
+<span style="color: rgb(174, 174, 174); font-style: italic;"># historical time series                                    #</span>
+<span style="color: rgb(174, 174, 174); font-style: italic;"># QuantCorner @ <span class="skimlinks-unlinked">https://quantcorner.wordpress.com</span>            #</span>
+<span style="color: rgb(174, 174, 174); font-style: italic;">#############################################################</span>
+
+<span style="color: rgb(174, 174, 174); font-style: italic;"># Some sources</span>
+<span style="color: rgb(174, 174, 174); font-style: italic;"># <span class="skimlinks-unlinked">http://www.unixuser.org/~euske/python/pdfminer/programming.html</span></span>
+<span style="color: rgb(174, 174, 174); font-style: italic;"># <span class="skimlinks-unlinked">http://denis.papathanasiou.org/2010/08/04/extracting-text-images-from-pdf-files</span>/</span>
+<span style="color: rgb(174, 174, 174); font-style: italic;"># <span class="skimlinks-unlinked">http://stackoverflow.com/questions/25665/python-module-for-converting-pdf-to-text</span></span>
+
+<span style="color: rgb(174, 174, 174); font-style: italic;"># Required headers</span>
+<span style="color: rgb(226, 137, 100);">from</span> pdfminer.pdfparser <span style="color: rgb(226, 137, 100);">import</span> PDFParser
+<span style="color: rgb(226, 137, 100);">from</span> pdfminer.pdfdocument <span style="color: rgb(226, 137, 100);">import</span> PDFDocument
+<span style="color: rgb(226, 137, 100);">from</span> pdfminer.pdfpage <span style="color: rgb(226, 137, 100);">import</span> PDFPage
+<span style="color: rgb(226, 137, 100);">from</span> pdfminer.pdfinterp <span style="color: rgb(226, 137, 100);">import</span> PDFResourceManager, PDFPageInterpreter
+<span style="color: rgb(226, 137, 100);">from</span> pdfminer.pdfdevice <span style="color: rgb(226, 137, 100);">import</span> PDFDevice
+<span style="color: rgb(226, 137, 100);">from</span> pdfminer.layout <span style="color: rgb(226, 137, 100);">import</span> LAParams
+<span style="color: rgb(226, 137, 100);">from</span> pdfminer.converter <span style="color: rgb(226, 137, 100);">import</span>  TextConverter <span style="color: rgb(174, 174, 174); font-style: italic;"># , XMLConverter, HTMLConverter</span>
+<span style="color: rgb(226, 137, 100);">import</span> urllib2
+<span style="color: rgb(226, 137, 100);">from</span> urllib2 <span style="color: rgb(226, 137, 100);">import</span> Request
+<span style="color: rgb(226, 137, 100);">import</span> datetime
+<span style="color: rgb(226, 137, 100);">import</span> re
+
+<span style="color: rgb(174, 174, 174); font-style: italic;"># Define a PDF parser function</span>
+<span style="color: rgb(153, 207, 80);">def</span> <span style="color: rgb(137, 189, 255);">parsePDF</span>(<span style="color: rgb(62, 135, 227);">url</span>):
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Open the url provided as an argument to the function and read the content</span>
+    <span style="color: rgb(155, 133, 157);">open</span> <span style="color: rgb(226, 137, 100);">=</span> urllib2.urlopen(Request(url)).read()
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Cast to StringIO object</span>
+    <span style="color: rgb(226, 137, 100);">from</span> StringIO <span style="color: rgb(226, 137, 100);">import</span> StringIO
+    memory_file <span style="color: rgb(226, 137, 100);">=</span> StringIO(<span style="color: rgb(155, 133, 157);">open</span>)
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Create a PDF parser object associated with the StringIO object</span>
+    parser <span style="color: rgb(226, 137, 100);">=</span> PDFParser(memory_file)
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Create a PDF document object that stores the document structure</span>
+    document <span style="color: rgb(226, 137, 100);">=</span> PDFDocument(parser)
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Define parameters to the PDF device objet </span>
+    rsrcmgr <span style="color: rgb(226, 137, 100);">=</span> PDFResourceManager()
+    retstr <span style="color: rgb(226, 137, 100);">=</span> StringIO()
+    laparams <span style="color: rgb(226, 137, 100);">=</span> LAParams()
+    codec <span style="color: rgb(226, 137, 100);">=</span> <span style="color: rgb(101, 176, 66);">'utf-8'</span>
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Create a PDF device object</span>
+    device <span style="color: rgb(226, 137, 100);">=</span> TextConverter(rsrcmgr, retstr, <span style="color: rgb(62, 135, 227);">codec</span> <span style="color: rgb(226, 137, 100);">=</span> codec, <span style="color: rgb(62, 135, 227);">laparams</span> <span style="color: rgb(226, 137, 100);">=</span> laparams)
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Create a PDF interpreter object</span>
+    interpreter <span style="color: rgb(226, 137, 100);">=</span> PDFPageInterpreter(rsrcmgr, device)
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Process each page contained in the document</span>
+    <span style="color: rgb(226, 137, 100);">for</span> page <span style="color: rgb(226, 137, 100);">in</span> PDFPage.create_pages(document):
+        interpreter.process_page(page)
+        data <span style="color: rgb(226, 137, 100);">=</span>  retstr.getvalue()
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Get values for Iowa B100 prices </span>
+    reg <span style="color: rgb(226, 137, 100);">=</span> <span style="color: rgb(101, 176, 66);">'(?&lt;=<span style="color: rgb(221, 242, 164);">\n</span>---<span style="color: rgb(221, 242, 164);">\n</span><span style="color: rgb(221, 242, 164);">\n</span>)\d.\d{2}-\d.\d{2}'</span>
+    matches <span style="color: rgb(226, 137, 100);">=</span> re.findall(reg, data)                 <span style="color: rgb(174, 174, 174); font-style: italic;"># Our data are contained in matches[0]</span>
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Compute the average</span>
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Extract value from previous regex </span>
+    low <span style="color: rgb(226, 137, 100);">=</span> re.search(<span style="color: rgb(101, 176, 66);">'\d.\d{2}(?=-)'</span>, matches[<span style="color: rgb(51, 135, 204);">0</span>])
+    high <span style="color: rgb(226, 137, 100);">=</span> re.search(<span style="color: rgb(101, 176, 66);">'(?&lt;=-)\d.\d{2}'</span>, matches[<span style="color: rgb(51, 135, 204);">0</span>])
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Cast string variables to float type</span>
+    low_val <span style="color: rgb(226, 137, 100);">=</span> <span style="color: rgb(155, 133, 157);">float</span>(<span class="skimlinks-unlinked">low.group</span>(<span style="color: rgb(51, 135, 204);">0</span>))
+    high_val <span style="color: rgb(226, 137, 100);">=</span> <span style="color: rgb(155, 133, 157);">float</span> (<span class="skimlinks-unlinked">high.group</span>(<span style="color: rgb(51, 135, 204);">0</span>))
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Calculate the average</span>
+    <span style="color: rgb(174, 174, 174); font-style: italic;">#import numpy</span>
+    <span style="color: rgb(174, 174, 174); font-style: italic;">#value = [high_val, low_val]</span>
+    <span style="color: rgb(174, 174, 174); font-style: italic;">#print <span class="skimlinks-unlinked">value.mean</span></span>
+    ave <span style="color: rgb(226, 137, 100);">=</span> (high_val <span style="color: rgb(226, 137, 100);">+</span> low_val) <span style="color: rgb(226, 137, 100);">/</span><span style="color: rgb(51, 135, 204);">2</span>
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Search the date of the report </span>
+    reg <span style="color: rgb(226, 137, 100);">=</span> <span style="color: rgb(101, 176, 66);">'\w{3},\s\w{3}\s\d{2},\s\d{4}'</span>
+    match <span style="color: rgb(226, 137, 100);">=</span> re.search(reg, data)        <span style="color: rgb(174, 174, 174); font-style: italic;"># Result is contained in matches[0]</span>
+    dat <span style="color: rgb(226, 137, 100);">=</span> <span class="skimlinks-unlinked">match.group</span>(<span style="color: rgb(51, 135, 204);">0</span>)
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Cast to date format</span>
+    <span style="color: rgb(174, 174, 174); font-style: italic;">#import datetime</span>
+    <span style="color: rgb(174, 174, 174); font-style: italic;">#form = datetime.datetime.strptime(<span class="skimlinks-unlinked">match.group(0</span>), '%a, %b %d, %Y')</span>
+    <span style="color: rgb(174, 174, 174); font-style: italic;">#print form</span>
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># <span class="skimlinks-unlinked">http://stackoverflow.com/questions/9752958/how-can-i-return-two-values-from-a-function-in-python</span></span>
+    <span style="color: rgb(226, 137, 100);">return</span> (dat, ave)
+
+<span style="color: rgb(174, 174, 174); font-style: italic;"># The date of the latest weekly price bulletin</span>
+start_date <span style="color: rgb(226, 137, 100);">=</span> <span style="color: rgb(218, 208, 133);">raw_input</span>(<span style="color: rgb(101, 176, 66);">"Enter the date of the latest weekly price bulletin (dd/mm/yyyy): "</span>)
+
+<span style="color: rgb(174, 174, 174); font-style: italic;"># Convert start_date string to Python date format</span>
+dat <span style="color: rgb(226, 137, 100);">=</span> datetime.datetime.strptime(start_date,  <span style="color: rgb(101, 176, 66);">'<span style="color: rgb(221, 242, 164);">%d</span>/<span style="color: rgb(221, 242, 164);">%m</span>/<span style="color: rgb(221, 242, 164);">%Y</span>'</span>)
+
+<span style="color: rgb(174, 174, 174); font-style: italic;"># Time series length</span>
+back_weeks <span style="color: rgb(226, 137, 100);">=</span> <span style="color: rgb(218, 208, 133);">raw_input</span>(<span style="color: rgb(101, 176, 66);">"How many weeks back in time: "</span>)
+
+<span style="color: rgb(174, 174, 174); font-style: italic;"># A bit of order onto the screen</span>
+<span style="color: rgb(226, 137, 100);">print</span> <span style="color: rgb(101, 176, 66);">'<span style="color: rgb(221, 242, 164);">\n</span>'</span>
+<span style="color: rgb(226, 137, 100);">print</span> <span style="color: rgb(101, 176, 66);">'Date as read in PDF'</span> <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(101, 176, 66);">'<span style="color: rgb(221, 242, 164);">\t</span>'</span> <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(101, 176, 66);">'Formatted date'</span> <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(101, 176, 66);">'<span style="color: rgb(221, 242, 164);">\t</span>'</span> <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(101, 176, 66);">'Value'</span>
+
+<span style="color: rgb(174, 174, 174); font-style: italic;"># Loop through the dates</span>
+<span style="color: rgb(226, 137, 100);">for</span> weeks <span style="color: rgb(226, 137, 100);">in</span> <span style="color: rgb(155, 133, 157);">xrange</span>(<span style="color: rgb(51, 135, 204);">0</span>, <span style="color: rgb(155, 133, 157);">int</span>(back_weeks)):
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Basic exception handling mechamism</span>
+    <span style="color: rgb(226, 137, 100);">try</span>:           
+        wk <span style="color: rgb(226, 137, 100);">=</span> datetime.timedelta(<span style="color: rgb(62, 135, 227);">weeks</span> <span style="color: rgb(226, 137, 100);">=</span> weeks)
+        date_back <span style="color: rgb(226, 137, 100);">=</span> dat <span style="color: rgb(226, 137, 100);">-</span> wk
+
+        <span style="color: rgb(174, 174, 174); font-style: italic;"># Construct the url</span>
+        url <span style="color: rgb(226, 137, 100);">=</span> <span style="color: rgb(101, 176, 66);">'<span class="skimlinks-unlinked">http://search.ams.usda.gov/mndms</span>/'</span> <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(155, 133, 157);">str</span>(<span class="skimlinks-unlinked">date_back.year</span>) <span style="color: rgb(226, 137, 100);">+</span> \
+              <span style="color: rgb(101, 176, 66);">'/'</span> <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(155, 133, 157);">str</span>(<span class="skimlinks-unlinked">date_back.month).zfill</span>(<span style="color: rgb(51, 135, 204);">2</span>) <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(101, 176, 66);">'/LS'</span> <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(155, 133, 157);">str</span>(<span class="skimlinks-unlinked">date_back.year</span>) <span style="color: rgb(226, 137, 100);">+</span> \
+              <span style="color: rgb(155, 133, 157);">str</span>(<span class="skimlinks-unlinked">date_back.month).zfill</span>(<span style="color: rgb(51, 135, 204);">2</span>) <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(155, 133, 157);">str</span>(<span class="skimlinks-unlinked">date_back.day).zfill</span>(<span style="color: rgb(51, 135, 204);">2</span>) <span style="color: rgb(226, 137, 100);">+</span> \
+              <span style="color: rgb(101, 176, 66);">'<span class="skimlinks-unlinked">WAGENERGY.PDF</span>'</span>
+
+        <span style="color: rgb(174, 174, 174); font-style: italic;"># Call to function</span>
+        fun <span style="color: rgb(226, 137, 100);">=</span>  parsePDF(url)
+
+        <span style="color: rgb(174, 174, 174); font-style: italic;"># Information we are after</span>
+        res <span style="color: rgb(226, 137, 100);">=</span> <span style="color: rgb(155, 133, 157);">str</span>(fun[<span style="color: rgb(51, 135, 204);">0</span>]) <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(101, 176, 66);">'<span style="color: rgb(221, 242, 164);">\t</span>'</span> <span style="color: rgb(226, 137, 100);">+</span>  <span style="color: rgb(155, 133, 157);">str</span>(<span class="skimlinks-unlinked">date_back.day).zfill</span>(<span style="color: rgb(51, 135, 204);">2</span>) <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(101, 176, 66);">'/'</span> <span style="color: rgb(226, 137, 100);">+</span> \
+              <span style="color: rgb(155, 133, 157);">str</span>(<span class="skimlinks-unlinked">date_back.month).zfill</span>(<span style="color: rgb(51, 135, 204);">2</span>) <span style="color: rgb(226, 137, 100);">+</span>  <span style="color: rgb(101, 176, 66);">'/'</span> <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(155, 133, 157);">str</span>(<span class="skimlinks-unlinked">date_back.year</span>) <span style="color: rgb(226, 137, 100);">+</span> \
+              <span style="color: rgb(101, 176, 66);">'<span style="color: rgb(221, 242, 164);">\t</span>'</span> <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(155, 133, 157);">str</span>(fun[<span style="color: rgb(51, 135, 204);">1</span>])
+
+    <span style="color: rgb(226, 137, 100);">except</span> <span style="color: rgb(155, 133, 157);">Exception</span>:
+        <span style="color: rgb(226, 137, 100);">print</span> <span style="color: rgb(101, 176, 66);">'NA<span style="color: rgb(221, 242, 164);">\t</span><span style="color: rgb(221, 242, 164);">\t</span><span style="color: rgb(221, 242, 164);">\t</span>'</span> <span style="color: rgb(226, 137, 100);">+</span>  <span style="color: rgb(155, 133, 157);">str</span>(<span class="skimlinks-unlinked">date_back.day).zfill</span>(<span style="color: rgb(51, 135, 204);">2</span>) <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(101, 176, 66);">'/'</span> <span style="color: rgb(226, 137, 100);">+</span> \
+              <span style="color: rgb(155, 133, 157);">str</span>(<span class="skimlinks-unlinked">date_back.month).zfill</span>(<span style="color: rgb(51, 135, 204);">2</span>) <span style="color: rgb(226, 137, 100);">+</span>  <span style="color: rgb(101, 176, 66);">'/'</span> <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(155, 133, 157);">str</span>(<span class="skimlinks-unlinked">date_back.year</span>) <span style="color: rgb(226, 137, 100);">+</span> \
+              <span style="color: rgb(101, 176, 66);">'<span style="color: rgb(221, 242, 164);">\t</span>'</span> <span style="color: rgb(226, 137, 100);">+</span> <span style="color: rgb(101, 176, 66);">'NA'</span>
+
+    <span style="color: rgb(174, 174, 174); font-style: italic;"># Output onto the screen</span>
+    <span style="color: rgb(226, 137, 100);">print</span> res
+
+<span style="color: rgb(101, 176, 66);">'''
+Result example:
+
+&gt;&gt;&gt; 
+
+Date as read in PDF Formatted date  Value
+Fri, Mar 07, 2014   07/03/2014  3.67
+Fri, Feb 28, 2014   28/02/2014  3.57
+Fri, Feb 21, 2014   21/02/2014  3.475
+Fri, Feb 14, 2014   14/02/2014  3.225
+Fri, Feb 07, 2014   07/02/2014  3.175
+Fri, Jan 31, 2014   31/01/2014  3.15
+Fri, Jan 24, 2014   24/01/2014  3.295
+Fri, Jan 17, 2014   17/01/2014  3.24
+Fri, Jan 10, 2014   10/01/2014  3.2
+Fri, Jan 03, 2014   03/01/2014  3.825
+Fri, Dec 27, 2013   27/12/2013  3.845
+Fri, Dec 20, 2013   20/12/2013  3.855
+Fri, Dec 13, 2013   13/12/2013  3.885
+Fri, Dec 06, 2013   06/12/2013  4.025
+Fri, Nov 29, 2013   29/11/2013  4.05
+Fri, Nov 22, 2013   22/11/2013  4.025
+Fri, Nov 15, 2013   15/11/2013  4.075
+Fri, Nov 08, 2013   08/11/2013  4.325
+Fri, Nov 01, 2013   01/11/2013  4.365
+Fri, Oct 25, 2013   25/10/2013  4.54
+
+'''</span></pre>
+		<div class="wpcnt">
+			<div class="wpa wpmrec">
+				<a class="wpa-about" href="https://wordpress.com/about-these-ads/" rel="nofollow">Acerca de estos anuncios</a>
+				<div class="u">
+					<div id="automattic-id-6410" data-section="26942" style="width: 300px; height: 250px;"><iframe src="index_1.html" id="fif_slot_automattic-id-_automattic-id-6410" name="fif_slot_automattic-id-_automattic-id-6410" scrolling="no" style="border: medium none; width: 300px; height: 250px;" frameborder="0" height="250" width="300"></iframe></div>
+				</div>
+			</div>
+		</div><div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><h3 class="sd-title">Share this !</h3><div class="sd-content"><ul><li class="share-twitter"><div class="twitter_button"><iframe allowtransparency="true" scrolling="no" src="index_5.html" style="width: 101px; height: 20px;" frameborder="0"></iframe></div></li><li class="share-google-plus-1"><div class="googleplus1_button"><div style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;" id="___plusone_0" class="g-plus" data-action="share" data-size="medium" data-annotation="bubble" data-href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/"><iframe title="+1" data-gapiattached="true" src="index_6.html" name="I0_1448894241283" id="I0_1448894241283" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" scrolling="no" marginwidth="0" marginheight="0" hspace="0" frameborder="0" width="100%"></iframe></div></div></li><li class="share-linkedin"><div class="linkedin_button"><span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center;"><span style="padding: 0px ! important; margin: 0px ! important; text-indent: 0px ! important; display: inline-block ! important; vertical-align: baseline ! important; font-size: 1px ! important;"><span id="li_ui_li_gen_1448894248535_0"><a id="li_ui_li_gen_1448894248535_0-link" href="javascript:void(0);"><span id="li_ui_li_gen_1448894248535_0-logo">in</span><span id="li_ui_li_gen_1448894248535_0-title"><span id="li_ui_li_gen_1448894248535_0-mark"></span><span id="li_ui_li_gen_1448894248535_0-title-text">Share</span></span></a></span></span><span style="padding: 0px ! important; margin: 0px ! important; text-indent: 0px ! important; display: inline-block ! important; vertical-align: baseline ! important; font-size: 1px ! important;"><span id="li_ui_li_gen_1448894248587_1-container" class="IN-right IN-hidden"><span id="li_ui_li_gen_1448894248587_1" class="IN-right"><span id="li_ui_li_gen_1448894248587_1-inner" class="IN-right"><span id="li_ui_li_gen_1448894248587_1-content" class="IN-right">0</span></span></span></span></span></span></div></li><li class="share-facebook"><div fb-iframe-plugin-query="app_id=249643311490&amp;container_width=589&amp;href=https%3A%2F%2Fquantcorner.wordpress.com%2F2014%2F03%2F16%2Fparsing-pdf-files-with-python-and-pdfminer%2F&amp;layout=button_count&amp;locale=es_ES&amp;sdk=joey" fb-xfbml-state="parsed" class="fb-share-button fb_iframe_widget" data-href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/" data-layout="button_count"><span style="vertical-align: top; width: 0px; height: 0px; overflow: hidden;"><iframe src="index_7.html" style="border: medium none; visibility: hidden; width: 0px; height: 0px;" title="fb:share_button Facebook Social Plugin" scrolling="no" allowfullscreen="true" allowtransparency="true" name="f2987ff9281f8fa" frameborder="0" height="1000px" width="1000px"></iframe></span></div></li><li class="share-reddit"><div class="reddit_button"><iframe src="index_8.html" scrolling="no" frameborder="0" height="22" width="120"></iframe></div></li><li class="share-tumblr"><a target="_top" href="http://www.tumblr.com/share/link/?url=https%3A%2F%2Fquantcorner.wordpress.com%2F2014%2F03%2F16%2Fparsing-pdf-files-with-python-and-pdfminer%2F&amp;name=Parsing%20pdf%20files%20with%20Python%20and%20PDFMiner" title="Compartir en Tumblr" style="display: inline-block; text-indent: -9999px; overflow: hidden; width: 62px; height: 20px; background: url('share_2.png') no-repeat scroll left top transparent;">Compartir en Tumblr</a></li><li class="share-pinterest"><div class="pinterest_button"><a data-pin-config="beside" data-pin-log="button_pinit" data-pin-href="https://es.pinterest.com/pin/create/button/?guid=eDgA9yySpSW4-1&amp;url=https%3A%2F%2Fquantcorner.wordpress.com%2F2014%2F03%2F16%2Fparsing-pdf-files-with-python-and-pdfminer%2F&amp;media=https%3A%2F%2F2.gravatar.com%2Favatar%2F25160914a37b80148786c38bfef89012%3Fs%3D96%26amp%3Bd%3Dhttps%253A%252F%252Fs0.wp.com%252Fi%252Fmu.gif%26amp%3Br%3DG&amp;description=Parsing%20pdf%20files%20with%20Python%20and%20PDFMiner" class="PIN_1448894241988_pin_it_button_20 PIN_1448894241988_pin_it_button_en_20_gray PIN_1448894241988_pin_it_button_inline_20 PIN_1448894241988_pin_it_beside_20"><span id="PIN_1448894241988_pin_count_0" class="PIN_1448894241988_hidden"><i></i></span></a></div></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-19388043-1482-565c5f40bd5e1" data-src="//widgets.wp.com/likes/#blog_id=19388043&amp;post_id=1482&amp;origin=quantcorner.wordpress.com&amp;obj_id=19388043-1482-565c5f40bd5e1" data-name="like-post-frame-19388043-1482-565c5f40bd5e1"><h3 class="sd-title">Me gusta:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px; display: none;"><span class="button"><span>Me gusta</span></span> <span class="loading">Cargando...</span></div><iframe class="post-likes-widget jetpack-likes-widget" name="like-post-frame-19388043-1482-565c5f40bd5e1" src="index_10.html" frameborder="0" height="55px" width="100%"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
+<div style="display: block;" id="jp-relatedposts" class="jp-relatedposts">
+	<h3 class="jp-relatedposts-headline"><em>Relacionado</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-visual"><div class="jp-relatedposts-post jp-relatedposts-post0 jp-relatedposts-post-thumbs" data-post-id="1461" data-post-format="false"><a data-position="0" data-origin="1482" rel="nofollow" title="Scraping data from the internet with Python and BeautifulSoup
+
+I needed a daily time series of crude soybean oil prices in Central Illinois (yes, I did ...). After a bit of search, I found out that the data I needed are available on the&nbsp;Iowa Farm Bureau&nbsp;website. More specifically, there is no time series available but data are accessible playing…" href="https://quantcorner.wordpress.com/2014/03/05/scraping-data-from-the-internet-with-python-and-beautifulsoup/" class="jp-relatedposts-post-a"><img class="jp-relatedposts-post-img" src="iowa_farm_bureau.jpg" alt="Scraping data from the internet with Python and BeautifulSoup" width="350"></a><h4 class="jp-relatedposts-post-title"><a data-position="0" data-origin="1482" rel="nofollow" title="Scraping data from the internet with Python and BeautifulSoup
+
+I needed a daily time series of crude soybean oil prices in Central Illinois (yes, I did ...). After a bit of search, I found out that the data I needed are available on the&nbsp;Iowa Farm Bureau&nbsp;website. More specifically, there is no time series available but data are accessible playing…" href="https://quantcorner.wordpress.com/2014/03/05/scraping-data-from-the-internet-with-python-and-beautifulsoup/" class="jp-relatedposts-post-a">Scraping data from the internet with Python and BeautifulSoup</a></h4><p class="jp-relatedposts-post-excerpt">I needed a daily time series of crude soybean oil prices in Central Illinois (yes, I did ...). After a bit of search, I found out that the data I needed are available on the&nbsp;Iowa Farm Bureau&nbsp;website. More specifically, there is no time series available but data are accessible playing…</p><p class="jp-relatedposts-post-context">En "BeautifulSoup"</p></div><div class="jp-relatedposts-post jp-relatedposts-post1 jp-relatedposts-post-nothumbs" data-post-id="1674" data-post-format="false"><a data-position="1" data-origin="1482" rel="nofollow" title="Fetching options data from NASDAQ website with Python
+
+Below is&nbsp;a piece of Python code allowing to download option chains from NASDAQ&nbsp;website. It is basically a big function relying heavily on BeautifulSoup and wrapped into a class ('c'est chic'). User&nbsp;provides the ticker, expiry and a some other arguments. He&nbsp;is then returned a&nbsp;pandas.DataFrame&nbsp;object containing options data. Notice that I wrote…" href="https://quantcorner.wordpress.com/2015/11/02/fetching-nasdaq-options-data-with-python/" class="jp-relatedposts-post-a jp-relatedposts-post-aoverlay"></a><h4 class="jp-relatedposts-post-title"><a data-position="1" data-origin="1482" rel="nofollow" title="Fetching options data from NASDAQ website with Python
+
+Below is&nbsp;a piece of Python code allowing to download option chains from NASDAQ&nbsp;website. It is basically a big function relying heavily on BeautifulSoup and wrapped into a class ('c'est chic'). User&nbsp;provides the ticker, expiry and a some other arguments. He&nbsp;is then returned a&nbsp;pandas.DataFrame&nbsp;object containing options data. Notice that I wrote…" href="https://quantcorner.wordpress.com/2015/11/02/fetching-nasdaq-options-data-with-python/" class="jp-relatedposts-post-a">Fetching options data from NASDAQ website with Python</a></h4><p style="max-height: 7.14286em;" class="jp-relatedposts-post-excerpt">Below is&nbsp;a piece of Python code allowing to download option chains from NASDAQ&nbsp;website. It is basically a big function relying heavily on BeautifulSoup and wrapped into a class ('c'est chic'). User&nbsp;provides the ticker, expiry and a some other arguments. He&nbsp;is then returned a&nbsp;pandas.DataFrame&nbsp;object containing options data. Notice that I wrote…</p><p class="jp-relatedposts-post-context">En "data"</p></div><div class="jp-relatedposts-post jp-relatedposts-post2 jp-relatedposts-post-nothumbs" data-post-id="1544" data-post-format="false"><a data-position="2" data-origin="1482" rel="nofollow" title="Downloading EIA's data with Python
+
+Below is a&nbsp;snippet to download the many data sets available on the US EIA's website (www.eia.gov). Required user's inputs are a&nbsp;EIA token and the codes for the series one wants to download. Output is a pandas dataframe. Dates returned are strings. It is easy to parse them&nbsp;as Python&nbsp;date objects, anyway.…" href="https://quantcorner.wordpress.com/2014/11/18/downloading-eias-data-with-python/" class="jp-relatedposts-post-a jp-relatedposts-post-aoverlay"></a><h4 class="jp-relatedposts-post-title"><a data-position="2" data-origin="1482" rel="nofollow" title="Downloading EIA's data with Python
+
+Below is a&nbsp;snippet to download the many data sets available on the US EIA's website (www.eia.gov). Required user's inputs are a&nbsp;EIA token and the codes for the series one wants to download. Output is a pandas dataframe. Dates returned are strings. It is easy to parse them&nbsp;as Python&nbsp;date objects, anyway.…" href="https://quantcorner.wordpress.com/2014/11/18/downloading-eias-data-with-python/" class="jp-relatedposts-post-a">Downloading EIA's data with Python</a></h4><p style="max-height: 7.14286em;" class="jp-relatedposts-post-excerpt">Below is a&nbsp;snippet to download the many data sets available on the US EIA's website (www.eia.gov). Required user's inputs are a&nbsp;EIA token and the codes for the series one wants to download. Output is a pandas dataframe. Dates returned are strings. It is easy to parse them&nbsp;as Python&nbsp;date objects, anyway.…</p><p class="jp-relatedposts-post-context">En "Computer programming"</p></div></div></div></div>					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			Esta entrada se publicó en <a href="https://quantcorner.wordpress.com/category/python/" rel="category tag">Python</a> y está etiquetada con <a href="https://quantcorner.wordpress.com/tag/http/" rel="tag">http</a>, <a href="https://quantcorner.wordpress.com/tag/parse/" rel="tag">parse</a>, <a href="https://quantcorner.wordpress.com/tag/pdf/" rel="tag">pdf</a>, <a href="https://quantcorner.wordpress.com/tag/pdfminer/" rel="tag">PDFMiner</a>, <a href="https://quantcorner.wordpress.com/tag/python/" rel="tag">Python</a>, <a href="https://quantcorner.wordpress.com/tag/time-series/" rel="tag">time series</a>, <a href="https://quantcorner.wordpress.com/tag/url/" rel="tag">url</a> en <a href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/" title="3:32 PM" rel="bookmark"><time class="entry-date" datetime="2014-03-16T15:32:36+00:00">marzo 16, 2014</time></a><span class="by-author"> por <span class="author vcard"><a class="url fn n" href="https://quantcorner.wordpress.com/author/tallente/" title="Ver todas las entradas de édouard" rel="author">édouard</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Navegador de artículos</h3>
+					<span class="nav-previous"><a href="https://quantcorner.wordpress.com/2014/03/05/scraping-data-from-the-internet-with-python-and-beautifulsoup/" rel="prev"><span class="meta-nav">←</span> Scraping data from the internet with Python and&nbsp;BeautifulSoup</a></span>
+					<span class="nav-next"><a href="https://quantcorner.wordpress.com/2014/03/23/plotting-forward-curves-with-r/" rel="next">Plotting forward curves with&nbsp;R <span class="meta-nav">→</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			7 pensamientos en “<span>Parsing pdf files with Python and&nbsp;PDFMiner</span>”		</h2>
+
+		<ol class="commentlist">
+				<li class="comment even thread-even depth-1 highlander-comment" id="li-comment-988">
+		<article id="comment-988" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt="" src="photo.jpg" class="avatar avatar-44" height="44" width="44"><cite><b class="fn"><a href="https://plus.google.com/101903130513431917063" rel="external nofollow" class="url">Jing Lu</a></b> </cite><a href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/#comment-988"><time datetime="2014-06-10T16:58:29+00:00">junio 10, 2014 en 4:58 PM</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>“for page in PDFPage.create_pages(document)” only returns the first page of pdf. Probably I do something wrong.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a class="comment-reply-link" href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/?replytocom=988#respond" onclick="return addComment.moveForm(&quot;comment-988&quot;, &quot;988&quot;, &quot;respond&quot;, &quot;1482&quot;)">Responder</a> <span>↓</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment byuser comment-author-tallente comment-author-is-site-member bypostauthor odd alt thread-odd thread-alt depth-1 highlander-comment" id="li-comment-989">
+		<article id="comment-989" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img id="grav-25160914a37b80148786c38bfef89012-0" alt="" src="25160914a37b80148786c38bfef89012" class="avatar avatar-44 grav-hashed grav-hijack" height="44" width="44"><cite><b class="fn"><a href="https://quantcorner.wordpress.com/" rel="external nofollow" class="url">édouard</a></b> <span>Autor de la entrada</span></cite><a href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/#comment-989"><time datetime="2014-06-10T20:18:27+00:00">junio 10, 2014 en 8:18 PM</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hello.<br>
+Thanks for visiting this webpage.<br>
+I just ran the code published above (copy/paste into my Python interpreter).<br>
+That worked.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a class="comment-reply-link" href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/?replytocom=989#respond" onclick="return addComment.moveForm(&quot;comment-989&quot;, &quot;989&quot;, &quot;respond&quot;, &quot;1482&quot;)">Responder</a> <span>↓</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+	<li class="comment even thread-even depth-1 highlander-comment" id="li-comment-997">
+		<article id="comment-997" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt="" src="photo_001.jpg" class="avatar avatar-44" height="44" width="44"><cite><b class="fn"><a href="https://plus.google.com/101690744516275989697" rel="external nofollow" class="url">Kieren Tinning</a></b> </cite><a href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/#comment-997"><time datetime="2014-07-21T20:08:17+00:00">julio 21, 2014 en 8:08 PM</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Great sample, do you know how to extract certain elements though? And to know which elements to extract?  I.e., if I have a PDF that has a form and I need one element out of the form. I know which element it is, but how does one get PDFMiner to extract it?</p>
+<p>Thanks for the help</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a class="comment-reply-link" href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/?replytocom=997#respond" onclick="return addComment.moveForm(&quot;comment-997&quot;, &quot;997&quot;, &quot;respond&quot;, &quot;1482&quot;)">Responder</a> <span>↓</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	<ol class="children">
+	<li class="comment byuser comment-author-tallente comment-author-is-site-member bypostauthor odd alt depth-2 highlander-comment" id="li-comment-998">
+		<article id="comment-998" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img id="grav-25160914a37b80148786c38bfef89012-1" alt="" src="25160914a37b80148786c38bfef89012" class="avatar avatar-44 grav-hashed grav-hijack" height="44" width="44"><cite><b class="fn"><a href="https://quantcorner.wordpress.com/" rel="external nofollow" class="url">édouard</a></b> <span>Autor de la entrada</span></cite><a href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/#comment-998"><time datetime="2014-07-21T20:57:11+00:00">julio 21, 2014 en 8:57 PM</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Hello Kieren,</p>
+<p>Thanks for stopping here.</p>
+<p>I guess that the ‘best’ strategy depends on that very PDF document of yours.</p>
+<p>It may be more efficient (easier) to get everything out of the PDF document and then extract the relevant pieces.<br>
+Alternatively, one may extract only the information required. Once again, that depends on the structure (‘complexity’) of the document.</p>
+<p>Edouard.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a class="comment-reply-link" href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/?replytocom=998#respond" onclick="return addComment.moveForm(&quot;comment-998&quot;, &quot;998&quot;, &quot;respond&quot;, &quot;1482&quot;)">Responder</a> <span>↓</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="comment even thread-odd thread-alt depth-1 highlander-comment" id="li-comment-1019">
+		<article id="comment-1019" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt="" src="photo_002.jpg" class="avatar avatar-44" height="44" width="44"><cite><b class="fn"><a href="https://plus.google.com/108695347481881117419" rel="external nofollow" class="url">Pantelis Karamolegkos</a></b> </cite><a href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/#comment-1019"><time datetime="2015-04-23T10:05:20+00:00">abril 23, 2015 en 10:05 AM</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>May I ask why you are using the keyword ‘open’ as the variable’s name where the result of the <span class="skimlinks-unlinked">urlopen.read</span>() is stored?</p>
+<p>open = urllib2.urlopen(Request(url)).read()</p>
+<p>Wouldn’t just any other valid python variable name do?</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a class="comment-reply-link" href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/?replytocom=1019#respond" onclick="return addComment.moveForm(&quot;comment-1019&quot;, &quot;1019&quot;, &quot;respond&quot;, &quot;1482&quot;)">Responder</a> <span>↓</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	<ol class="children">
+	<li class="comment byuser comment-author-tallente comment-author-is-site-member bypostauthor odd alt depth-2 highlander-comment" id="li-comment-1020">
+		<article id="comment-1020" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img id="grav-25160914a37b80148786c38bfef89012-2" alt="" src="25160914a37b80148786c38bfef89012" class="avatar avatar-44 grav-hashed grav-hijack" height="44" width="44"><cite><b class="fn"><a href="https://quantcorner.wordpress.com/" rel="external nofollow" class="url">édouard</a></b> <span>Autor de la entrada</span></cite><a href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/#comment-1020"><time datetime="2015-04-23T12:10:37+00:00">abril 23, 2015 en 12:10 PM</time></a>			</header><!-- .comment-meta -->
+
+			
+			<section class="comment-content comment">
+				<p>Thanks for your comment. Any variable name other than reserved Python keywords would do. And ‘open’ may not be the best choice.</p>
+							</section><!-- .comment-content -->
+
+			<div class="reply">
+				<a class="comment-reply-link" href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/?replytocom=1020#respond" onclick="return addComment.moveForm(&quot;comment-1020&quot;, &quot;1020&quot;, &quot;respond&quot;, &quot;1482&quot;)">Responder</a> <span>↓</span>			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+	</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+	<li class="pingback even thread-even depth-1 highlander-comment" id="comment-1030">
+		<p>Pingback:  <a href="http://chris.cothrun.com/2015/09/10/bookmarks-for-september-10th-8/" rel="external nofollow" class="url">Bookmarks for September 10th | Chris's Digital Detritus</a> </p>
+	</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+					<div id="respond" class="comment-respond js">
+			<h3 id="reply-title" class="comment-reply-title">Deja un comentario <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/#respond" style="display: none;">Cancelar respuesta</a></small></h3>		<form action="https://quantcorner.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+														
+
+
+						<input id="highlander_comment_nonce" name="highlander_comment_nonce" value="de84f7990a" type="hidden"><input name="_wp_http_referer" value="/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/" type="hidden">
+<input name="hc_post_as" id="hc_post_as" value="guest" type="hidden">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea class="autosizejs " tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px none; padding: 0px; box-sizing: content-box; word-wrap: break-word; height: 0px ! important; min-height: 0px ! important; overflow: hidden; transition: none 0s ease 0s ; font-family: Arial,Helvetica,Tahoma,Verdana,sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; text-decoration: none; word-spacing: 0px; text-indent: 0px; line-height: 24px; width: 603px;"></textarea><textarea style="height: 44px; overflow: hidden; word-wrap: break-word; resize: none;" placeholder="Introduce tu comentario aquí..." id="comment" name="comment" title="Introduce tu comentario aquí..."></textarea></div>
+</div>
+
+<div style="display: none;" id="comment-form-identity" class="comment_registration">
+
+	<div id="comment-form-nascar">
+		<p>Por favor, inicia sesión con uno de estos métodos para publicar tu comentario:</p>
+		<ul>
+			<li>
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="index_11.html" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0" height="24" width="24"></iframe>
+			</li>
+		</ul>
+	</div>
+
+	<div style="display: none;" id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_top">				<img src="mu.gif" alt="Gravatar" class="no-grav" width="25">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Correo <span class="required">(requerido)</span> <span class="nopublish">(La dirección no se hará pública)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" value="" type="email"></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Nombre <span class="required">(requerido)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" value="" type="text"></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Sitio web</label>
+					<div class="comment-form-input"><input id="url" name="url" value="" type="text"></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="wplogo.png" alt="Logo de WordPress.com" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="" type="hidden">
+				<input name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="" type="hidden">
+				<input name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="" type="hidden">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> Estás comentando usando tu cuenta de <span class="skimlinks-unlinked">WordPress.com</span>. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'wordpress'%20);">Cerrar&nbsp;sesión</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Cambiar</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="mu.gif" alt="Imagen de Twitter" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" type="hidden">
+				<input name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" type="hidden">
+				<input name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" type="hidden">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> Estás comentando usando tu cuenta de Twitter. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'twitter'%20);">Cerrar&nbsp;sesión</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Cambiar</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="mu.gif" alt="Foto de Facebook" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" type="hidden">
+				<input name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" type="hidden">
+				<input name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" type="hidden">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> Estás comentando usando tu cuenta de Facebook. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'facebook'%20);">Cerrar&nbsp;sesión</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Cambiar</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="mu.gif" alt="Google+ photo" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="" type="hidden">
+				<input name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="" type="hidden">
+				<input name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="" type="hidden">
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> Estás comentando usando tu cuenta de Google+. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'googleplus'%20);">Cerrar&nbsp;sesión</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Cambiar</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancelar</a></div>
+		<p>Conectando a %s</p>
+	</div>
+
+</div>
+
+
+
+<div style="display: none;" id="comment-form-subscribe">
+	<p class="comment-subscription-form"><input name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6" type="checkbox"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notificarme los nuevos comentarios por correo electrónico.</label></p><p class="post-subscription-form"><input name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;" tabindex="7" type="checkbox"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">Recibir nuevas entradas por email.</label></p></div>
+
+						<p style="display: none;" class="form-submit">
+				<input name="submit" id="comment-submit" value="Publicar comentario" type="submit">
+				<input name="comment_post_ID" value="1482" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+			</p>
+			<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="671349c4b6" type="hidden"></p>
+<input name="genseq" value="1448894272" type="hidden">
+<p style="display: none;"></p>		<input id="ak_js" name="ak_js" value="1448894241520" type="hidden"></form>
+		</div><!-- #respond -->
+		<div style="clear: both;"></div>
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+						<aside id="search-3" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="https://quantcorner.wordpress.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Buscar:</label>
+					<input value="" name="s" id="s" type="text">
+					<input id="searchsubmit" value="Buscar" type="submit">
+				</div>
+			</form></aside><aside id="archives-4" class="widget widget_archive"><h3 class="widget-title">Archivos</h3>		<ul>
+			<li><a href="https://quantcorner.wordpress.com/2015/11/">noviembre 2015</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2015/10/">octubre 2015</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2015/05/">mayo 2015</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2014/11/">noviembre 2014</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2014/10/">octubre 2014</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2014/04/">abril 2014</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2014/03/">marzo 2014</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2013/11/">noviembre 2013</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2013/02/">febrero 2013</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2012/11/">noviembre 2012</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2012/10/">octubre 2012</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2012/07/">julio 2012</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2012/04/">abril 2012</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2012/02/">febrero 2012</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2011/06/">junio 2011</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2011/05/">mayo 2011</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2011/04/">abril 2011</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2011/03/">marzo 2011</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2011/02/">febrero 2011</a></li>
+	<li><a href="https://quantcorner.wordpress.com/2011/01/">enero 2011</a></li>
+		</ul>
+		</aside><aside id="text-4" class="widget widget_text">			<div class="textwidget">**  UNIQUE    VISITORS  **
+<a href="http://s08.flagcounter.com/more/ET"><img src="untitled_005.dat" alt="Free counters!" border="0"></a>
+
+</div>
+		</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+			<a href="https://wordpress.com/themes/twentytwelve/" title="Saber más sobre este tema">El tema Twenty Twelve</a>.			<a href="http://es.wordpress.org/" title="Plataforma semántica de publicación personal">Funciona con WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!-- wpcom_wp_footer -->
+
+
+
+
+	
+
+		<div style="display: none;">
+	<div class="grofile-hash-map-c622498b38cbd4e1c98b3aceb7c265ce">
+	</div>
+	<div class="grofile-hash-map-25160914a37b80148786c38bfef89012">
+	</div>
+	<div class="grofile-hash-map-9d295a7d4030e14611e48b2e327c520d">
+	</div>
+	<div class="grofile-hash-map-2951a95165755f12880e6a427fc7414a">
+	</div>
+	</div>
+
+
+
+	<div style="bottom: -322px;" id="bit" class="loggedout-follow-normal">
+		<a class="bsub" href="javascript:void(0)"><span id="bsub-text">Seguir</span></a>
+		<div id="bitsubscribe">
+
+					<h3><label for="loggedout-follow-field">Seguir “Quant Corner”</label></h3>
+
+			<form action="https://subscribe.wordpress.com/" method="post" accept-charset="utf-8" id="loggedout-follow">
+			<p>Recibe cada nueva publicación en tu buzón de correo electrónico.</p>
+
+			<p id="loggedout-follow-error" style="display: none;"></p>
+
+						<p class="bit-follow-count">Únete a otros 61 seguidores</p>
+			<p><input name="email" placeholder="Introduce tu dirección de correo electrónico" id="loggedout-follow-field" type="email"></p>
+
+			<input name="action" value="subscribe" type="hidden">
+			<input name="blog_id" value="19388043" type="hidden">
+			<input name="source" value="https://quantcorner.wordpress.com/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/" type="hidden">
+			<input name="sub-type" value="loggedout-follow" type="hidden">
+
+			<input id="_wpnonce" name="_wpnonce" value="39910feb60" type="hidden"><input name="_wp_http_referer" value="/2014/03/16/parsing-pdf-files-with-python-and-pdfminer/" type="hidden">
+			<p id="bsub-subscribe-button"><input value="Suscríbeme" type="submit"></p>
+			</form>
+					<div id="bsub-credit"><a href="https://es.wordpress.com/?ref=lof">Construye un sitio web con WordPress.com</a></div>
+		</div><!-- #bitsubscribe -->
+	</div><!-- #bit -->
+
+	
+		
+					
+					
+					<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="index_12.html" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="index_13.html" style="display: none;" scrolling="no" allowfullscreen="true" allowtransparency="true" name="f28dedbaf13e728" frameborder="0"></iframe></div></div></div>
+			
+			
+								
+				<iframe src="index_14.html" scrolling="no" id="likes-master" name="likes-master" style="display: none;"></iframe>
+		<div id="likes-other-gravatars"><div class="likes-text">A <span>%d</span> blogueros les gusta esto:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		
+<iframe tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;" src="index_15.html" id="oauth2relay752713322" name="oauth2relay752713322"></iframe>
+
+
+
+	
+	
+
+
+
+<img id="wpstats" src="g.gif"></body>
+</html>

@@ -1,0 +1,65 @@
+/* ::::: https://static.grvcdn.com/personalization/base.ba9d20abcbd784d365c8a49c89a8f87f.css ::::: */
+
+body.grvWidgetIframeBody { margin: 0px; padding: 0px; }
+.grv_clear { clear: both; }
+.grv_right { float: right; }
+.grv_left { float: left; }
+.grv_txt_center { text-align: center; display: block; margin: 0px; }
+.grv_txt_14 { font-size: 14px; }
+* {  }
+.grv_publisher > * { display: none; }
+.grv_publisher_site, .grv_display_name, .grv_article_author, .grv_publisher_title, .grv_publisher_img, .grv_sponsored, .grv_date, .grv_img_link, .grv_number, .grv_stats, .grv_thumb_rating, .grv_current_article_lead, .grv_meta_category, .grv_alt_headline, .grv_secondary_links_header, .grv_secondary_links, .grv_aol_oo_source, .grv_first_tag, .grv_section_name, .grv_video_dur, .grv_article_url_domain { display: none; }
+.grvImpPixel { opacity: 0; width: 1px; height: 1px; line-height: 1px; font-size: 1px; }
+.grv_stories_header { margin-top: 0px; }
+.grv_first_tag { text-transform: capitalize; }
+.grv_post_type { display: none; z-index: 1; }
+.grv_article { list-style: none outside none; }
+a.grv_article_title { width: auto; outline: 0px none; }
+a.grv_img_link img.grv_article_img { border-style: none; }
+.grv_article_img.grv_positionable { position: relative; }
+.grv_article_img.grv_full_width { width: 100%; }
+.grv_article_img.grv_full_height { height: 100%; }
+#grv_badge { position: relative; }
+.grv_badge_inner { height: 13px; padding: 5px 10px; position: relative; }
+#grv_personalization, #grv_personalizedby { background: url('by_gravity_lt_dk.8adc67afbfd7d2879c26547fb63a82fd.png') no-repeat scroll -62px 0px transparent; float: right; height: 0px; overflow: hidden; padding-top: 13px; position: relative; right: 0px; width: 17px; }
+#grv_personalization:hover { background-position: -80px 0px; }
+.grv_text_badge #grv_personalization { background: none repeat scroll 0% 0% transparent; height: auto; width: auto; color: rgb(153, 153, 153); font-size: 11px; padding: 0px; text-decoration: none; }
+.grv_text_badge #grv_personalization:hover { text-decoration: underline; }
+.grvHasSponsored .grv_text_badge #grv_personalization { float: left; }
+#grv_tooltip { display: none; background: none no-repeat scroll right bottom transparent; padding: 0px 0px 5px; position: absolute; margin: 0px; bottom: 19px; right: 0px; z-index: 999; font-family: arial,"Helvetica Neue",sans-serif; }
+.grv_tt_container { padding: 15px; border-top: 1px solid rgb(119, 119, 119); background: linear-gradient(rgb(80, 80, 80), rgb(49, 49, 49)) repeat scroll 0% 0% transparent; border-radius: 6px; box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.5); }
+#grv_tooltip .grv_tt_content { color: rgb(221, 221, 221); font-size: 12px; line-height: 16px; margin: 0px 0px 15px; text-shadow: -1px 0px 3px rgba(0, 0, 0, 0.698); position: relative; }
+#grv_tooltip .grv_tt_content .grv_tt_link { color: rgb(255, 255, 255); text-decoration: none; border-bottom: 1px dotted rgb(153, 153, 153); padding-bottom: 0px; }
+#grv_tooltip .grv_tt_content .grv_tt_link:hover { color: rgb(0, 153, 255); border-bottom: 1px dotted rgb(0, 153, 255); }
+#grv_tooltip a.grv_tt_bottom { display: block; text-decoration: none; font-size: 11px; line-height: 11px; font-weight: normal; padding: 5px 10px; background: url('bg-black-30.988bfe97c00ad02163fd4a78437ac2b9.png') repeat scroll 0% 0% transparent; border-radius: 10px; }
+#grv_tooltip a.grv_tt_bottom, #grv_tooltip a.grv_tt_bottom:visited { color: rgb(238, 238, 238); }
+#grv_tooltip a.grv_tt_bottom:hover { background: none repeat scroll 0% 0% rgb(0, 153, 255); color: rgb(255, 255, 255); }
+#grv_adchoice { display: none; float: right; width: 10px; height: 10px; margin: 1px 0px 0px 4px; overflow: hidden; background: url('grv_adchoices2.3ce3939de80301b42b7c38cafd10899a.png') no-repeat scroll right center / cover  transparent; }
+.grvHasSponsored #grv_adchoice { display: block; }
+/* ::::: https://static.grvcdn.com/personalization/sites/wordpress/wp-4-medrec-resp.9d125aa890910aac4bcbeaa2fd98a8d3.css ::::: */
+
+#grv_widget { position: relative; font: 11px Arial,Sans-Serif; width: 300px; }
+.grv_stories_header { display: none; }
+ul.grv_articles { margin: 0px; padding: 0px; list-style: none outside none; }
+li.grv_article { position: relative; display: block; float: left; height: 140px; font-size: 12px; background: none repeat scroll 0% 0% rgb(240, 240, 240); margin: 0px 1% 1% 0px; width: 24.25%; overflow: hidden; }
+li.grv_article.grv_num_3 { margin: 0px; }
+a.grv_article_title { text-decoration: none; color: rgb(0, 0, 0); font-size: 12px; line-height: 16px; height: 48px; overflow: hidden; vertical-align: middle; position: absolute; padding: 2px 4px; bottom: -16px; left: 0px; display: block; z-index: 10; }
+li.grv_article:hover a.grv_article_title { bottom: 12px; }
+li.grv_article a.grv_img_link { height: 140px; width: 100%; display: block; position: absolute; top: 0px; left: 0px; overflow: hidden; background: none repeat scroll 0% 0% rgb(240, 240, 240); }
+li.grv_article a.grv_img_link img.grv_article_img { display: none; }
+.grv_post_type { display: block; width: 100%; height: 140px; position: absolute; top: 0px; left: 0px; background: none repeat scroll 0% 0% transparent; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2) inset; }
+li.grv_article.grv_has_image a.grv_img_link { background: none repeat scroll 0% 0% rgb(240, 240, 240); }
+li.grv_article.grv_has_image a.grv_img_link img.grv_article_img { display: block; }
+li.grv_article.grv_has_image a.grv_img_link:hover img.grv_article_img { opacity: 0.5; }
+.grv_publisher { font-size: 11px; line-height: 18px; display: inline; padding: 0px 4px; font-weight: bold; position: absolute; bottom: -28px; z-index: 10; }
+.grv_publisher a.grv_display_name { display: inline; color: rgb(119, 119, 119); text-decoration: none; pointer-events: none; }
+li.grv_article:hover .grv_publisher { bottom: 0px; }
+#grv_stat_5 { background: none repeat scroll 0% 0% rgb(255, 255, 255); opacity: 0.85; position: absolute; bottom: -28px; height: 64px; width: 101%; z-index: 9; display: block; }
+li.grv_article:hover #grv_stat_5 { bottom: 0px; }
+.grv_less_520 .grv_stories_header { font-size: 14px; line-height: 19px; }
+.grv_less_520 li.grv_article { position: relative; display: block; float: left; height: 115px; font-size: 12px; background: none repeat scroll 0% 0% rgb(240, 240, 240); margin: 0px 0.5% 1px 0px; width: 49%; overflow: hidden; }
+.grv_less_520 li.grv_article.grv_num_1, .grv_less_520 li.grv_article.grv_num_3 { margin-right: 0px; }
+.grv_less_520 li.grv_article.grv_num_2, .grv_less_520 li.grv_article.grv_num_3 { margin-bottom: 0px; }
+.grv_less_520 li.grv_article a.grv_img_link { height: 115px; }
+.grv_less_520 .grv_post_type { height: 115px; }
+.grv_less_520 #grv_badge { margin-top: -3px; }

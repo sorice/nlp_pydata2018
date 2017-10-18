@@ -1,0 +1,147 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>ERROR: El URL solicitado no se ha podido conseguir</title>
+    <style type="text/css"><!--
+    %
+    l
+    body
+    :lang(fa) {
+        direction: rtl;
+        font-size: 100%;
+        font-family: Tahoma, Roya, sans-serif;
+        float: right;
+    }
+
+    :lang(he) {
+        direction: rtl;
+    }
+
+    --></style>
+
+    <style type="text/css">
+        body{
+            margin: 0;
+            font-family: "Segoe UI",Tahoma,Helvetica,sans-serif;
+            font-size: 0.8125em;
+            line-height: 1.53856;
+        }
+        #content{
+            background-color: #D2D2D2;
+            color: #000;
+            line-height: 16px;
+            padding: 32px 50px;
+            font-size: 1.2em;
+            margin-top: 40px;
+        }
+
+        #content p {
+            line-height: 1.5;
+        }
+
+        #content .info{
+            font-size: 0.814em;
+        }
+
+        #titles{
+            padding: 20px 30px;
+        }
+
+        img{
+            display: inline;
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+
+        #titles h1{
+            display: inline;
+            font-size: 4em;
+            font-weight: 400;
+            margin-bottom: -20px;
+            margin-top: 0px;
+            color: #2d589b;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 600px) {
+            #titles h1{
+                font-size: 3.5em;
+            }
+        }
+
+        @media (max-width: 460px) {
+            #titles h1{
+                font-size: 2.8em;
+                display: block;
+            }
+        }
+
+        @media (max-width: 280px) {
+            #titles h1{
+                font-size: 2.4em;
+            }
+        }
+
+
+
+        #titles h2{
+            display: inline;
+            color:#2d589b;
+            font-weight: 600;
+            margin-top: 0px
+        }
+
+        #error{
+            border-left: 4px solid;
+            padding-left: 10px;
+            margin-left: 0px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body id="ERR_UCLV_ALL">
+
+<div id="titles">
+    <img src="http://10.12.1.7/images/squid1.png">
+    <h1>Ha ocurrido un error</h1>
+</div>
+
+<div id="content">
+<p>Ha ocurrido un error. Se adiciona informaci&oacute;n que puede ayudarlo a encontrar la causa.</p>
+<p>
+ Usuario: abelm<br>
+ IP Origen: 10.12.68.21<br>
+ M&eacute;todo: GET<br>
+ Hora: 08/Jan/2016:13:49:10 -0500<br>
+ Demora: %d<br>
+ Proxy Error: ERR_UCLV_ALL<br>
+ URL: <a href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico?">http://cdn.sstatic.net/stackoverflow/img/favicon.ico?</a><br>
+ Petici&oacute;n: GET /stackoverflow/img/favicon.ico?v=4f32ecc8f43d HTTP/1.1
+Host: cdn.sstatic.net
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:30.0) Gecko/20100101 Firefox/30.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Cookie: __cfduid=d3e43c87c49c32f64b8c3262526423a631422651974
+Proxy-Authorization: ** NOT DISPLAYED **
+Connection: keep-alive
+<br>
+</p>
+
+<blockquote id="error">
+<p><b>ERROR</b></p>
+</blockquote>
+
+<p>La configuración de control de acceso evita que su solicitud sea permitida en este momento.</p>
+
+<br>
+</div>
+
+<div id="footer" style=" padding: 0px 10px;">
+    <p style="font-size: 11px; color: #5c5c5c">Generado Fri, 08 Jan 2016 18:49:10 GMT por proxy.uclv.edu.cu (squid/3.4.6)</p>
+<!-- ERR_UCLV_ALL -->
+</div>
+</body>
+</html>
+
